@@ -1,0 +1,14 @@
+/** Styles. @package lsx-sharing */
+.lsx-sharing-content ul { list-style: none; padding-left: 0; }
+
+.lsx-sharing-content ul li { display: inline-block; margin-left: 5px; }
+
+.lsx-sharing-content ul li:first-child { margin-left: 0; }
+
+.lsx-sharing-content ul li.lsx-sharing-button-facebook .fa:before { content: '\f230'; }
+
+.lsx-sharing-content ul li.lsx-sharing-button-twitter .fa:before { content: '\f099'; }
+
+.lsx-sharing-content ul li.lsx-sharing-button-pinterest .fa:before { content: '\f0d2'; }
+
+/*# sourceMappingURL=maps/lsx-sharing.css.map */
