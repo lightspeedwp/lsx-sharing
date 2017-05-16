@@ -45,7 +45,7 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 				'ajax_url' => admin_url( 'admin-ajax.php' ),
 			));
 
-			wp_localize_script( 'lsx-sharing', 'lsx-sharing_params', $params );
+			wp_localize_script( 'lsx-sharing', 'lsx_sharing_params', $params );
 
 			wp_enqueue_style( 'lsx-sharing', LSX_SHARING_URL . 'assets/css/lsx-sharing.css', array(), LSX_SHARING_VER );
 			wp_style_add_data( 'lsx-sharing', 'rtl', 'replace' );
