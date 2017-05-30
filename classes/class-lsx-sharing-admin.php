@@ -121,11 +121,6 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 		 */
 		public function general_tab() { ?>
 			<tr class="form-field">
-				<th scope="row" colspan="2">
-					<h2><?php esc_html_e( 'General', 'lsx-sharing' ); ?></h2>
-				</th>
-			</tr>
-			<tr class="form-field">
 				<th scope="row">
 					<label for="sharing_label_text"><?php esc_html_e( 'Label text', 'lsx-sharing' ); ?></label>
 				</th>
@@ -147,7 +142,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 			</tr>
 			<tr class="form-field">
 				<th scope="row" colspan="2">
-					<h2><?php esc_html_e( 'Disable post types', 'lsx-sharing' ); ?></h2>
+					<h3><?php esc_html_e( 'Disable post types', 'lsx-sharing' ); ?></h3>
 				</th>
 			</tr>
 			<?php
