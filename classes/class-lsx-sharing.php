@@ -79,6 +79,12 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 
 			global $post;
 
+			$post_type = get_post_type();
+
+			if ( isset( $this->options['sharing'] ) && ! empty( $this->options['sharing'][ 'sharing_disable_pt_' . $post_type ] ) ) {
+				return '';
+			}
+
 			if ( is_array( $buttons ) && count( $buttons ) > 0 ) {
 				$sharing_content .= '<div class="lsx-sharing-content"><p>';
 
