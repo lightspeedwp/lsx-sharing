@@ -25,6 +25,15 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 		 * Constructor.
 		 */
 		public function __construct() {
+			add_action( 'init', array( $this, 'set_options' ), 500 );
+			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ) );
+			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
+		}
+
+		/**
+		 * Set options.
+		 */
+		public function set_options() {
 			if ( class_exists( 'Tour_Operator' ) ) {
 				$this->options = get_option( '_lsx-to_settings', false );
 			} else {
@@ -34,9 +43,6 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 					$this->options = get_option( '_lsx_lsx-settings', false );
 				}
 			}
-
-			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ) );
-			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
 		}
 
 		/**
@@ -74,7 +80,7 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 			global $post;
 
 			if ( is_array( $buttons ) && count( $buttons ) > 0 ) {
-				$sharing_content .= '<div class="lsx-sharing-content">';
+				$sharing_content .= '<div class="lsx-sharing-content"><p>';
 
 				if ( isset( $this->options['sharing'] ) && ! empty( $this->options['sharing']['sharing_label_text'] ) ) {
 					$sharing_content .= '<span class="lsx-sharing-label">' . $this->options['sharing']['sharing_label_text'] . '</span>';
@@ -92,7 +98,7 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 					}
 				}
 
-				$sharing_content .= '</div>';
+				$sharing_content .= '</p></div>';
 			}
 
 			if ( $echo ) {

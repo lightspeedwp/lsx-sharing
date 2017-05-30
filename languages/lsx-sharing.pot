@@ -14,63 +14,59 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: classes/class-lsx-sharing-admin.php:60, classes/class-lsx-sharing-admin.php:61
+#: classes/class-lsx-sharing-admin.php:65, classes/class-lsx-sharing-admin.php:66
 msgid "Theme Options"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:65
+#: classes/class-lsx-sharing-admin.php:70
 msgid "Save Changes"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:85
+#: classes/class-lsx-sharing-admin.php:90
 msgid "Sharing"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:97
+#: classes/class-lsx-sharing-admin.php:102
 msgid "API"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:125
+#: classes/class-lsx-sharing-admin.php:130
 msgid "Label text"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:137
+#: classes/class-lsx-sharing-admin.php:142
 msgid "Twitter username"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:145
-msgid "Disable post types"
+#: classes/class-lsx-sharing-admin.php:150
+msgid "Disable share buttons on (post types)"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:160
-msgid "Disable %s"
-msgstr ""
-
-#: classes/class-lsx-sharing-admin.php:164
+#: classes/class-lsx-sharing-admin.php:169
 msgid "Disable share buttons on post type: %s"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:176
+#: classes/class-lsx-sharing-admin.php:181
 msgid "Disable Facebook"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:180
+#: classes/class-lsx-sharing-admin.php:185
 msgid "Disable Facebook share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:185
+#: classes/class-lsx-sharing-admin.php:190
 msgid "Disable Twitter"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:189
+#: classes/class-lsx-sharing-admin.php:194
 msgid "Disable Twitter share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:194
+#: classes/class-lsx-sharing-admin.php:199
 msgid "Disable Pinterest"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:198
+#: classes/class-lsx-sharing-admin.php:203
 msgid "Disable Pinterest share button."
 msgstr ""
 

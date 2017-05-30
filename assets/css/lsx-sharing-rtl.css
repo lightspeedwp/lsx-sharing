@@ -1,4 +1,6 @@
 /** Styles. @package lsx-sharing */
+.lsx-sharing-content p { margin-bottom: 0; }
+
 .lsx-sharing-content .lsx-sharing-label { display: inline-block; margin-left: 10px; }
 
 .lsx-sharing-content .lsx-sharing-button { display: inline-block; margin-left: 10px; }
