@@ -1,14 +1,14 @@
 /** Styles. @package lsx-sharing */
-.lsx-sharing-content ul { list-style: none; padding-left: 0; }
+.lsx-sharing-content .lsx-sharing-label { display: inline-block; margin-right: 10px; }
 
-.lsx-sharing-content ul li { display: inline-block; margin-left: 10px; }
+.lsx-sharing-content .lsx-sharing-button { display: inline-block; margin-right: 10px; }
 
-.lsx-sharing-content ul li:first-child { margin-left: 0; }
+.lsx-sharing-content .lsx-sharing-button:last-child { margin-right: 0; }
 
-.lsx-sharing-content ul li.lsx-sharing-button-facebook .fa:before { content: '\f230'; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook .fa:before { content: '\f230'; }
 
-.lsx-sharing-content ul li.lsx-sharing-button-twitter .fa:before { content: '\f099'; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter .fa:before { content: '\f099'; }
 
-.lsx-sharing-content ul li.lsx-sharing-button-pinterest .fa:before { content: '\f0d2'; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest .fa:before { content: '\f0d2'; }
 
 /*# sourceMappingURL=maps/lsx-sharing.css.map */

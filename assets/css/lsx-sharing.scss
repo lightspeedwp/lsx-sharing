@@ -5,39 +5,39 @@
  */
 
 .lsx-sharing-content {
-	ul {
-		list-style: none;
-		padding-left: 0;
+	.lsx-sharing-label {
+		display: inline-block;
+		margin-right: 10px;
+	}
 
-		li {
-			display: inline-block;
-			margin-left: 10px;
+	.lsx-sharing-button {
+		display: inline-block;
+		margin-right: 10px;
 
-			&:first-child {
-				margin-left: 0;
-			}
+		&:last-child {
+			margin-right: 0;
+		}
 
-			&.lsx-sharing-button-facebook {
-				.fa {
-					&:before {
-						content: '\f230';
-					}
+		&.lsx-sharing-button-facebook {
+			.fa {
+				&:before {
+					content: '\f230';
 				}
 			}
+		}
 
-			&.lsx-sharing-button-twitter {
-				.fa {
-					&:before {
-						content: '\f099';
-					}
+		&.lsx-sharing-button-twitter {
+			.fa {
+				&:before {
+					content: '\f099';
 				}
 			}
+		}
 
-			&.lsx-sharing-button-pinterest {
-				.fa {
-					&:before {
-						content: '\f0d2';
-					}
+		&.lsx-sharing-button-pinterest {
+			.fa {
+				&:before {
+					content: '\f0d2';
 				}
 			}
 		}

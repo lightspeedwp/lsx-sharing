@@ -14,3 +14,90 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: classes/class-lsx-sharing-admin.php:60, classes/class-lsx-sharing-admin.php:61
+msgid "Theme Options"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:65
+msgid "Save Changes"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:85
+msgid "Sharing"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:97
+msgid "API"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:125, includes/settings/sharing.php:3
+msgid "General"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:130
+msgid "Label text"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:142
+msgid "Twitter username"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:150
+msgid "Disable post types"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:165
+msgid "Disable %s"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:169
+msgid "Disable share buttons on post type: %s"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:181
+msgid "Disable Facebook"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:185
+msgid "Disable Facebook share button."
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:190
+msgid "Disable Twitter"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:194
+msgid "Disable Twitter share button."
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:199
+msgid "Disable Pinterest"
+msgstr ""
+
+#: classes/class-lsx-sharing-admin.php:203
+msgid "Disable Pinterest share button."
+msgstr ""
+
+#: includes/settings/api.php:3
+msgid "Settings"
+msgstr ""
+
+#: includes/settings/api.php:4
+msgid "License Keys"
+msgstr ""
+
+#: includes/settings/api.php:25
+msgid "Enter the license keys for your add-ons in the boxes below."
+msgstr ""
+
+#: includes/settings/api.php:30
+msgid "You have not installed any add-ons yet. View our list of add-ons"
+msgstr ""
+
+#: includes/settings/api.php:30
+msgid "here"
+msgstr ""
+
+#: includes/settings/sharing.php:4
+msgid "Buttons"
+msgstr ""

@@ -35,10 +35,18 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		/**
 		 * Constructor.
 		 */
-		public function __construct( $service ) {
-			if ( in_array( $service, $this->services, true ) ) {
-				$this->service = $service;
+		public function __construct( $service, $options ) {
+			$this->options = $options;
+
+			if ( ! in_array( $service, $this->services, true ) ) {
+				return;
 			}
+
+			if ( isset( $this->options['sharing'] ) && ! empty( $this->options['sharing'][ 'sharing_disable_' . $service ] ) ) {
+				return;
+			}
+
+			$this->service = $service;
 		}
 
 		/**

@@ -25,6 +25,16 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 		 * Constructor.
 		 */
 		public function __construct() {
+			if ( class_exists( 'Tour_Operator' ) ) {
+				$this->options = get_option( '_lsx-to_settings', false );
+			} else {
+				$this->options = get_option( '_lsx_settings', false );
+
+				if ( false === $this->options ) {
+					$this->options = get_option( '_lsx_lsx-settings', false );
+				}
+			}
+
 			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ) );
 			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
 		}
@@ -54,7 +64,7 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 		/**
 		 * Display/return sharing buttons.
 		 */
-		public function sharing_buttons( $buttons = array(), $echo = false ) {
+		public function sharing_buttons( $buttons = array( 'facebook', 'twitter', 'pinterest' ), $echo = false ) {
 			$sharing_content = '';
 
 			if ( ( is_preview() || is_admin() ) && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
@@ -64,21 +74,25 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 			global $post;
 
 			if ( is_array( $buttons ) && count( $buttons ) > 0 ) {
-				$sharing_content .= '<div class="lsx-sharing-content"><ul>';
+				$sharing_content .= '<div class="lsx-sharing-content">';
+
+				if ( isset( $this->options['sharing'] ) && ! empty( $this->options['sharing']['sharing_label_text'] ) ) {
+					$sharing_content .= '<span class="lsx-sharing-label">' . $this->options['sharing']['sharing_label_text'] . '</span>';
+				}
 
 				foreach ( $buttons as $id => $button ) {
-					$button_obj = new LSX_Sharing_Button( $button );
+					$button_obj = new LSX_Sharing_Button( $button, $this->options );
 
 					if ( ! empty( $button_obj ) ) {
 						$url = $button_obj->get_link( $post );
 
 						if ( ! empty( $url ) ) {
-							$sharing_content .= '<li class="lsx-sharing-button-' . esc_attr( $button ) . '"><a href="' . esc_url( $url ) . '" target="_blank"><span class="fa" aria-hidden="true"></span></a></li>';
+							$sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr( $button ) . '"><a href="' . esc_url( $url ) . '" target="_blank"><span class="fa" aria-hidden="true"></span></a></span>';
 						}
 					}
 				}
 
-				$sharing_content .= '</ul></div>';
+				$sharing_content .= '</div>';
 			}
 
 			if ( $echo ) {
