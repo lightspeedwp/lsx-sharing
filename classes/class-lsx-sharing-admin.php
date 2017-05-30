@@ -26,7 +26,6 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 			}
 
 			add_action( 'init', array( $this, 'create_settings_page' ), 100 );
-			add_filter( 'lsx_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
 		}
 
 		/**
@@ -39,6 +38,12 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					$pages = $this->settings_page_array();
 					$uix = \lsx\ui\uix::get_instance( 'lsx' );
 					$uix->register_pages( $pages );
+				}
+
+				if ( class_exists( 'Tour_Operator' ) ) {
+					add_filter( 'lsx_to_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
+				} else {
+					add_filter( 'lsx_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
 				}
 
 				if ( class_exists( 'Tour_Operator' ) ) {
@@ -142,7 +147,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 			</tr>
 			<tr class="form-field">
 				<th scope="row" colspan="2">
-					<h3><?php esc_html_e( 'Disable post types', 'lsx-sharing' ); ?></h3>
+					<h3><?php esc_html_e( 'Disable share buttons on (post types)', 'lsx-sharing' ); ?></h3>
 				</th>
 			</tr>
 			<?php
@@ -157,7 +162,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 			<?php foreach ( $post_types as $key => $value ) : ?>
 				<tr class="form-field">
 					<th scope="row">
-						<label for="sharing_disable_pt_<?php echo esc_attr( $key ); ?>"><?php printf( esc_html__( 'Disable %s', 'lsx-sharing' ), esc_html( $key ) ); ?></label>
+						<label for="sharing_disable_pt_<?php echo esc_attr( $key ); ?>"><?php echo esc_html( ucfirst( $key ) ); ?></label>
 					</th>
 					<td>
 						<input type="checkbox" {{#if sharing_disable_pt_<?php echo esc_attr( $key ); ?>}} checked="checked" {{/if}} name="sharing_disable_pt_<?php echo esc_attr( $key ); ?>" />
