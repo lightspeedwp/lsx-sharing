@@ -25,7 +25,7 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 		 * Constructor.
 		 */
 		public function __construct() {
-			add_action( 'init', array( $this, 'set_options' ), 500 );
+			add_action( 'init', array( $this, 'set_options' ), 50 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ) );
 			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
 		}

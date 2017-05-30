@@ -15,6 +15,17 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 	class LSX_Sharing_Admin {
 
 		public function __construct() {
+			add_action( 'init', array( $this, 'set_options' ), 50 );
+			add_action( 'init', array( $this, 'create_settings_page' ), 100 );
+
+			add_filter( 'lsx_to_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
+			add_filter( 'lsx_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
+		}
+
+		/**
+		 * Set options.
+		 */
+		public function set_options() {
 			if ( class_exists( 'Tour_Operator' ) ) {
 				$this->options = get_option( '_lsx-to_settings', false );
 			} else {
@@ -24,8 +35,6 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					$this->options = get_option( '_lsx_lsx-settings', false );
 				}
 			}
-
-			add_action( 'init', array( $this, 'create_settings_page' ), 100 );
 		}
 
 		/**
@@ -40,17 +49,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					$uix->register_pages( $pages );
 				}
 
-				if ( class_exists( 'Tour_Operator' ) ) {
-					add_filter( 'lsx_to_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
-				} else {
-					add_filter( 'lsx_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
-				}
-
-				if ( class_exists( 'Tour_Operator' ) ) {
-					add_action( 'lsx_framework_sharing_tab_content', array( $this, 'sharing_settings' ), 11 );
-				} else {
-					add_action( 'lsx_framework_sharing_tab_content', array( $this, 'sharing_settings' ), 11 );
-				}
+				add_action( 'lsx_framework_sharing_tab_content', array( $this, 'sharing_settings' ), 11 );
 			}
 		}
 
@@ -137,6 +136,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					{{/if}}
 				</td>
 			</tr>
+			<!-- @TODO
 			<tr class="form-field">
 				<th scope="row">
 					<label for="sharing_twitter_username"><?php esc_html_e( 'Twitter username', 'lsx-sharing' ); ?></label>
@@ -145,6 +145,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					<input type="text" {{#if sharing_twitter_username}} value="{{sharing_twitter_username}}" {{/if}} name="sharing_twitter_username" />
 				</td>
 			</tr>
+			-->
 			<tr class="form-field">
 				<th scope="row" colspan="2">
 					<h3><?php esc_html_e( 'Disable share buttons on (post types)', 'lsx-sharing' ); ?></h3>
