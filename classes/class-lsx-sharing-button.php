@@ -110,7 +110,11 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 			$permalink = get_permalink( $post->ID );
 			$title     = apply_filters( 'the_title', $post->post_title );
 			if ( ! has_post_thumbnail( $post ) ) {
-				$image = LSX_TO_Placeholders::placeholder_url(null,$post->post_type);
+				if(class_exists('LSX_TO_Placeholders')) {
+					$image = LSX_TO_Placeholders::placeholder_url(null, $post->post_type);
+				}else if(class_exists('LSX_Placeholders')){
+					$image = LSX_Placeholders::placeholder_url(null, $post->post_type);
+				}
 			}else {
 				$image = get_the_post_thumbnail_url($post->ID, 'large');
 			}
