@@ -106,14 +106,14 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		 * Get Pinterest link to share.
 		 */
 		public function get_link_pinterest( $post ) {
-			if ( ! has_post_thumbnail( $post ) ) {
-				return '';
-			}
 
 			$permalink = get_permalink( $post->ID );
 			$title     = apply_filters( 'the_title', $post->post_title );
-			$image     = get_the_post_thumbnail_url( $post->ID, 'large' );
-
+			if ( ! has_post_thumbnail( $post ) ) {
+				$image = LSX_TO_Placeholders::placeholder_url(null,$post->post_type);
+			}else {
+				$image = get_the_post_thumbnail_url($post->ID, 'large');
+			}
 			return 'https://www.pinterest.com/pin/create/button/?url=' . rawurlencode( $permalink ) . '&media=' . rawurlencode( $image ) . '&description=' . rawurlencode( $title );
 		}
 
