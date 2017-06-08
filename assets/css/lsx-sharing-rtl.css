@@ -1,4 +1,19 @@
 /** Styles. @package lsx-sharing */
+.post-tags-wrapper .lsx-sharing-content { clear: none; float: left; line-height: 1; margin: 0 0 7px 0; text-align: center; width: 100%; }
+
+@media only screen and (max-width: 767px) { .post-tags-wrapper .lsx-sharing-content { margin-top: 10px; text-align: right; width: 100%; }
+  .post-tags-wrapper .lsx-sharing-content:first-child { margin-top: 0; } }
+
+.post-tags-wrapper .post-tags + .lsx-sharing-content { text-align: left; width: 50%; }
+
+@media only screen and (max-width: 767px) { .post-tags-wrapper .post-tags + .lsx-sharing-content { text-align: right; } }
+
+.lsx-sharing-content .lsx-sharing-label { font-size: 15px; line-height: 26px; }
+
+.lsx-sharing-content .lsx-sharing-label:before { color: #333; content: '\f1e0'; border-top: none; display: inline-block; font-family: fontawesome; font-weight: normal; font-size: 16px; margin-left: 5px; margin-bottom: 0; min-width: auto; width: auto; }
+
+@media only screen and (max-width: 767px) { .lsx-sharing-content .lsx-sharing-label { display: none; } }
+
 .lsx-sharing-content p { margin-bottom: 0; }
 
 .lsx-sharing-content .lsx-sharing-label { display: inline-block; margin-left: 10px; }

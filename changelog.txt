@@ -1,4 +1,7 @@
 ## Change log
 
+### 1.0.1
+* Dev - LSX Sharing styles moved from LSX to LSX Sharing plugin
+
 ### 1.0.0
 * First Version
