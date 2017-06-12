@@ -49,7 +49,11 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					$uix->register_pages( $pages );
 				}
 
-				add_action( 'lsx_framework_sharing_tab_content', array( $this, 'sharing_settings' ), 11 );
+				if ( class_exists( 'Tour_Operator' ) ) {
+					add_action( 'lsx_to_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
+				} else {
+					add_action( 'lsx_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
+				}
 			}
 		}
 
@@ -82,28 +86,30 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 				$default = false;
 			}
 
-			if ( ! array_key_exists( 'sharing', $tabs ) ) {
-				$tabs['sharing'] = array(
-					'page_title'        => '',
-					'page_description'  => '',
-					'menu_title'        => esc_html__( 'Sharing', 'lsx-sharing' ),
-					'template'          => LSX_SHARING_PATH . 'includes/settings/sharing.php',
-					'default'           => $default,
-				);
+			if ( ! class_exists( 'Tour_Operator' ) ) {
+				if ( ! array_key_exists( 'display', $tabs ) ) {
+					$tabs['display'] = array(
+						'page_title'        => '',
+						'page_description'  => '',
+						'menu_title'        => esc_html__( 'Display', 'lsx-sharing' ),
+						'template'          => LSX_SHARING_PATH . 'includes/settings/display.php',
+						'default'           => $default,
+					);
 
-				$default = false;
-			}
+					$default = false;
+				}
 
-			if ( ! array_key_exists( 'api', $tabs ) ) {
-				$tabs['api'] = array(
-					'page_title'        => '',
-					'page_description'  => '',
-					'menu_title'        => esc_html__( 'API', 'lsx-sharing' ),
-					'template'          => LSX_SHARING_PATH . 'includes/settings/api.php',
-					'default'           => $default,
-				);
+				if ( ! array_key_exists( 'api', $tabs ) ) {
+					$tabs['api'] = array(
+						'page_title'        => '',
+						'page_description'  => '',
+						'menu_title'        => esc_html__( 'API', 'lsx-sharing' ),
+						'template'          => LSX_SHARING_PATH . 'includes/settings/api.php',
+						'default'           => $default,
+					);
 
-				$default = false;
+					$default = false;
+				}
 			}
 
 			return $tabs;
@@ -112,18 +118,19 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 		/**
 		 * Outputs the display tabs settings.
 		 */
-		public function sharing_settings( $tab = 'general' ) {
-			if ( 'general' === $tab ) {
-				$this->general_tab();
-			} elseif ( 'buttons' === $tab ) {
-				$this->buttons_tab();
+		public function display_settings( $tab = 'general' ) {
+			if ( 'sharing' === $tab ) {
+				$this->general_fields();
+				$this->post_type_fields();
+				$this->social_network_fields();
 			}
 		}
 
 		/**
-		 * Outputs the general tab options.
+		 * Outputs the general fields.
 		 */
-		public function general_tab() { ?>
+		public function general_fields() {
+			?>
 			<tr class="form-field">
 				<th scope="row">
 					<label for="sharing_label_text"><?php esc_html_e( 'Label text', 'lsx-sharing' ); ?></label>
@@ -146,9 +153,17 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 				</td>
 			</tr>
 			-->
+			<?php
+		}
+
+		/**
+		 * Outputs the post type fields.
+		 */
+		public function post_type_fields() {
+			?>
 			<tr class="form-field">
 				<th scope="row" colspan="2">
-					<h3><?php esc_html_e( 'Disable share buttons on (post types)', 'lsx-sharing' ); ?></h3>
+					<h3><?php esc_html_e( 'Disable share buttons by post type', 'lsx-sharing' ); ?></h3>
 				</th>
 			</tr>
 			<?php
@@ -174,9 +189,15 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 		<?php }
 
 		/**
-		 * Outputs the buttons tab options.
+		 * Outputs the social network fields.
 		 */
-		public function buttons_tab() { ?>
+		public function social_network_fields() {
+			?>
+			<tr class="form-field">
+				<th scope="row" colspan="2">
+					<h3><?php esc_html_e( 'Disable share buttons by social network', 'lsx-sharing' ); ?></h3>
+				</th>
+			</tr>
 			<tr class="form-field">
 				<th scope="row">
 					<label for="sharing_disable_facebook"><?php esc_html_e( 'Disable Facebook', 'lsx-sharing' ); ?></label>
