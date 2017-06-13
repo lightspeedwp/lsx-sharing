@@ -20,6 +20,7 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		 * @var string
 		 */
 		public $services = array(
+			'email',
 			'facebook',
 			'twitter',
 			'pinterest',
@@ -42,7 +43,7 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 				return;
 			}
 
-			if ( isset( $this->options['sharing'] ) && ! empty( $this->options['sharing'][ 'sharing_disable_' . $service ] ) ) {
+			if ( isset( $this->options['display'] ) && ! empty( $this->options['display'][ 'sharing_disable_' . $service ] ) ) {
 				return;
 			}
 
@@ -57,13 +58,23 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 				return '';
 			}
 
-			if ( 'facebook' === $this->service ) {
+			if ( 'email' === $this->service ) {
+				return $this->get_link_email( $post );
+			} elseif ( 'facebook' === $this->service ) {
 				return $this->get_link_facebook( $post );
 			} elseif ( 'twitter' === $this->service ) {
 				return $this->get_link_twitter( $post );
 			} elseif ( 'pinterest' === $this->service ) {
 				return $this->get_link_pinterest( $post );
 			}
+		}
+
+		/**
+		 * Get email link to share.
+		 */
+		public function get_link_email( $post ) {
+			$permalink = get_permalink( $post->ID );
+			return $permalink;
 		}
 
 		/**
@@ -106,18 +117,19 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		 * Get Pinterest link to share.
 		 */
 		public function get_link_pinterest( $post ) {
-
 			$permalink = get_permalink( $post->ID );
 			$title     = apply_filters( 'the_title', $post->post_title );
+
 			if ( ! has_post_thumbnail( $post ) ) {
-				if(class_exists('LSX_TO_Placeholders')) {
-					$image = LSX_TO_Placeholders::placeholder_url(null, $post->post_type);
-				}else if(class_exists('LSX_Placeholders')){
-					$image = LSX_Placeholders::placeholder_url(null, $post->post_type);
+				if ( class_exists( 'LSX_TO_Placeholders' ) ) {
+					$image = LSX_TO_Placeholders::placeholder_url( null, $post->post_type );
+				} elseif ( class_exists( 'LSX_Placeholders' ) ) {
+					$image = LSX_Placeholders::placeholder_url( null, $post->post_type );
 				}
-			}else {
-				$image = get_the_post_thumbnail_url($post->ID, 'large');
+			} else {
+				$image = get_the_post_thumbnail_url( $post->ID, 'large' );
 			}
+
 			return 'https://www.pinterest.com/pin/create/button/?url=' . rawurlencode( $permalink ) . '&media=' . rawurlencode( $image ) . '&description=' . rawurlencode( $title );
 		}
 

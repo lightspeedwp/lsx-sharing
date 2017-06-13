@@ -75,6 +75,14 @@
 			margin-right: 0;
 		}
 
+		&.lsx-sharing-button-email {
+			.fa {
+				&:before {
+					content: '\f0e0';
+				}
+			}
+		}
+
 		&.lsx-sharing-button-facebook {
 			.fa {
 				&:before {
