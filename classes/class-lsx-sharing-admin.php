@@ -136,11 +136,15 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					<label for="sharing_label_text"><?php esc_html_e( 'Label text', 'lsx-sharing' ); ?></label>
 				</th>
 				<td>
-					{{#if sharing_label_text}}
-						<input type="text" value="{{sharing_label_text}}" name="sharing_label_text" />
-					{{else}}
-						<input type="text" value="Share this:" name="sharing_label_text" />
-					{{/if}}
+					<input type="text" {{#if sharing_label_text}} value="{{sharing_label_text}}" {{/if}} name="sharing_label_text" />
+				</td>
+			</tr>
+			<tr class="form-field">
+				<th scope="row">
+					<label for="sharing_email_form_id"><?php esc_html_e( 'Caldera Form ID (e-mail sharing)', 'lsx-sharing' ); ?></label>
+				</th>
+				<td>
+					<input type="text" {{#if sharing_email_form_id}} value="{{sharing_email_form_id}}" {{/if}} name="sharing_email_form_id" />
 				</td>
 			</tr>
 			<?php /*<!--
@@ -197,6 +201,15 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 				<th scope="row" colspan="2">
 					<h3><?php esc_html_e( 'Disable share buttons by social network', 'lsx-sharing' ); ?></h3>
 				</th>
+			</tr>
+			<tr class="form-field">
+				<th scope="row">
+					<label for="sharing_disable_email"><?php esc_html_e( 'Disable E-mail', 'lsx-sharing' ); ?></label>
+				</th>
+				<td>
+					<input type="checkbox" {{#if sharing_disable_email}} checked="checked" {{/if}} name="sharing_disable_email" />
+					<small><?php esc_html_e( 'Disable E-mail share button.', 'lsx-sharing' ); ?></small>
+				</td>
 			</tr>
 			<tr class="form-field">
 				<th scope="row">

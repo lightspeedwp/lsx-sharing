@@ -3,12 +3,12 @@ Sharing plugin for LSX Theme.
 
 ## Shortcode
 ```
-[lsx_sharing_buttons buttons="facebook,twitter,pinterest"]
+[lsx_sharing_buttons buttons="email,facebook,twitter,pinterest"]
 ```
 
 ## PHP function
 ```
-$buttons = array( 'facebook', 'twitter', 'pinterest' );
+$buttons = array( 'email', 'facebook', 'twitter', 'pinterest' );
 $echo = false;
 $lsx_sharing->sharing_buttons( $buttons, $echo );
 ```
