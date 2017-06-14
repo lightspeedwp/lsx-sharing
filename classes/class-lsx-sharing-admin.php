@@ -143,7 +143,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					{{/if}}
 				</td>
 			</tr>
-			<!-- @TODO
+			<?php /*<!--
 			<tr class="form-field">
 				<th scope="row">
 					<label for="sharing_twitter_username"><?php esc_html_e( 'Twitter username', 'lsx-sharing' ); ?></label>
@@ -152,7 +152,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					<input type="text" {{#if sharing_twitter_username}} value="{{sharing_twitter_username}}" {{/if}} name="sharing_twitter_username" />
 				</td>
 			</tr>
-			-->
+			-->*/ ?>
 			<?php
 		}
 
