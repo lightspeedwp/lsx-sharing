@@ -175,8 +175,10 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					'public' => true,
 				) );
 
-				if ( false !== ( $key = array_search( 'attachment', $post_types, true ) ) ) {
-					unset( $post_types[$key] );
+				$key = array_search( 'attachment', $post_types, true );
+
+				if ( false !== $key ) {
+					unset( $post_types[ $key ] );
 				}
 			?>
 			<?php foreach ( $post_types as $key => $value ) : ?>
@@ -186,7 +188,15 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					</th>
 					<td>
 						<input type="checkbox" {{#if sharing_disable_pt_<?php echo esc_attr( $key ); ?>}} checked="checked" {{/if}} name="sharing_disable_pt_<?php echo esc_attr( $key ); ?>" />
-						<small><?php printf( esc_html__( 'Disable share buttons on post type: %s', 'lsx-sharing' ), esc_html( $key ) ); ?></small>
+						<small>
+							<?php
+								printf(
+									/* Translators: 1: post type */
+									esc_html__( 'Disable share buttons on post type: %s', 'lsx-sharing' ),
+									esc_html( $key )
+								);
+							?>
+						</small>
 					</td>
 				</tr>
 			<?php endforeach; ?>
