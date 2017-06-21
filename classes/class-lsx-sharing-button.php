@@ -121,8 +121,8 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 			$title     = apply_filters( 'the_title', $post->post_title );
 
 			if ( ! has_post_thumbnail( $post ) ) {
-				if ( class_exists( 'LSX_TO_Placeholders' ) ) {
-					$image = LSX_TO_Placeholders::placeholder_url( null, $post->post_type );
+				if ( class_exists( 'lsx\legacy\Placeholders' ) ) {
+					$image = lsx\legacy\Placeholders::placeholder_url( null, $post->post_type );
 				} elseif ( class_exists( 'LSX_Placeholders' ) ) {
 					$image = LSX_Placeholders::placeholder_url( null, $post->post_type );
 				}
