@@ -2,14 +2,25 @@
 <ruleset name="WordPress-LSX-Theme">
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<rule ref="WordPress">
+		<!-- We will not fix these -->
 		<exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed" />
 		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
 
-		<!-- WordPress VIP -->
+		<exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen" />
+		<exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd" />
+		<exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace" />
+
+		<!-- We will not fix these (WordPress VIP) -->
 		<exclude name="WordPress.VIP" />
 
-		<!-- PHP Comments -->
+		<!-- Fix on next LSX release (not override global WordPress variables) -->
+		<exclude name="WordPress.Variables.GlobalVariables.OverrideProhibited" />
+
+		<!-- Fix on next LSX release (PHP Comments) -->
 		<exclude name="Generic.Commenting" />
 		<exclude name="Squiz.Commenting" />
+
+		<!-- Fix on next LSX release (we will resolve this with the new Google Font selector) -->
+		<exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet" />
 	</rule>
 </ruleset>
