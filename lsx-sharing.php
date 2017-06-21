@@ -41,7 +41,7 @@ function lsx_sharing_activate_plugin() {
 register_activation_hook( __FILE__, 'lsx_sharing_activate_plugin' );
 
 /**
- *	Grabs the email and api key from the LSX Currency Settings.
+ * Grabs the email and api key from the LSX Currency Settings.
  */
 function lsx_sharing_options_pages_filter( $pages ) {
 	$pages[] = 'lsx-settings';
