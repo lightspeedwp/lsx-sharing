@@ -26,7 +26,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 		 * Set options.
 		 */
 		public function set_options() {
-			if ( class_exists( 'Tour_Operator' ) ) {
+			if ( function_exists( 'tour_operator' ) ) {
 				$this->options = get_option( '_lsx-to_settings', false );
 			} else {
 				$this->options = get_option( '_lsx_settings', false );
@@ -42,14 +42,14 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 		 */
 		public function create_settings_page() {
 			if ( is_admin() ) {
-				if ( ! class_exists( '\lsx\ui\uix' ) && ! class_exists( 'Tour_Operator' ) ) {
+				if ( ! class_exists( '\lsx\ui\uix' ) && ! function_exists( 'tour_operator' ) ) {
 					include_once LSX_SHARING_PATH . 'vendor/uix/uix.php';
 					$pages = $this->settings_page_array();
 					$uix = \lsx\ui\uix::get_instance( 'lsx' );
 					$uix->register_pages( $pages );
 				}
 
-				if ( class_exists( 'Tour_Operator' ) ) {
+				if ( function_exists( 'tour_operator' ) ) {
 					add_action( 'lsx_to_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
 				} else {
 					add_action( 'lsx_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
@@ -86,7 +86,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 				$default = false;
 			}
 
-			if ( ! class_exists( 'Tour_Operator' ) ) {
+			if ( ! function_exists( 'tour_operator' ) ) {
 				if ( ! array_key_exists( 'display', $tabs ) ) {
 					$tabs['display'] = array(
 						'page_title'        => '',

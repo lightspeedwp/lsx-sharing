@@ -53,7 +53,7 @@ add_filter( 'lsx_api_manager_options_pages', 'lsx_sharing_options_pages_filter',
 function lsx_sharing_api_admin_init() {
 	global $lsx_sharing_api_manager;
 
-	if ( class_exists( 'Tour_Operator' ) ) {
+	if ( function_exists( 'tour_operator' ) ) {
 		$options = get_option( '_lsx-to_settings', false );
 	} else {
 		$options = get_option( '_lsx_settings', false );

@@ -36,7 +36,7 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 		 * Set options.
 		 */
 		public function set_options() {
-			if ( class_exists( 'Tour_Operator' ) ) {
+			if ( function_exists( 'tour_operator' ) ) {
 				$this->options = get_option( '_lsx-to_settings', false );
 			} else {
 				$this->options = get_option( '_lsx_settings', false );
