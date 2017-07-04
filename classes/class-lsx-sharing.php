@@ -154,7 +154,7 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 
 			$form_id = $this->options['display']['sharing_email_form_id'];
 			?>
-			<div id="lsx-sharing-email" class="modal fade" role="dialog">
+			<div class="lsx-modal modal fade" id="lsx-sharing-email" role="dialog">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
