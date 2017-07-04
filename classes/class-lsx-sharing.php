@@ -157,8 +157,8 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 			<div class="lsx-modal modal fade" id="lsx-sharing-email" role="dialog">
 				<div class="modal-dialog">
 					<div class="modal-content">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
 							<h4 class="modal-title"><?php esc_html_e( 'Share', 'lsx-sharing' ); ?></h4>
 						</div>
 						<div class="modal-body">
