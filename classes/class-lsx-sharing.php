@@ -26,7 +26,7 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 		 */
 		public function __construct() {
 			add_action( 'init', array( $this, 'set_options' ), 50 );
-			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 999 );
 			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
 			add_action( 'wp_footer', array( $this, 'add_email_modal' ) );
 			add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
