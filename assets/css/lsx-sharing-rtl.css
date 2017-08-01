@@ -8,6 +8,10 @@
 
 @media only screen and (max-width: 767px) { .post-tags-wrapper .post-tags + .lsx-sharing-content { text-align: right; } }
 
+body.single-post:not(.lsx) .lsx-sharing-content { margin-bottom: 20px; }
+
+body.single-product.woocommerce-active .lsx-sharing-content { margin-top: 20px; }
+
 .lsx-sharing-content .lsx-sharing-label { font-size: 90%; line-height: 25px; }
 
 .lsx-sharing-content .lsx-sharing-label:before { content: '\f1e0'; border-top: none; display: inline-block; font-family: fontawesome; font-weight: normal; font-size: 16px; margin-left: 8px; margin-bottom: 0; min-width: auto; width: auto; }

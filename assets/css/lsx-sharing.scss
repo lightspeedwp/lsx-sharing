@@ -33,6 +33,12 @@
 		}
 	}
 
+	// Storefront
+	body.single-post:not(.lsx) & { margin-bottom: 20px; }
+
+	// WooCommerce
+	body.single-product.woocommerce-active & { margin-top: 20px; }
+
 	.lsx-sharing-label {
 		font-size: 90%;
 		line-height: 25px;
