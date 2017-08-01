@@ -1,25 +1,18 @@
 <?php
 /**
- * LSX_Sharing
+ * LSX_Sharing_Frontend
  *
  * @package lsx-sharing
  */
 
-if ( ! class_exists( 'LSX_Sharing' ) ) {
+if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 
 	/**
-	 * LSX Sharing plugin class.
+	 * LSX Sharing front-end class.
 	 *
 	 * @package lsx-sharing
 	 */
-	class LSX_Sharing {
-
-		/**
-		 * Plugin slug.
-		 *
-		 * @var string
-		 */
-		public $plugin_slug = 'lsx-sharing';
+	class LSX_Sharing_Frontend {
 
 		/**
 		 * Constructor.
@@ -27,9 +20,17 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 		public function __construct() {
 			add_action( 'init', array( $this, 'set_options' ), 50 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 999 );
-			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
+
 			add_action( 'wp_footer', array( $this, 'add_email_modal' ) );
 			add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
+
+			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
+
+			// Storefront (storefront_loop_post, storefront_single_post)
+			add_action( 'storefront_post_content_before', array( $this, 'sharing_buttons_template' ), 20 );
+
+			// WooCommerce
+			add_action( 'woocommerce_share', array( $this, 'sharing_buttons_template' ) );
 		}
 
 		/**
@@ -142,6 +143,13 @@ if ( ! class_exists( 'LSX_Sharing' ) ) {
 			if ( is_array( $buttons ) && count( $buttons ) > 0 ) {
 				return $this->sharing_buttons( $buttons );
 			}
+		}
+
+		/**
+		 * Display buttons (template hook).
+		 */
+		public function sharing_buttons_template() {
+			echo wp_kses_post( $this->sharing_buttons() );
 		}
 
 		/**

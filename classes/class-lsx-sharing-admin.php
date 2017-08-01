@@ -14,6 +14,9 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 	 */
 	class LSX_Sharing_Admin {
 
+		/**
+		 * Constructor.
+		 */
 		public function __construct() {
 			add_action( 'init', array( $this, 'set_options' ), 50 );
 			add_action( 'init', array( $this, 'create_settings_page' ), 100 );

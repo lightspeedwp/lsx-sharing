@@ -14,75 +14,75 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: classes/class-lsx-sharing-admin.php:68, classes/class-lsx-sharing-admin.php:69
+#: classes/class-lsx-sharing-admin.php:71, classes/class-lsx-sharing-admin.php:72
 msgid "Theme Options"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:73
+#: classes/class-lsx-sharing-admin.php:76
 msgid "Save Changes"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:94
+#: classes/class-lsx-sharing-admin.php:97
 msgid "Display"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:106
+#: classes/class-lsx-sharing-admin.php:109
 msgid "API"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:136
+#: classes/class-lsx-sharing-admin.php:139
 msgid "Label text"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:144
+#: classes/class-lsx-sharing-admin.php:147
 msgid "Caldera Form ID (e-mail sharing)"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:170
+#: classes/class-lsx-sharing-admin.php:173
 msgid "Disable share buttons by post type"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:195
+#: classes/class-lsx-sharing-admin.php:198
 msgid "Disable share buttons on post type: %s"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:212
+#: classes/class-lsx-sharing-admin.php:215
 msgid "Disable share buttons by social network"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:217
+#: classes/class-lsx-sharing-admin.php:220
 msgid "Disable E-mail"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:221
+#: classes/class-lsx-sharing-admin.php:224
 msgid "Disable E-mail share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:226
+#: classes/class-lsx-sharing-admin.php:229
 msgid "Disable Facebook"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:230
+#: classes/class-lsx-sharing-admin.php:233
 msgid "Disable Facebook share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:235
+#: classes/class-lsx-sharing-admin.php:238
 msgid "Disable Twitter"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:239
+#: classes/class-lsx-sharing-admin.php:242
 msgid "Disable Twitter share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:244
+#: classes/class-lsx-sharing-admin.php:247
 msgid "Disable Pinterest"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:248
+#: classes/class-lsx-sharing-admin.php:251
 msgid "Disable Pinterest share button."
 msgstr ""
 
-#: classes/class-lsx-sharing.php:162
+#: classes/class-lsx-sharing-frontend.php:170
 msgid "Share"
 msgstr ""
 
