@@ -99,6 +99,7 @@ add_action( 'admin_init', 'lsx_sharing_api_admin_init' );
 
 /* ======================= Below is the Plugin Class init ========================= */
 
+require_once( LSX_SHARING_PATH . '/classes/class-lsx-sharing.php' );
 require_once( LSX_SHARING_PATH . '/classes/class-lsx-sharing-admin.php' );
 require_once( LSX_SHARING_PATH . '/classes/class-lsx-sharing-frontend.php' );
 require_once( LSX_SHARING_PATH . '/classes/class-lsx-sharing-button.php' );
