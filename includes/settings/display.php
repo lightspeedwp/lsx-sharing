@@ -100,7 +100,7 @@
 		</div>
 	<?php } ?>
 
-	<?php if ( class_exists( 'LSX_Sharing' ) ) { ?>
+	<?php //if ( class_exists( 'LSX_Sharing' ) ) { ?>
 		<?php $class_active = ( class_exists( 'LSX_Blog_Customizer' ) || class_exists( 'LSX_Banners' ) || class_exists( 'LSX_Currencies' ) || class_exists( 'LSX_Team' ) || class_exists( 'LSX_Testimonials' ) || class_exists( 'LSX_Projects' ) ) ? '' : 'active' ?>
 		<div id="ui-sharing" class="ui-tab <?php echo esc_attr( $class_active ) ?>">
 			<table class="form-table">
@@ -109,7 +109,7 @@
 				</tbody>
 			</table>
 		</div>
-	<?php } ?>
+	<?php //} ?>
 
 	<?php do_action( 'lsx_framework_display_tab_bottom', 'display' ); ?>
 </div>
