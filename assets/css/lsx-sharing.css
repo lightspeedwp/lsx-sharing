@@ -32,9 +32,9 @@ body.single-product.woocommerce-active .lsx-sharing-content { margin-top: 20px; 
 
 .lsx-sharing-content .lsx-sharing-button:last-child { margin-right: 0; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):visited { background-color: #000000; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):visited { background-color: #4a4a4a; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):focus { background-color: lighter(#000000, 15%); color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):focus { background-color: #242424; color: white; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email .fa:before { content: '\f0e0'; }
 
