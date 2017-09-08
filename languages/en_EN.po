@@ -86,24 +86,16 @@ msgstr ""
 msgid "Share"
 msgstr ""
 
-#: includes/settings/api.php:3
+#: includes/settings/api.php:11
 msgid "Settings"
 msgstr ""
 
-#: includes/settings/api.php:4
+#: includes/settings/api.php:12
 msgid "License Keys"
 msgstr ""
 
-#: includes/settings/api.php:25
-msgid "Enter the license keys for your add-ons in the boxes below."
-msgstr ""
-
-#: includes/settings/api.php:30
-msgid "You have not installed any add-ons yet. View our list of add-ons"
-msgstr ""
-
-#: includes/settings/api.php:30
-msgid "here"
+#: includes/settings/api.php:17
+msgid "Please enter your user details (email address, API key, username, etc) below as required for the extensions that you have installed."
 msgstr ""
 
 #: includes/settings/display.php:4

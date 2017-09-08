@@ -106,6 +106,22 @@
 		}
 
 		&.lsx-sharing-button-email {
+			a:not(.btn) {
+				&,
+				&:active,
+				&:visited {
+					background-color: #000000;
+					color: white;
+				}
+
+				&:hover,
+				&:hover:active,
+				&:focus {
+					background-color: lighter(#000000, 15%);
+					color: white;
+				}
+			}
+
 			.fa {
 				&:before {
 					content: '\f0e0';
