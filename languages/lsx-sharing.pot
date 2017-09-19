@@ -119,9 +119,13 @@ msgid "Projects"
 msgstr ""
 
 #: includes/settings/display.php:29
-msgid "Blog Customizer (posts widget)"
+msgid "Services"
 msgstr ""
 
 #: includes/settings/display.php:34
+msgid "Blog Customizer (posts widget)"
+msgstr ""
+
+#: includes/settings/display.php:39
 msgid "Sharing"
 msgstr ""
