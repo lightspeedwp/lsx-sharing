@@ -1,6 +1,6 @@
 {
   "name": "lsx-sharing",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sharing plugin for LSX Theme.",
   "main": "gulpfile.js",
   "repository": {
