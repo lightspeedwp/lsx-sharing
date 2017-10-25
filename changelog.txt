@@ -2,6 +2,7 @@
 
 ### 1.0.3
 * Dev - Added compatibility with LSX Videos
+* Dev - Added compatibility with LSX Search
 
 ### 1.0.2
 * Dev - Add template hook for Storefront
