@@ -109,7 +109,7 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 
 								$sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr( $button ) . '"><a href="#lsx-sharing-email" data-toggle="modal" data-link="' . esc_url( $url ) . '"><span class="fa" aria-hidden="true"></span></a></span>';
 							} else {
-								$sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr( $button ) . '"><a href="' . esc_url( $url ) . '" target="_blank"><span class="fa" aria-hidden="true"></span></a></span>';
+								$sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr( $button ) . '"><a href="' . esc_url( $url ) . '" target="_blank" rel="noopener noreferrer"><span class="fa" aria-hidden="true"></span></a></span>';
 							}
 						}
 					}
