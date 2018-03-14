@@ -48,7 +48,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 				if ( ! class_exists( '\lsx\ui\uix' ) && ! function_exists( 'tour_operator' ) ) {
 					include_once LSX_SHARING_PATH . 'vendor/uix/uix.php';
 					$pages = $this->settings_page_array();
-					$uix   = \lsx\ui\uix::get_instance( 'lsx' );
+					$uix = \lsx\ui\uix::get_instance( 'lsx' );
 					$uix->register_pages( $pages );
 				}
 
@@ -67,7 +67,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 			$tabs = apply_filters( 'lsx_framework_settings_tabs', array() );
 
 			return array(
-				'settings' => array(
+				'settings'  => array(
 					'page_title'  => esc_html__( 'Theme Options', 'lsx-sharing' ),
 					'menu_title'  => esc_html__( 'Theme Options', 'lsx-sharing' ),
 					'capability'  => 'manage_options',
@@ -92,11 +92,11 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 			if ( ! function_exists( 'tour_operator' ) ) {
 				if ( ! array_key_exists( 'display', $tabs ) ) {
 					$tabs['display'] = array(
-						'page_title'       => '',
-						'page_description' => '',
-						'menu_title'       => esc_html__( 'Display', 'lsx-sharing' ),
-						'template'         => LSX_SHARING_PATH . 'includes/settings/display.php',
-						'default'          => $default,
+						'page_title'        => '',
+						'page_description'  => '',
+						'menu_title'        => esc_html__( 'Display', 'lsx-sharing' ),
+						'template'          => LSX_SHARING_PATH . 'includes/settings/display.php',
+						'default'           => $default,
 					);
 
 					$default = false;
@@ -104,11 +104,11 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 
 				if ( ! array_key_exists( 'api', $tabs ) ) {
 					$tabs['api'] = array(
-						'page_title'       => '',
-						'page_description' => '',
-						'menu_title'       => esc_html__( 'API', 'lsx-sharing' ),
-						'template'         => LSX_SHARING_PATH . 'includes/settings/api.php',
-						'default'          => $default,
+						'page_title'        => '',
+						'page_description'  => '',
+						'menu_title'        => esc_html__( 'API', 'lsx-sharing' ),
+						'template'          => LSX_SHARING_PATH . 'includes/settings/api.php',
+						'default'           => $default,
 					);
 
 					$default = false;
@@ -150,10 +150,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					<input type="text" {{#if sharing_email_form_id}} value="{{sharing_email_form_id}}" {{/if}} name="sharing_email_form_id" />
 				</td>
 			</tr>
-			<?php
-
-			/*
-			<!--
+			<?php /*<!--
 			<tr class="form-field">
 				<th scope="row">
 					<label for="sharing_twitter_username"><?php esc_html_e( 'Twitter username', 'lsx-sharing' ); ?></label>
@@ -162,10 +159,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					<input type="text" {{#if sharing_twitter_username}} value="{{sharing_twitter_username}}" {{/if}} name="sharing_twitter_username" />
 				</td>
 			</tr>
-			-->
-			*/
-
-			?>
+			-->*/ ?>
 			<?php
 		}
 
@@ -186,9 +180,9 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 
 				$key = array_search( 'attachment', $post_types, true );
 
-			if ( false !== $key ) {
+				if ( false !== $key ) {
 					unset( $post_types[ $key ] );
-			}
+				}
 			?>
 			<?php foreach ( $post_types as $key => $value ) : ?>
 				<tr class="form-field">
@@ -209,8 +203,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					</td>
 				</tr>
 			<?php endforeach; ?>
-		<?php
-		}
+		<?php }
 
 		/**
 		 * Outputs the social network fields.
@@ -258,8 +251,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 					<small><?php esc_html_e( 'Disable Pinterest share button.', 'lsx-sharing' ); ?></small>
 				</td>
 			</tr>
-		<?php
-		}
+		<?php }
 
 	}
 
