@@ -26,10 +26,10 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 
 			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
 
-			// Storefront (storefront_loop_post, storefront_single_post)
+			// Storefront (storefront_loop_post, storefront_single_post).
 			add_action( 'storefront_post_content_before', array( $this, 'sharing_buttons_template' ), 20 );
 
-			// WooCommerce
+			// WooCommerce.
 			add_action( 'woocommerce_share', array( $this, 'sharing_buttons_template' ) );
 		}
 
@@ -138,7 +138,7 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 			}
 
 			$no_whitespaces = preg_replace( '/\s*,\s*/', ',', filter_var( $atts['buttons'], FILTER_SANITIZE_STRING ) );
-			$buttons = explode( ',', $no_whitespaces );
+			$buttons        = explode( ',', $no_whitespaces );
 
 			if ( is_array( $buttons ) && count( $buttons ) > 0 ) {
 				return $this->sharing_buttons( $buttons );
@@ -183,7 +183,7 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 		 */
 		public function wp_kses_allowed_html( $allowedtags, $context ) {
 			$allowedtags['a']['data-toggle'] = true;
-			$allowedtags['a']['data-link'] = true;
+			$allowedtags['a']['data-link']   = true;
 			return $allowedtags;
 		}
 
