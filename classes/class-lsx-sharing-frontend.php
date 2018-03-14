@@ -156,7 +156,7 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 		 * Add email modal.
 		 */
 		public function add_email_modal() {
-			if ( ! isset( $this->options['display'] ) || empty( $this->options['display']['sharing_email_form_id'] ) ) {
+			if ( ! isset( $this->options['display'] ) || empty( $this->options['display']['sharing_email_form_id'] ) || ! is_single() ) {
 				return '';
 			}
 
