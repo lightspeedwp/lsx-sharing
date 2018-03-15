@@ -1,7 +1,7 @@
 === Sharing ===
 Contributors: feedmymedia
 Donate link: https://www.lsdev.biz/product/lsx-sharing/
-Tags: sharing, post type, front-end
+Tags: LSX theme, sharing, social sharing, sharing plugin, share posts
 Requires at least: 4.3
 Tested up to: 4.9.4
 Requires PHP: 7.0
@@ -42,7 +42,11 @@ Bugs can be reported either in our support forum or preferably on the [LSX Shari
 = The LSX Sharing plugin is awesome! Can I contribute? =
 Yes you can! Join in on our [GitHub repository](https://github.com/lightspeeddevelopment/lsx-sharing) :)
 
+= Credit =
+The LSX sharing plugin was developed with the use of Jetpack & Sharedaddy’s open source software. 
+
+
 == Screenshots ==
 
 1. Sharing Settings Panel
-2. SHaring Buttons 
+2. Sharing Buttons 
