@@ -8,7 +8,7 @@ Requires PHP: 7.0
 Stable tag: 1.0.0
 License: GPLv3
 
-LSX Sharing adds buttons to your posts that your readers can use to share your content on Facebook, Twitter and Pinterest.
+LSX Sharing adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
 
 = Works with the LSX Theme =
 We've also made a fantastic [theme](https://www.lsdev.biz/product/lsx-wordpress-theme/) that work well with the LSX Sharing plugin.
@@ -27,7 +27,7 @@ We offer premium support for this plugin. Premium support that can be purchased 
 == Frequently Asked Questions ==
 
 = Where can I find LSX Sharing plugin documentation and user guides? =
-For help setting up and configuring the Sharing plugin please refer to our [user guide](https://www.lsdev.biz/documentation/lsx/sharing-extension/)
+For help setting up and configuring the Sharing plugin please refer to our [user guide](https://www.lsdev.biz/documentation/lsx/lsx-sharing-extension/)
 
 = Where can I get support or talk to other users =
 If you get stuck, you can ask for help in the [LSX Sharing plugin forum](https://wordpress.org/support/plugin/lsx-sharing).
