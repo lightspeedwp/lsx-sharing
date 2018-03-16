@@ -239,7 +239,7 @@ class uix {
 
 			$config = json_decode( stripslashes_deep( ! empty( $_POST['config'] ) ), true );
 
-			if ( wp_verify_nonce( ! empty( $_POST[‘uix_setup’] ) $this->plugin_slug ) ) {
+			if ( wp_verify_nonce( ! empty( $_POST[‘uix_setup’] ), $this->plugin_slug ) ) {
 
 				$page_slug = sanitize_text_field( wp_unslash( ! empty( $_POST['page_slug'] ) ) );
 
