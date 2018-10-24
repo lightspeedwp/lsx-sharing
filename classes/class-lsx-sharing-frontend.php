@@ -73,16 +73,24 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 		/**
 		 * Display/return sharing buttons.
 		 */
-		public function sharing_buttons( $buttons = array( 'email', 'facebook', 'twitter', 'pinterest' ), $echo = false ) {
+		public function sharing_buttons( $buttons = array( 'email', 'facebook', 'twitter', 'pinterest' ), $echo = false, $post_id = false ) {
 			$sharing_content = '';
 
 			if ( ( is_preview() || is_admin() ) && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
 				return '';
 			}
 
+			//Set our variables
 			global $post;
+			$share_post = $post;
+			if ( false !== $post_id ) {
+				$share_post = get_post( $post_id );
+				$post_type = get_post_type( $post_id );
+			} else {
+				$post_type = get_post_type();
+			}
 
-			$post_type = get_post_type();
+
 
 			if ( isset( $this->options['display'] ) && ! empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) ) {
 				return '';
@@ -99,7 +107,7 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 					$button_obj = new LSX_Sharing_Button( $button, $this->options );
 
 					if ( ! empty( $button_obj ) ) {
-						$url = $button_obj->get_link( $post );
+						$url = $button_obj->get_link( $share_post );
 
 						if ( ! empty( $url ) ) {
 							if ( 'email' === $button ) {

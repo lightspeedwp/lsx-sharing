@@ -2,6 +2,7 @@
 
 ###
 * Dev - Added in 3 filters for the button permalinks lsx_sharing_{social_media_name}_url
+* Dev - Allowing the Sharing buttons to be sent a post_id for output.
 
 ### 1.0.3
 * Dev - Added compatibility with LSX Videos
