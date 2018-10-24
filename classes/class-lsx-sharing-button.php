@@ -82,6 +82,7 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		 */
 		public function get_link_facebook( $post ) {
 			$permalink = get_permalink( $post->ID );
+			$permalink = apply_filters( 'lsx_sharing_facebook_url', $permalink, $post );
 			$title     = apply_filters( 'the_title', $post->post_title );
 
 			return 'https://www.facebook.com/sharer.php?display=page&u=' . rawurlencode( $permalink ) . '&t=' . rawurlencode( $title );
@@ -92,6 +93,7 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		 */
 		public function get_link_twitter( $post ) {
 			$permalink = get_permalink( $post->ID );
+			$permalink = apply_filters( 'lsx_sharing_twitter_url', $permalink, $post );
 			$title     = apply_filters( 'the_title', $post->post_title );
 
 			if ( function_exists( 'mb_stripos' ) ) {
@@ -118,6 +120,7 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		 */
 		public function get_link_pinterest( $post ) {
 			$permalink = get_permalink( $post->ID );
+			$permalink = apply_filters( 'lsx_sharing_pinterest_url', $permalink, $post );
 			$title     = apply_filters( 'the_title', $post->post_title );
 
 			if ( ! has_post_thumbnail( $post ) ) {

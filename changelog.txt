@@ -1,5 +1,8 @@
 ## Change log
 
+###
+* Dev - Added in 3 filters for the button permalinks lsx_sharing_{social_media_name}_url
+
 ### 1.0.3
 * Dev - Added compatibility with LSX Videos
 * Dev - Added compatibility with LSX Search
