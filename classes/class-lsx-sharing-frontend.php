@@ -90,8 +90,6 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 				$post_type = get_post_type();
 			}
 
-
-
 			if ( isset( $this->options['display'] ) && ! empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) ) {
 				return '';
 			}
