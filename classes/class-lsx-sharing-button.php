@@ -20,7 +20,6 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		 * @var string
 		 */
 		public $services = array(
-			'email',
 			'facebook',
 			'twitter',
 			'pinterest',
@@ -67,14 +66,6 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 			} elseif ( 'pinterest' === $this->service ) {
 				return $this->get_link_pinterest( $post );
 			}
-		}
-
-		/**
-		 * Get email link to share.
-		 */
-		public function get_link_email( $post ) {
-			$permalink = get_permalink( $post->ID );
-			return $permalink;
 		}
 
 		/**

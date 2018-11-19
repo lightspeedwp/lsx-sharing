@@ -21,7 +21,6 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 			add_action( 'init', array( $this, 'set_options' ), 50 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 999 );
 
-			add_action( 'wp_footer', array( $this, 'add_email_modal' ) );
 			add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
 
 			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
@@ -73,7 +72,7 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 		/**
 		 * Display/return sharing buttons.
 		 */
-		public function sharing_buttons( $buttons = array( 'email', 'facebook', 'twitter', 'pinterest' ), $echo = false, $post_id = false ) {
+		public function sharing_buttons( $buttons = array( 'facebook', 'twitter', 'pinterest' ), $echo = false, $post_id = false ) {
 			$sharing_content = '';
 
 			if ( ( is_preview() || is_admin() ) && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
@@ -155,33 +154,6 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 		 */
 		public function sharing_buttons_template() {
 			echo wp_kses_post( $this->sharing_buttons() );
-		}
-
-		/**
-		 * Add email modal.
-		 */
-		public function add_email_modal() {
-			$post_type = get_post_type();
-			if ( ! isset( $this->options['display'] ) || empty( $this->options['display']['sharing_email_form_id'] ) || ! empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) || ! is_single() ) {
-				return '';
-			}
-
-			$form_id = $this->options['display']['sharing_email_form_id'];
-			?>
-			<div class="lsx-modal modal fade" id="lsx-sharing-email" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<div class="modal-header">
-							<h4 class="modal-title"><?php esc_html_e( 'Share', 'lsx-sharing' ); ?></h4>
-						</div>
-						<div class="modal-body">
-							<?php echo do_shortcode( '[caldera_form id="' . $form_id . '"]' ); ?>
-						</div>
-					</div>
-				</div>
-			</div>
-			<?php
 		}
 
 		/**

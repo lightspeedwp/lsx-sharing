@@ -1,6 +1,9 @@
 ## Change log
 
-###
+### 1.1
+* Stable Release
+
+### 1.0.4
 * Dev - Added in 3 filters for the button permalinks lsx_sharing_{social_media_name}_url
 * Dev - Allowing the Sharing buttons to be sent a post_id for output.
 
