@@ -1,5 +1,8 @@
 ## Change log
 
+### 1.1.1
+* Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
+
 ### 1.1
 * Stable Release
 
