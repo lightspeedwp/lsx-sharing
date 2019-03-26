@@ -1,4 +1,4 @@
-#LSX Sharing
+# LSX Sharing
 
 ## Description
 LSX Sharing adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
