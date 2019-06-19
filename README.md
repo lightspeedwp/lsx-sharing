@@ -35,6 +35,9 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 ## Changelog
 
+### 1.1.1
+* Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
+
 ### 1.1.0
 * Dev -  Removing API file.
 * Dev - making sure that there are no code sniffer errors.
