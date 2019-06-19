@@ -1,4 +1,4 @@
-<p align="center"><a target="_blank" href="https://lsx.lsdev.biz/"><img width="100px;" src="https://lsx.lsdev.biz/wp-content/uploads/2019/03/Icon_Sharing.svg" alt="LSX Sharing"></a>
+<p align="center"><a target="_blank" href="https://lsx.lsdev.biz/"><img width="100px;" src="https://lsx.lsdev.biz/wp-content/uploads/2019/06/sharing_blue.svg" alt="LSX Sharing"></a>
 </p>
 <h1 align="center">LSX Sharing</h1>
 
