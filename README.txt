@@ -1,8 +1,8 @@
-=== Sharing ===
+=== LSX Sharing ===
 Contributors: feedmymedia
 Donate link: https://www.donate.lsdev.biz/
 Tags: LSX theme, Gutenberg, sharing, social sharing, wordpress blocks
-Requires at least: 4.3
+Requires at least: 4.7
 Tested up to: 5.2.1
 Requires PHP: 7.0
 Stable tag: 1.1.1
@@ -11,10 +11,10 @@ License: GPLv3
 [LSX Sharing Extension](https://lsx.lsdev.biz/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
 
 ## Works with the LSX Theme
-Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Blog Customizer, improving internal linking, website SEO and user experience! 
+Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with LSX Sharing, improving internal linking, website SEO and user experience! 
 
 ## Gutenberg Compatible Plugin
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Mega Menu Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
+Have you updated to the new WordPress Gutenberg editor? We've got you covered! Our software has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
 
 ## It's free, and always will be.
 We’re firm believers in open source - that’s why the [LSX Sharing](https://lsx.lsdev.biz/extensions/sharing/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
