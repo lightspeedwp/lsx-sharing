@@ -1,7 +1,7 @@
 === LSX Sharing ===
 Contributors: feedmymedia
 Donate link: https://www.donate.lsdev.biz/
-Tags: LSX theme, Gutenberg, sharing, social sharing, wordpress blocks
+Tags: lsx, Gutenberg, sharing, social sharing, wordpress blocks
 Requires at least: 4.7
 Tested up to: 5.2.1
 Requires PHP: 7.0
