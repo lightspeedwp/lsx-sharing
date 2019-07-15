@@ -1,4 +1,4 @@
-# Copyright (C) 2017 lsx-sharing
+# Copyright (C) 2019 lsx-sharing
 # This file is distributed under the same license as the lsx-sharing package.
 msgid ""
 msgstr ""
@@ -34,106 +34,79 @@ msgstr ""
 msgid "Label text"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:147
-msgid "Caldera Form ID (e-mail sharing)"
-msgstr ""
-
-#: classes/class-lsx-sharing-admin.php:173
+#: classes/class-lsx-sharing-admin.php:171
 msgid "Disable share buttons by post type"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:198
+#. translators: 1: post type
+#: classes/class-lsx-sharing-admin.php:196
 msgid "Disable share buttons on post type: %s"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:215
+#: classes/class-lsx-sharing-admin.php:214
 msgid "Disable share buttons by social network"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:220
-msgid "Disable E-mail"
-msgstr ""
-
-#: classes/class-lsx-sharing-admin.php:224
-msgid "Disable E-mail share button."
-msgstr ""
-
-#: classes/class-lsx-sharing-admin.php:229
+#: classes/class-lsx-sharing-admin.php:219
 msgid "Disable Facebook"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:233
+#: classes/class-lsx-sharing-admin.php:223
 msgid "Disable Facebook share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:238
+#: classes/class-lsx-sharing-admin.php:228
 msgid "Disable Twitter"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:242
+#: classes/class-lsx-sharing-admin.php:232
 msgid "Disable Twitter share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:247
+#: classes/class-lsx-sharing-admin.php:237
 msgid "Disable Pinterest"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:251
+#: classes/class-lsx-sharing-admin.php:241
 msgid "Disable Pinterest share button."
-msgstr ""
-
-#: classes/class-lsx-sharing-frontend.php:170
-msgid "Share"
-msgstr ""
-
-#: includes/settings/api.php:11
-msgid "Settings"
-msgstr ""
-
-#: includes/settings/api.php:12
-msgid "License Keys"
-msgstr ""
-
-#: includes/settings/api.php:17
-msgid "Please enter your user details (email address, API key, username, etc) below as required for the extensions that you have installed."
 msgstr ""
 
 #: includes/settings/display.php:4
 msgid "Placeholders"
 msgstr ""
 
-#: includes/settings/display.php:9
+#: includes/settings/display.php:10
 msgid "Currencies"
 msgstr ""
 
-#: includes/settings/display.php:14
+#: includes/settings/display.php:16
 msgid "Team"
 msgstr ""
 
-#: includes/settings/display.php:19
+#: includes/settings/display.php:22
 msgid "Testimonials"
 msgstr ""
 
-#: includes/settings/display.php:24
+#: includes/settings/display.php:28
 msgid "Projects"
 msgstr ""
 
-#: includes/settings/display.php:29
+#: includes/settings/display.php:35
 msgid "Services"
 msgstr ""
 
-#: includes/settings/display.php:34
+#: includes/settings/display.php:41
 msgid "Blog Customizer (posts widget)"
 msgstr ""
 
-#: includes/settings/display.php:39
+#: includes/settings/display.php:47
 msgid "Sharing"
 msgstr ""
 
-#: includes/settings/display.php:44
+#: includes/settings/display.php:53
 msgid "Videos"
 msgstr ""
 
-#: includes/settings/display.php:49
+#: includes/settings/display.php:59
 msgid "Search"
 msgstr ""

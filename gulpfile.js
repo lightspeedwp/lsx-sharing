@@ -12,7 +12,6 @@ const plumber      = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
 const gutil        = require('gulp-util');
 const rename       = require('gulp-rename');
-const minify       = require('gulp-minify-css');
 const map          = require('map-stream');
 const browserlist  = ['last 2 version', '> 1%'];
 
@@ -44,7 +43,7 @@ gulp.task('default', function() {
 	console.log('gulp wordpress-lang to compile the lsx-sharing.pot, en_EN.po and en_EN.mo');
 });
 
-gulp.task('styles', function () {
+gulp.task('styles', function (done) {
 	return gulp.src('assets/css/lsx-sharing.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
@@ -61,10 +60,11 @@ gulp.task('styles', function () {
 			casacade: true
 		}))
 		.pipe(sourcemaps.write('maps'))
-		.pipe(gulp.dest('assets/css'))
+		.pipe(gulp.dest('assets/css')),
+		done();
 });
 
-gulp.task('styles-rtl', function () {
+gulp.task('styles-rtl', function (done) {
 	return gulp.src('assets/css/lsx-sharing.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
@@ -83,23 +83,29 @@ gulp.task('styles-rtl', function () {
 		.pipe(rename({
 			suffix: '-rtl'
 		}))
-		.pipe(gulp.dest('assets/css'))
+		.pipe(gulp.dest('assets/css')),
+		done();
 });
 
-gulp.task('compile-css', ['styles', 'styles-rtl']);
+gulp.task('compile-css', gulp.series( ['styles', 'styles-rtl'], function(done) {
+	done();
+}));
 
-gulp.task('js', function() {
+gulp.task('js', function(done) {
 	gulp.src('assets/js/lsx-sharing.js')
 		.pipe(jshint())
 		.pipe(errorreporter)
 		.pipe(concat('lsx-sharing.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('assets/js'))
+		.pipe(gulp.dest('assets/js')),
+		done();
 });
 
-gulp.task('compile-js', ['js']);
+gulp.task('compile-js', gulp.series( ['js'] , function(done) {
+	done();
+}));
 
-gulp.task('wordpress-pot', function() {
+gulp.task('wordpress-pot', function(done) {
 	return gulp.src('**/*.php')
 		.pipe(sort())
 		.pipe(wppot({
@@ -107,10 +113,11 @@ gulp.task('wordpress-pot', function() {
 			package: 'lsx-sharing',
 			team: 'LightSpeed <webmaster@lsdev.biz>'
 		}))
-		.pipe(gulp.dest('languages/lsx-sharing.pot'))
+		.pipe(gulp.dest('languages/lsx-sharing.pot')),
+		done();
 });
 
-gulp.task('wordpress-po', function() {
+gulp.task('wordpress-po', function(done) {
 	return gulp.src('**/*.php')
 		.pipe(sort())
 		.pipe(wppot({
@@ -118,13 +125,17 @@ gulp.task('wordpress-po', function() {
 			package: 'lsx-sharing',
 			team: 'LightSpeed <webmaster@lsdev.biz>'
 		}))
-		.pipe(gulp.dest('languages/en_EN.po'))
+		.pipe(gulp.dest('languages/en_EN.po')),
+		done();
 });
 
-gulp.task('wordpress-po-mo', ['wordpress-po'], function() {
+gulp.task('wordpress-po-mo', gulp.series( ['wordpress-po'], function(done) {
 	return gulp.src('languages/en_EN.po')
 		.pipe(gettext())
-		.pipe(gulp.dest('languages'))
-});
+		.pipe(gulp.dest('languages')),
+		done();
+}));
 
-gulp.task('wordpress-lang', (['wordpress-pot', 'wordpress-po-mo']));
+gulp.task('wordpress-lang', gulp.series( ['wordpress-pot', 'wordpress-po-mo'] , function(done) {
+	done();
+}));
