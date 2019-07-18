@@ -19,7 +19,7 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 		 */
 		public function __construct() {
 			add_action( 'init', array( $this, 'set_options' ), 50 );
-			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 999 );
+			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 5 );
 
 			add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
 
