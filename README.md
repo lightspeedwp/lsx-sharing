@@ -35,6 +35,11 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 ## Changelog
 
+### 1.1.2
+* Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
+* Fix - Changing the wp_enqueue_script priority
+* Fix - Removing gulp-minify-css and updating gulpfile to 4.0+
+
 ### 1.1.1
 * Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
 

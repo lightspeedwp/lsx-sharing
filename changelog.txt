@@ -1,7 +1,9 @@
 ## Change log
 
-### 1.1.2 - In Development
+### 1.1.2 - September 27
 * Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
+* Fix - Changing the wp_enqueue_script priority
+* Fix - Removing gulp-minify-css and updating gulpfile to 4.0+
 
 ### 1.1.1
 * Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options

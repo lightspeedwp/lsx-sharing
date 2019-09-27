@@ -5,7 +5,7 @@ Tags: lsx, Gutenberg, sharing, social sharing, wordpress blocks
 Requires at least: 4.9
 Tested up to: 5.2.2
 Requires PHP: 7.0
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv3
 
 [LSX Sharing Extension](https://lsx.lsdev.biz/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
@@ -40,6 +40,11 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 2. Sharing Buttons 
 
 == Changelog ==
+
+### 1.1.2
+* Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
+* Fix - Changing the wp_enqueue_script priority
+* Fix - Removing gulp-minify-css and updating gulpfile to 4.0+
 
 ### 1.1.1
 * Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
