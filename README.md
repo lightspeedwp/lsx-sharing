@@ -33,16 +33,6 @@ If you are experiencing issues with the LSX Sharing Plugin & have experience wit
 
 If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Sharing Plugin on Github](https://github.com/lightspeeddevelopment/lsx-sharing) and submit a Pull Request with your updates.
 
-## Changelog
+## Like what you see?
 
-### 1.1.2
-* Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
-* Fix - Changing the wp_enqueue_script priority
-* Fix - Removing gulp-minify-css and updating gulpfile to 4.0+
-
-### 1.1.1
-* Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
-
-### 1.1.0
-* Dev -  Removing API file.
-* Dev - making sure that there are no code sniffer errors.
+<a href="https://www.lsdev.biz/contact/"><img src="https://www.lsdev.biz/wp-content/uploads/2020/02/work-with-lightspeed.png" width="850" alt="Work with us at LightSpeed"></a>
