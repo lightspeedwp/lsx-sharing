@@ -124,6 +124,7 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 		public function display_settings( $tab = 'general' ) {
 			if ( 'sharing' === $tab ) {
 				$this->general_fields();
+				$this->post_type_fields_disable_all();
 				$this->post_type_fields();
 				$this->social_network_fields();
 			}
@@ -158,6 +159,30 @@ if ( ! class_exists( 'LSX_Sharing_Admin' ) ) {
 			*/
 
 			?>
+			<?php
+		}
+
+		/**
+		 * Disable all share buttons
+		 *
+		 * @return void
+		 */
+		public function post_type_fields_disable_all() {
+			?>
+			<tr class="form-field">
+				<th scope="row" colspan="2">
+					<h3><?php esc_html_e( 'Disable all share buttons on the site', 'lsx-sharing' ); ?></h3>
+				</th>
+			</tr>
+			<tr class="form-field">
+				<th scope="row">
+					<label for="sharing_disable_all"><?php esc_html_e( 'Disable All', 'lsx-sharing' ); ?></label>
+				</th>
+				<td>
+					<input type="checkbox" {{#if sharing_disable_all}} checked="checked" {{/if}} name="sharing_disable_all" />
+					<small><?php esc_html_e( 'Disable All share button.', 'lsx-sharing' ); ?></small>
+				</td>
+			</tr>
 			<?php
 		}
 
