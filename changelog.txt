@@ -1,5 +1,8 @@
 ## Change log
 
+### 1.1.3
+* Dev - The js and css assets front end assets for this plugin will only load in each post type if the sharing option is enabled for the post type.
+
 ### 1.1.2 - September 27
 * Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
 * Fix - Changing the wp_enqueue_script priority

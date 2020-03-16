@@ -51,22 +51,45 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 		 * Enques the assets.
 		 */
 		public function assets() {
+
+			//Set our variables
+			global $post;
+			$post_id    = false;
+			$share_post = $post;
+			if ( false !== $post_id ) {
+				$share_post = get_post( $post_id );
+				$post_type  = get_post_type( $post_id );
+			} else {
+				$post_type = get_post_type();
+			}
+
 			if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
 				$min = '';
 			} else {
 				$min = '.min';
 			}
 
-			wp_enqueue_script( 'lsx-sharing', LSX_SHARING_URL . 'assets/js/lsx-sharing' . $min . '.js', array( 'jquery' ), LSX_SHARING_VER, true );
+			/* Remove assets completely if all sharing options are off */
+			if ( isset( $this->options['display'] ) && ! empty( $this->options['display']['sharing_disable_all'] ) ) {
+				return '';
+			}
 
-			$params = apply_filters( 'lsx_sharing_js_params', array(
-				'ajax_url' => admin_url( 'admin-ajax.php' ),
-			));
+			/* Only show the assets if the post type sharing option is on */
+			if ( isset( $this->options['display'] ) && empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) ) {
 
-			wp_localize_script( 'lsx-sharing', 'lsx_sharing_params', $params );
+				wp_enqueue_script( 'lsx-sharing', LSX_SHARING_URL . 'assets/js/lsx-sharing' . $min . '.js', array( 'jquery' ), LSX_SHARING_VER, true );
 
-			wp_enqueue_style( 'lsx-sharing', LSX_SHARING_URL . 'assets/css/lsx-sharing.css', array(), LSX_SHARING_VER );
-			wp_style_add_data( 'lsx-sharing', 'rtl', 'replace' );
+				$params = apply_filters( 'lsx_sharing_js_params', array(
+					'ajax_url' => admin_url( 'admin-ajax.php' ),
+				));
+
+				wp_localize_script( 'lsx-sharing', 'lsx_sharing_params', $params );
+
+				wp_enqueue_style( 'lsx-sharing', LSX_SHARING_URL . 'assets/css/lsx-sharing.css', array(), LSX_SHARING_VER );
+				wp_style_add_data( 'lsx-sharing', 'rtl', 'replace' );
+
+			}
+
 		}
 
 		/**
@@ -89,11 +112,11 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 				$post_type = get_post_type();
 			}
 
-			if ( isset( $this->options['display'] ) && ! empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) ) {
+			if ( isset( $this->options['display'] ) && ! empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) && ! empty( $this->options['display']['sharing_disable_all'] ) ) {
 				return '';
 			}
 
-			if ( is_array( $buttons ) && count( $buttons ) > 0 ) {
+			if ( ( is_array( $buttons ) && count( $buttons ) > 0 ) && empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) && empty( $this->options['display']['sharing_disable_all'] ) ) {
 				$sharing_content .= '<div class="lsx-sharing-content"><p>';
 
 				if ( isset( $this->options['display'] ) && ! empty( $this->options['display']['sharing_label_text'] ) ) {
