@@ -3,7 +3,7 @@
  * Plugin Name: LSX Sharing
  * Plugin URI:  https://www.lsdev.biz/product/lsx-sharing/
  * Description: The LSX Sharing extension add social share icons for LSX Theme.
- * Version:     1.1.2
+ * Version:     1.1.3
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
  * License:     GPL3
@@ -20,14 +20,14 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'LSX_SHARING_PATH', plugin_dir_path( __FILE__ ) );
 define( 'LSX_SHARING_CORE', __FILE__ );
 define( 'LSX_SHARING_URL', plugin_dir_url( __FILE__ ) );
-define( 'LSX_SHARING_VER', '1.1.2' );
+define( 'LSX_SHARING_VER', '1.1.3' );
 
 /* ======================= Below is the Plugin Class init ========================= */
 
-require_once( LSX_SHARING_PATH . '/classes/class-lsx-sharing.php' );
-require_once( LSX_SHARING_PATH . '/classes/class-lsx-sharing-admin.php' );
-require_once( LSX_SHARING_PATH . '/classes/class-lsx-sharing-frontend.php' );
-require_once( LSX_SHARING_PATH . '/classes/class-lsx-sharing-button.php' );
+require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing.php';
+require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing-admin.php';
+require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing-frontend.php';
+require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing-button.php';
 
 global $lsx_sharing_admin;
 $lsx_sharing_admin = new LSX_Sharing_Admin();
