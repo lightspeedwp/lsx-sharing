@@ -64,6 +64,27 @@ gulp.task('styles', function (done) {
 		done();
 });
 
+gulp.task('admin-style', function (done) {
+	return gulp.src('assets/css/lsx-sharing-admin.scss')
+		.pipe(plumber({
+			errorHandler: function(err) {
+				console.log(err);
+				this.emit('end');
+			}
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(sass({
+			outputStyle: 'compact'
+		}).on('error', gutil.log))
+		.pipe(autoprefixer({
+			browsers: browserlist,
+			casacade: true
+		}))
+		.pipe(sourcemaps.write('maps'))
+		.pipe(gulp.dest('assets/css')),
+		done();
+});
+
 gulp.task('styles-rtl', function (done) {
 	return gulp.src('assets/css/lsx-sharing.scss')
 		.pipe(plumber({
@@ -87,7 +108,7 @@ gulp.task('styles-rtl', function (done) {
 		done();
 });
 
-gulp.task('compile-css', gulp.series( ['styles', 'styles-rtl'], function(done) {
+gulp.task('compile-css', gulp.series( ['styles', 'styles-rtl', 'admin-style'], function(done) {
 	done();
 }));
 
