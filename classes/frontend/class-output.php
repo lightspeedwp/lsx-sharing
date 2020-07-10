@@ -139,7 +139,6 @@ class Output {
 					}
 				}
 			}
-
 			$sharing_content .= '</p></div>';
 		}
 
