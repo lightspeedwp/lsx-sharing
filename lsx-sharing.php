@@ -34,17 +34,3 @@ function lsx_sharing() {
 	return $lsx_sharing;
 }
 lsx_sharing();
-
-/**
- * Deprecated class.
- */
-// @codingStandardsIgnoreStart
-class LSX_Sharing {
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		return lsx_sharing();
-	}
-}
-// @codingStandardsIgnoreEnd

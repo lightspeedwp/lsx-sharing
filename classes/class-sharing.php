@@ -98,6 +98,8 @@ class Sharing {
 		$this->frontend = \lsx\sharing\classes\Frontend::get_instance();
 		global $lsx_sharing;
 		$lsx_sharing = $this->frontend->output;
+
+		require_once LSX_SHARING_PATH . '/classes/deprecated/class-lsx-sharing.php';
 	}
 	/**
 	 * Set options.
