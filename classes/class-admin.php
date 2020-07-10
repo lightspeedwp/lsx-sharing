@@ -20,17 +20,19 @@ class Admin {
 	 * @var      object \lsx\sharing\classes\Admin()
 	 */
 	protected static $instance = null;
+
 	/**
-	 * Holds the options for the sharing plugin.
+	 * Holds CMB Settings Instance
 	 *
-	 * @var array()
+	 * @var      object \lsx\sharing\classes\admin\Settings_Theme()
 	 */
-	public $options = false;
+	public $settings_theme = false;
 
 	/**
 	 * Constructor.
 	 */
 	public function __construct() {
+		$this->load_classes();
 		add_action( 'cmb2_admin_init', array( $this, 'register_settings_page' ) );
 		add_action( 'lsx_sharing_settings_page', array( $this, 'configure_general_fields' ), 15, 1 );
 		add_action( 'lsx_sharing_settings_page', array( $this, 'configure_archive_fields' ), 15, 1 );
@@ -53,18 +55,11 @@ class Admin {
 	}
 
 	/**
-	 * Set options.
+	 * Loads the plugin functions.
 	 */
-	public function set_options() {
-		if ( function_exists( 'tour_operator' ) ) {
-			$this->options = get_option( '_lsx-to_settings', false );
-		} else {
-			$this->options = get_option( '_lsx_settings', false );
-
-			if ( false === $this->options ) {
-				$this->options = get_option( '_lsx_lsx-settings', false );
-			}
-		}
+	private function load_classes() {
+		require_once LSX_SHARING_PATH . '/classes/admin/class-settings-theme.php';
+		$this->settings_theme = \lsx\sharing\classes\admin\Settings_Theme::get_instance();
 	}
 
 	/**

@@ -78,5 +78,4 @@ class Sharing {
 		global $lsx_sharing;
 		$lsx_sharing = new \LSX_Sharing_Frontend();
 	}
-
 }
