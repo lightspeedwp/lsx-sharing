@@ -90,15 +90,14 @@ class Sharing {
 	 */
 	private function load_classes() {
 		require_once LSX_SHARING_PATH . '/classes/class-admin.php';
-		require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing-frontend.php';
-		require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing-button.php';
-
 		global $lsx_sharing_admin;
 		$this->admin = \lsx\sharing\classes\Admin::get_instance();
 		$lsx_sharing_admin;
 
+		require_once LSX_SHARING_PATH . '/classes/class-frontend.php';
+		$this->frontend = \lsx\sharing\classes\Frontend::get_instance();
 		global $lsx_sharing;
-		$lsx_sharing = new \LSX_Sharing_Frontend();
+		$lsx_sharing = $this->frontend->output;
 	}
 	/**
 	 * Set options.

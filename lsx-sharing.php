@@ -35,10 +35,14 @@ function lsx_sharing() {
 }
 lsx_sharing();
 
+/**
+ * Deprecated class.
+ */
 class LSX_Sharing {
 	/**
 	 * Constructor.
 	 */
 	public function __construct() {
+		return lsx_sharing();
 	}
 }
