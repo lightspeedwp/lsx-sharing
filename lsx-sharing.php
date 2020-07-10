@@ -34,3 +34,11 @@ function lsx_sharing() {
 	return $lsx_sharing;
 }
 lsx_sharing();
+
+class LSX_Sharing {
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+	}
+}

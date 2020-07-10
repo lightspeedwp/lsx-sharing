@@ -251,35 +251,5 @@ class Settings {
 				'type' => 'tab_closing',
 			)
 		);
-
-
 	}
-
-	/**
-	 * Outputs the social network fields.
-	 */
-	public function social_network_fields() {
-		?>
-		<tr class="form-field">
-			<th scope="row">
-				<label for="sharing_disable_twitter"><?php esc_html_e( 'Disable Twitter', 'lsx-sharing' ); ?></label>
-			</th>
-			<td>
-				<input type="checkbox" {{#if sharing_disable_twitter}} checked="checked" {{/if}} name="sharing_disable_twitter" />
-				<small><?php esc_html_e( 'Disable Twitter share button.', 'lsx-sharing' ); ?></small>
-			</td>
-		</tr>
-		<tr class="form-field">
-			<th scope="row">
-				<label for="sharing_disable_pinterest"><?php esc_html_e( 'Disable Pinterest', 'lsx-sharing' ); ?></label>
-			</th>
-			<td>
-				<input type="checkbox" {{#if sharing_disable_pinterest}} checked="checked" {{/if}} name="sharing_disable_pinterest" />
-				<small><?php esc_html_e( 'Disable Pinterest share button.', 'lsx-sharing' ); ?></small>
-			</td>
-		</tr>
-	<?php
-	}
-
-
 }

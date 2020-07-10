@@ -18,39 +18,29 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 		 * Constructor.
 		 */
 		public function __construct() {
-			add_action( 'init', array( $this, 'set_options' ), 50 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 5 );
-
 			add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
-
 			add_shortcode( 'lsx_sharing_buttons', array( $this, 'sharing_buttons_shortcode' ) );
-
 			// Storefront (storefront_loop_post, storefront_single_post).
 			add_action( 'storefront_post_content_before', array( $this, 'sharing_buttons_template' ), 20 );
-
 			// WooCommerce.
 			add_action( 'woocommerce_share', array( $this, 'sharing_buttons_template' ) );
-		}
-
-		/**
-		 * Set options.
-		 */
-		public function set_options() {
-			if ( function_exists( 'tour_operator' ) ) {
-				$this->options = get_option( '_lsx-to_settings', false );
-			} else {
-				$this->options = get_option( '_lsx_settings', false );
-
-				if ( false === $this->options ) {
-					$this->options = get_option( '_lsx_lsx-settings', false );
-				}
-			}
 		}
 
 		/**
 		 * Enques the assets.
 		 */
 		public function assets() {
+			if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
+				$min = '';
+			} else {
+				$min = '.min';
+			}
+			/* Remove assets completely if all sharing options are off */
+
+			if ( \lsx\sharing\includes\functions\is_disabled() ) {
+				return '';
+			}
 
 			//Set our variables
 			global $post;
@@ -63,19 +53,8 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 				$post_type = get_post_type();
 			}
 
-			if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
-				$min = '';
-			} else {
-				$min = '.min';
-			}
-
-			/* Remove assets completely if all sharing options are off */
-			if ( isset( $this->options['display'] ) && ! empty( $this->options['display']['sharing_disable_all'] ) ) {
-				return '';
-			}
-
 			/* Only show the assets if the post type sharing option is on */
-			if ( isset( $this->options['display'] ) && empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) ) {
+			if ( ! \lsx\sharing\includes\functions\is_pt_disabled( $post_type ) ) {
 
 				wp_enqueue_script( 'lsx-sharing', LSX_SHARING_URL . 'assets/js/lsx-sharing' . $min . '.js', array( 'jquery' ), LSX_SHARING_VER, true );
 
@@ -112,19 +91,20 @@ if ( ! class_exists( 'LSX_Sharing_Frontend' ) ) {
 				$post_type = get_post_type();
 			}
 
-			if ( isset( $this->options['display'] ) && ! empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) && ! empty( $this->options['display']['sharing_disable_all'] ) ) {
+			if ( \lsx\sharing\includes\functions\is_disabled() || \lsx\sharing\includes\functions\is_pt_disabled( $post_type ) ) {
 				return '';
 			}
 
-			if ( ( is_array( $buttons ) && count( $buttons ) > 0 ) && empty( $this->options['display'][ 'sharing_disable_pt_' . $post_type ] ) && empty( $this->options['display']['sharing_disable_all'] ) ) {
+			if ( ( is_array( $buttons ) && count( $buttons ) > 0 ) ) {
 				$sharing_content .= '<div class="lsx-sharing-content"><p>';
 
-				if ( isset( $this->options['display'] ) && ! empty( $this->options['display']['sharing_label_text'] ) ) {
-					$sharing_content .= '<span class="lsx-sharing-label">' . $this->options['display']['sharing_label_text'] . '</span>';
+				$sharing_text = \lsx\sharing\includes\functions\get_sharing_text( $post_type );
+				if ( '' !== $sharing_text ) {
+					$sharing_content .= '<span class="lsx-sharing-label">' . $sharing_text . '</span>';
 				}
 
 				foreach ( $buttons as $id => $button ) {
-					$button_obj = new LSX_Sharing_Button( $button, $this->options );
+					$button_obj = new LSX_Sharing_Button( $button, $this->options, $post_type );
 
 					if ( ! empty( $button_obj ) ) {
 						$url = $button_obj->get_link( $share_post );

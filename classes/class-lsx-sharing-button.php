@@ -17,7 +17,7 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		/**
 		 * Services available.
 		 *
-		 * @var string
+		 * @var array
 		 */
 		public $services = array(
 			'facebook',
@@ -35,15 +35,15 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		/**
 		 * Constructor.
 		 */
-		public function __construct( $service, $options ) {
+		public function __construct( $service, $options, $prefix = 'sharing' ) {
 			$this->options = $options;
 
 			if ( ! in_array( $service, $this->services, true ) ) {
 				return;
 			}
 
-			if ( isset( $this->options['display'] ) && ! empty( $this->options['display'][ 'sharing_disable_' . $service ] ) ) {
-				return;
+			if ( \lsx\sharing\includes\functions\is_button_disabled( 'global', $service ) || \lsx\sharing\includes\functions\is_button_disabled( $prefix, $service ) ) {
+				return '';
 			}
 
 			$this->service = $service;
@@ -127,6 +127,10 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 			return 'https://www.pinterest.com/pin/create/button/?url=' . rawurlencode( $permalink ) . '&media=' . rawurlencode( $image ) . '&description=' . rawurlencode( $title );
 		}
 
+		/**
+		 * Get Email Link.
+		 */
+		public function get_link_email() {
+		}
 	}
-
 }
