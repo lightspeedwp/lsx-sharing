@@ -17,7 +17,7 @@ function is_button_disabled( $post_type = '' , $service = '' ) {
 	$option  = false;
 	if ( false === $sharing->is_new_options && isset( $sharing->options['display'] ) && ! empty( $sharing->options['display'][ 'sharing_disable_' . $service ] ) ) {
 		$option = true;
-	} elseif ( true === $sharing->is_new_options && ! empty( $sharing->options['display'][ $post_type . '_disable_' . $service ] ) ) {
+	} elseif ( true === $sharing->is_new_options && ! empty( $sharing->options[ $post_type . '_disable_' . $service ] ) ) {
 		$option = true;
 	}
 	return $option;

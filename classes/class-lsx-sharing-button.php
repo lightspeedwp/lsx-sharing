@@ -37,15 +37,12 @@ if ( ! class_exists( 'LSX_Sharing_Button' ) ) {
 		 */
 		public function __construct( $service, $options, $prefix = 'sharing' ) {
 			$this->options = $options;
-
 			if ( ! in_array( $service, $this->services, true ) ) {
 				return;
 			}
-
 			if ( \lsx\sharing\includes\functions\is_button_disabled( 'global', $service ) || \lsx\sharing\includes\functions\is_button_disabled( $prefix, $service ) ) {
 				return '';
 			}
-
 			$this->service = $service;
 		}
 

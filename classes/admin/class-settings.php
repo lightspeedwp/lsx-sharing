@@ -77,7 +77,7 @@ class Settings {
 	public function configure_general_fields( $cmb ) {
 		$global_args = array(
 			'title' => __( 'Global', 'lsx-search' ),
-			'desc'  => esc_html__( 'Control the sharing WordPress search results page.', 'lsx-search' ),
+			'desc'  => esc_html__( 'Control the sharing WordPress post types.', 'lsx-search' ),
 		);
 		$this->get_fields( $cmb, 'global', $global_args );
 	}
@@ -111,7 +111,7 @@ class Settings {
 						}
 						$description = sprintf(
 							/* translators: %s: The subscription info */
-							__( 'Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> page.', 'lsx-search' ),
+							__( 'Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> posts.', 'lsx-search' ),
 							$page_url,
 							$page_title
 						);
@@ -131,7 +131,7 @@ class Settings {
 						}
 						$description = sprintf(
 							/* translators: %s: The subscription info */
-							__( 'Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> page.', 'lsx-search' ),
+							__( 'Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> product pages.', 'lsx-search' ),
 							$page_url,
 							$page_title
 						);
@@ -151,7 +151,7 @@ class Settings {
 							$page_url    = get_post_type_archive_link( $temp_post_type->name );
 							$description = sprintf(
 								/* translators: %s: The subscription info */
-								__( 'Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> archive.', 'lsx-search' ),
+								__( 'Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> singles.', 'lsx-search' ),
 								$page_url,
 								$temp_post_type->label
 							);
@@ -183,7 +183,7 @@ class Settings {
 	public function get_fields( $cmb, $section, $args ) {
 		$cmb->add_field(
 			array(
-				'id'          => $section . '_title',
+				'id'          => 'settings_' . $section . '_sharing',
 				'type'        => 'title',
 				'name'        => $args['title'],
 				'default'     => $args['title'],
@@ -218,31 +218,36 @@ class Settings {
 				'type'        => 'text',
 			)
 		);
-
-		$cmb->add_field(
-			array(
-				'name'        => esc_html__( 'Disable Facebook', 'lsx-sharing' ),
-				'id'          => $section . '_disable_facebook',
-				'description' => esc_html__( 'Disable Facebook share button.', 'lsx-sharing' ),
-				'type'        => 'checkbox',
-			)
-		);
-		$cmb->add_field(
-			array(
-				'name'        => esc_html__( 'Disable Twitter', 'lsx-sharing' ),
-				'id'          => $section . '_disable_twitter',
-				'description' => esc_html__( 'Disable Twitter share button.', 'lsx-sharing' ),
-				'type'        => 'checkbox',
-			)
-		);
-		$cmb->add_field(
-			array(
-				'name'        => esc_html__( 'Disable Pinterest', 'lsx-sharing' ),
-				'id'          => $section . '_disable_pinterest',
-				'description' => esc_html__( 'Disable Pinterest button.', 'lsx-sharing' ),
-				'type'        => 'checkbox',
-			)
-		);
+		if ( 'global' === $section || ( 'global' !== $section && ! \lsx\sharing\includes\functions\is_button_disabled( 'global', 'facebook' ) ) ) {
+			$cmb->add_field(
+				array(
+					'name'        => esc_html__( 'Disable Facebook', 'lsx-sharing' ),
+					'id'          => $section . '_disable_facebook',
+					'description' => esc_html__( 'Disable Facebook share button.', 'lsx-sharing' ),
+					'type'        => 'checkbox',
+				)
+			);
+		}
+		if ( 'global' === $section || ( 'global' !== $section && ! \lsx\sharing\includes\functions\is_button_disabled( 'global', 'twitter' ) ) ) {
+			$cmb->add_field(
+				array(
+					'name'        => esc_html__( 'Disable Twitter', 'lsx-sharing' ),
+					'id'          => $section . '_disable_twitter',
+					'description' => esc_html__( 'Disable Twitter share button.', 'lsx-sharing' ),
+					'type'        => 'checkbox',
+				)
+			);
+		}
+		if ( 'global' === $section || ( 'global' !== $section && ! \lsx\sharing\includes\functions\is_button_disabled( 'global', 'pinterest' ) ) ) {
+			$cmb->add_field(
+				array(
+					'name'        => esc_html__( 'Disable Pinterest', 'lsx-sharing' ),
+					'id'          => $section . '_disable_pinterest',
+					'description' => esc_html__( 'Disable Pinterest button.', 'lsx-sharing' ),
+					'type'        => 'checkbox',
+				)
+			);
+		}
 
 		do_action( 'lsx_sharing_settings_section', $cmb, $section );
 		$cmb->add_field(
