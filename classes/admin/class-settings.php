@@ -190,12 +190,21 @@ class Settings {
 				'description' => $args['desc'],
 			)
 		);
-		if ( 'sharing' === $section ) {
+		if ( 'global' === $section ) {
 			$cmb->add_field(
 				array(
 					'name'        => esc_html__( 'Disable all', 'lsx-sharing' ),
 					'id'          => $section . '_disable_all',
 					'description' => esc_html__( 'Disable all share buttons on the site', 'lsx-sharing' ),
+					'type'        => 'checkbox',
+				)
+			);
+		} else {
+			$cmb->add_field(
+				array(
+					'name'        => esc_html__( 'Disable', 'lsx-sharing' ) . ' ' . $args['title'],
+					'id'          => $section . '_disable_pt',
+					'description' => esc_html__( 'Disable all share buttons on this post type', 'lsx-sharing' ),
 					'type'        => 'checkbox',
 				)
 			);
@@ -210,6 +219,31 @@ class Settings {
 			)
 		);
 
+		$cmb->add_field(
+			array(
+				'name'        => esc_html__( 'Disable Facebook', 'lsx-sharing' ),
+				'id'          => $section . '_disable_facebook',
+				'description' => esc_html__( 'Disable Facebook share button.', 'lsx-sharing' ),
+				'type'        => 'checkbox',
+			)
+		);
+		$cmb->add_field(
+			array(
+				'name'        => esc_html__( 'Disable Twitter', 'lsx-sharing' ),
+				'id'          => $section . '_disable_twitter',
+				'description' => esc_html__( 'Disable Twitter share button.', 'lsx-sharing' ),
+				'type'        => 'checkbox',
+			)
+		);
+		$cmb->add_field(
+			array(
+				'name'        => esc_html__( 'Disable Pinterest', 'lsx-sharing' ),
+				'id'          => $section . '_disable_pinterest',
+				'description' => esc_html__( 'Disable Pinterest button.', 'lsx-sharing' ),
+				'type'        => 'checkbox',
+			)
+		);
+
 		do_action( 'lsx_sharing_settings_section', $cmb, $section );
 		$cmb->add_field(
 			array(
@@ -219,54 +253,6 @@ class Settings {
 		);
 
 
-
-		/*if ( 'sharing' === $section ) {
-			$this->post_type_fields();
-			$this->social_network_fields();
-		}*/
-	}
-
-	/**
-	 * Outputs the post type fields.
-	 */
-	public function post_type_fields() {
-		?>
-		<tr class="form-field">
-			<th scope="row" colspan="2">
-				<h3><?php esc_html_e( 'Disable share buttons by post type', 'lsx-sharing' ); ?></h3>
-			</th>
-		</tr>
-		<?php
-			$post_types = get_post_types( array(
-				'public' => true,
-			) );
-
-			$key = array_search( 'attachment', $post_types, true );
-
-		if ( false !== $key ) {
-				unset( $post_types[ $key ] );
-		}
-		?>
-		<?php foreach ( $post_types as $key => $value ) : ?>
-			<tr class="form-field">
-				<th scope="row">
-					<label for="sharing_disable_pt_<?php echo esc_attr( $key ); ?>"><?php echo esc_html( ucfirst( $key ) ); ?></label>
-				</th>
-				<td>
-					<input type="checkbox" {{#if sharing_disable_pt_<?php echo esc_attr( $key ); ?>}} checked="checked" {{/if}} name="sharing_disable_pt_<?php echo esc_attr( $key ); ?>" />
-					<small>
-						<?php
-							printf(
-								/* Translators: 1: post type */
-								esc_html__( 'Disable share buttons on post type: %s', 'lsx-sharing' ),
-								esc_html( $key )
-							);
-						?>
-					</small>
-				</td>
-			</tr>
-		<?php endforeach; ?>
-	<?php
 	}
 
 	/**
@@ -274,20 +260,6 @@ class Settings {
 	 */
 	public function social_network_fields() {
 		?>
-		<tr class="form-field">
-			<th scope="row" colspan="2">
-				<h3><?php esc_html_e( 'Disable share buttons by social network', 'lsx-sharing' ); ?></h3>
-			</th>
-		</tr>
-		<tr class="form-field">
-			<th scope="row">
-				<label for="sharing_disable_facebook"><?php esc_html_e( 'Disable Facebook', 'lsx-sharing' ); ?></label>
-			</th>
-			<td>
-				<input type="checkbox" {{#if sharing_disable_facebook}} checked="checked" {{/if}} name="sharing_disable_facebook" />
-				<small><?php esc_html_e( 'Disable Facebook share button.', 'lsx-sharing' ); ?></small>
-			</td>
-		</tr>
 		<tr class="form-field">
 			<th scope="row">
 				<label for="sharing_disable_twitter"><?php esc_html_e( 'Disable Twitter', 'lsx-sharing' ); ?></label>
