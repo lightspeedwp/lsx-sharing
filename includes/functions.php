@@ -12,7 +12,7 @@ namespace lsx\sharing\includes\functions;
  *
  * @return boolean
  */
-function is_button_disabled( $post_type = '' , $service = '' ) {
+function is_button_disabled( $post_type = '', $service = '' ) {
 	$sharing = lsx_sharing();
 	$option  = false;
 	if ( false === $sharing->is_new_options && isset( $sharing->options['display'] ) && ! empty( $sharing->options['display'][ 'sharing_disable_' . $service ] ) ) {

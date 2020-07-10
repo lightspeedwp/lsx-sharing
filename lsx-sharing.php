@@ -38,6 +38,7 @@ lsx_sharing();
 /**
  * Deprecated class.
  */
+// @codingStandardsIgnoreStart
 class LSX_Sharing {
 	/**
 	 * Constructor.
@@ -46,3 +47,4 @@ class LSX_Sharing {
 		return lsx_sharing();
 	}
 }
+// @codingStandardsIgnoreEnd
