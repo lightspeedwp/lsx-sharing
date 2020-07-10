@@ -25,12 +25,12 @@ define( 'LSX_SHARING_VER', '1.1.3' );
 /* ======================= Below is the Plugin Class init ========================= */
 
 require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing.php';
-require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing-admin.php';
+require_once LSX_SHARING_PATH . '/classes/class-admin.php';
 require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing-frontend.php';
 require_once LSX_SHARING_PATH . '/classes/class-lsx-sharing-button.php';
 
 global $lsx_sharing_admin;
-$lsx_sharing_admin = new LSX_Sharing_Admin();
+$lsx_sharing_admin = \lsx\sharing\classes\Admin::get_instance();
 
 global $lsx_sharing;
 $lsx_sharing = new LSX_Sharing_Frontend();
