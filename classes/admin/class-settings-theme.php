@@ -184,10 +184,9 @@ class Settings_Theme {
 	 * @param string $cmb_id
 	 * @param string $object_id
 	 * @param string $object_type
-	 * @param object $cmb2_obj
 	 * @return void
 	 */
-	public function navigation_js( $cmb_id, $object_id, $object_type, $cmb2_obj ) {
+	public function navigation_js( $cmb_id, $object_id, $object_type ) {
 		if ( 'lsx_sharing_settings' === $cmb_id && 'lsx-sharing-settings' === $object_id && 'options-page' === $object_type ) {
 			?>
 			<script>
@@ -199,60 +198,15 @@ class Settings_Theme {
 
 					LSX_SHARING_CMB2.document = $(document);
 
-					/**
-					 * Start the JS Class
-					 */
-					LSX_SHARING_CMB2.init = function() {
-						var tab = LSX_SHARING_CMB2.urlParam( 'cmb_tab' );
-						if ( 0 === tab || '0' === tab ) {
-							tab = '';
-						}
-						LSX_SHARING_CMB2.addTabInput( tab );
-						LSX_SHARING_CMB2.prepNavigation( tab );
-						LSX_SHARING_CMB2.watchNavigation();
-					};
+					<?php $this->navigation_js_init(); ?>
 
-					LSX_SHARING_CMB2.addTabInput = function( tab = '' ) {
-						var counter = 1;
-						$( "form.cmb-form" ).append('<input type="hidden" name="cmb_tab" value="' + tab + '" />');
-					}
+					<?php $this->navigation_js_add_tab_input(); ?>
 
-					LSX_SHARING_CMB2.prepNavigation = function( tab = '' ) {
-						var counter = 1;
-						$( ".tab.tab-nav" ).each(function(){
-							console.log( tab );
-							if ( ( 1 !== counter && '' === tab ) || ( '' !== tab && 'settings_' + tab + '_tab' !== $( this ).attr('id') ) ) {
-								$( this ).hide().removeClass('hidden');
-							} else {
-								$( this ).addClass( 'current' ).removeClass('hidden');
-							}
-							counter++;
-						});
-					}
+					<?php $this->navigation_js_prep_navigation(); ?>
 
-					LSX_SHARING_CMB2.watchNavigation = function() {
-						$( ".wp-filter li a" ).on( 'click', function(event){
-							event.preventDefault();
-							// Change the current Tab heading.
-							$( ".wp-filter li a" ).removeClass('current');
-							$( this ).addClass('current');
+					<?php $this->navigation_js_watch_navigation(); ?>
 
-							// Change the current tab div.
-							var target = $( this ).attr('data-sort');
-							$( ".tab.tab-nav.current" ).hide().removeClass('current');
-							$( "#"+target ).show().addClass('current');
-							$( 'input[name="cmb_tab"]').val(target);
-						});
-					};
-
-					LSX_SHARING_CMB2.urlParam = function(name){
-						var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-						if ( results == null ){
-							return 0;
-						} else {
-							return results[1] || 0;
-						}
-					}
+					<?php $this->navigation_js_url_param(); ?>
 
 					LSX_SHARING_CMB2.document.ready( function() {
 						LSX_SHARING_CMB2.init();
@@ -281,5 +235,93 @@ class Settings_Theme {
 			}
 		}
 		return $url;
+	}
+
+	/**
+	 * The JS function to init the navigation JS.
+	 *
+	 * @return void
+	 */
+	public function navigation_js_init() {
+		?>
+			/**
+			* Start the JS Class
+			*/
+			LSX_SHARING_CMB2.init = function() {
+				var tab = LSX_SHARING_CMB2.urlParam( 'cmb_tab' );
+				if ( 0 === tab || '0' === tab ) {
+					tab = '';
+			}
+			LSX_SHARING_CMB2.addTabInput( tab );
+			LSX_SHARING_CMB2.prepNavigation( tab );
+			LSX_SHARING_CMB2.watchNavigation();
+			};
+		<?php
+	}
+	public function navigation_js_add_tab_input() {
+		?>
+		LSX_SHARING_CMB2.addTabInput = function( tab = '' ) {
+			var counter = 1;
+			$( "form.cmb-form" ).append('<input type="hidden" name="cmb_tab" value="' + tab + '" />');
+		}
+		<?php
+	}
+
+	public function navigation_js_url_param() {
+		?>
+		LSX_SHARING_CMB2.urlParam = function(name){
+			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			if ( results == null ){
+				return 0;
+			} else {
+				return results[1] || 0;
+			}
+		}
+		<?php
+	}
+	/**
+	 * The JS function to init the watch navigation JS.
+	 *
+	 * @return void
+	 */
+	public function navigation_js_watch_navigation() {
+		?>
+		LSX_SHARING_CMB2.watchNavigation = function() {
+			$( ".wp-filter li a" ).on( 'click', function(event){
+				event.preventDefault();
+				// Change the current Tab heading.
+				$( ".wp-filter li a" ).removeClass('current');
+				$( this ).addClass('current');
+
+				// Change the current tab div.
+				var target = $( this ).attr('data-sort');
+				$( ".tab.tab-nav.current" ).hide().removeClass('current');
+				$( "#"+target ).show().addClass('current');
+				$( 'input[name="cmb_tab"]').val(target);
+			});
+		};
+		<?php
+	}
+
+	/**
+	 * Preps the navigation for the js functions.
+	 *
+	 * @return void
+	 */
+	public function navigation_js_prep_navigation() {
+		?>
+		LSX_SHARING_CMB2.prepNavigation = function( tab = '' ) {
+			var counter = 1;
+			$( ".tab.tab-nav" ).each(function(){
+				console.log( tab );
+				if ( ( 1 !== counter && '' === tab ) || ( '' !== tab && 'settings_' + tab + '_tab' !== $( this ).attr('id') ) ) {
+					$( this ).hide().removeClass('hidden');
+				} else {
+					$( this ).addClass( 'current' ).removeClass('hidden');
+				}
+				counter++;
+			});
+		}
+		<?php
 	}
 }

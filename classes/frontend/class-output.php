@@ -60,16 +60,8 @@ class Output {
 			return '';
 		}
 
-		//Set our variables
-		global $post;
-		$post_id    = false;
-		$share_post = $post;
-		if ( false !== $post_id ) {
-			$share_post = get_post( $post_id );
-			$post_type  = get_post_type( $post_id );
-		} else {
-			$post_type = get_post_type();
-		}
+		// Set our variables.
+		$post_type = get_post_type();
 
 		/* Only show the assets if the post type sharing option is on */
 		if ( ! \lsx\sharing\includes\functions\is_pt_disabled( $post_type ) ) {
@@ -84,9 +76,7 @@ class Output {
 
 			wp_enqueue_style( 'lsx-sharing', LSX_SHARING_URL . 'assets/css/lsx-sharing.css', array(), LSX_SHARING_VER );
 			wp_style_add_data( 'lsx-sharing', 'rtl', 'replace' );
-
 		}
-
 	}
 
 	/**
