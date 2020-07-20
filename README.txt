@@ -3,9 +3,9 @@ Contributors: feedmymedia
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, Gutenberg, sharing, social sharing, wordpress blocks
 Requires at least: 4.9
-Tested up to: 5.4
+Tested up to: 5.4.2
 Requires PHP: 7.0
-Stable tag: 1.1.3
+Stable tag: 1.2.0
 License: GPLv3
 
 [LSX Sharing Extension](https://lsx.lsdev.biz/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
