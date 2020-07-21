@@ -24,6 +24,11 @@
 		}
 	}
 
+	.post-tags-wrapper .post-tags {
+		width: 50%;
+		display: inline-block;
+	}
+
 	.post-tags-wrapper .post-tags + & {
 		text-align: right;
 		width: 50%;
@@ -204,7 +209,7 @@
 }
 
 .lsx-sharing-wrapper {
-	.footer-meta {
+	&.footer-meta {
 		padding: 2.4rem 0;
 	}
 }
