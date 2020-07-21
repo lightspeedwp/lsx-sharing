@@ -142,7 +142,16 @@ class Settings {
 						break;
 
 					case 'page':
-					case 'media':
+					case 'attachment':
+					case 'forum':
+					case 'topic':
+					case 'lesson':
+					case 'quizz':
+					case 'reply':
+					case 'popup':
+					case 'message':
+					case 'envira':
+					case 'soliloquy':
 						break;
 
 					default:
