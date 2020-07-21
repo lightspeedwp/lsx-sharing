@@ -155,6 +155,7 @@ class Settings {
 					case 'soliloquy':
 					case 'certificate_template':
 					case 'certificate':
+					case 'project':
 						break;
 
 					default:
