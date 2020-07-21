@@ -146,13 +146,15 @@ class Settings {
 					case 'forum':
 					case 'topic':
 					case 'lesson':
-					case 'quizz':
+					case 'quiz':
 					case 'question':
 					case 'reply':
 					case 'popup':
-					case 'message':
+					case 'sensei_message':
 					case 'envira':
 					case 'soliloquy':
+					case 'certificate_template':
+					case 'certificate':
 						break;
 
 					default:
@@ -181,7 +183,6 @@ class Settings {
 			}
 		}
 	}
-
 	/**
 	 * Gets the sharing fields and loops through them.
 	 *
