@@ -202,9 +202,9 @@ class Settings {
 		} else {
 			$cmb->add_field(
 				array(
-					'name'        => esc_html__( 'Disable', 'lsx-sharing' ) . ' ' . $args['title'],
+					'name'        => esc_html__( 'Disable', 'lsx-sharing' ),
 					'id'          => $section . '_disable_pt',
-					'description' => esc_html__( 'Disable all share buttons on this post type', 'lsx-sharing' ),
+					'description' => esc_html__( 'Disable the share buttons on this post type', 'lsx-sharing' ),
 					'type'        => 'checkbox',
 				)
 			);

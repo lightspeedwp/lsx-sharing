@@ -113,9 +113,9 @@ class Button {
 
 		if ( ! has_post_thumbnail( $post ) ) {
 			if ( class_exists( 'lsx\legacy\Placeholders' ) ) {
-				$image = lsx\legacy\Placeholders::placeholder_url( null, $post->post_type );
+				$image = \lsx\legacy\Placeholders::placeholder_url( null, $post->post_type );
 			} elseif ( class_exists( 'LSX_Placeholders' ) ) {
-				$image = LSX_Placeholders::placeholder_url( null, $post->post_type );
+				$image = \LSX_Placeholders::placeholder_url( null, $post->post_type );
 			}
 		} else {
 			$image = get_the_post_thumbnail_url( $post->ID, 'large' );

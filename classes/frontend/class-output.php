@@ -28,6 +28,8 @@ class Output {
 		add_action( 'storefront_post_content_before', array( $this, 'sharing_buttons_template' ), 20 );
 		// WooCommerce.
 		add_action( 'woocommerce_share', array( $this, 'sharing_buttons_template' ) );
+
+		add_action( 'lsx_entry_after', array( $this, 'output_sharing' ) );
 	}
 
 	/**
@@ -173,5 +175,22 @@ class Output {
 		$allowedtags['a']['data-toggle'] = true;
 		$allowedtags['a']['data-link']   = true;
 		return $allowedtags;
+	}
+
+	/**
+	 * Outputs the sharing to the templates.
+	 *
+	 * @return void
+	 */
+	public function output_sharing() {
+		if ( is_main_query() && is_single() && ! is_singular( array( 'post', 'page', 'product' ) ) ) {
+			?>
+			<footer class="footer-meta clearfix">
+				<div class="post-tags-wrapper">
+					<?php $this->sharing_buttons_template(); ?>
+				</div>
+			</footer><!-- .footer-meta -->
+			<?php
+		}
 	}
 }

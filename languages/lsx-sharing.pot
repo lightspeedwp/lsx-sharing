@@ -1,4 +1,4 @@
-# Copyright (C) 2019 lsx-sharing
+# Copyright (C) 2020 lsx-sharing
 # This file is distributed under the same license as the lsx-sharing package.
 msgid ""
 msgstr ""
@@ -14,61 +14,52 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: classes/class-lsx-sharing-admin.php:71, classes/class-lsx-sharing-admin.php:72
-msgid "Theme Options"
+#: classes/admin/class-settings.php:205
+msgid "Disable"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:76
-msgid "Save Changes"
+#: classes/admin/class-settings.php:207
+msgid "Disable the share buttons on this post type"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:97
-msgid "Display"
+#: classes/admin/class-settings.php:196
+msgid "Disable all"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:109
-msgid "API"
+#: classes/admin/class-settings.php:198
+msgid "Disable all share buttons on the site"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:139
+#: classes/admin/class-settings.php:215
 msgid "Label text"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:171
-msgid "Disable share buttons by post type"
+#: classes/admin/class-settings.php:217
+msgid "A default label for the sharing."
 msgstr ""
 
-#. translators: 1: post type
-#: classes/class-lsx-sharing-admin.php:196
-msgid "Disable share buttons on post type: %s"
-msgstr ""
-
-#: classes/class-lsx-sharing-admin.php:214
-msgid "Disable share buttons by social network"
-msgstr ""
-
-#: classes/class-lsx-sharing-admin.php:219
+#: classes/admin/class-settings.php:224
 msgid "Disable Facebook"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:223
+#: classes/admin/class-settings.php:226
 msgid "Disable Facebook share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:228
+#: classes/admin/class-settings.php:234
 msgid "Disable Twitter"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:232
+#: classes/admin/class-settings.php:236
 msgid "Disable Twitter share button."
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:237
+#: classes/admin/class-settings.php:244
 msgid "Disable Pinterest"
 msgstr ""
 
-#: classes/class-lsx-sharing-admin.php:241
-msgid "Disable Pinterest share button."
+#: classes/admin/class-settings.php:246
+msgid "Disable Pinterest button."
 msgstr ""
 
 #: includes/settings/display.php:4
@@ -105,8 +96,4 @@ msgstr ""
 
 #: includes/settings/display.php:53
 msgid "Videos"
-msgstr ""
-
-#: includes/settings/display.php:59
-msgid "Search"
 msgstr ""
