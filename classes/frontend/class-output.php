@@ -192,7 +192,7 @@ class Output {
 				return '';
 			}
 			?>
-			<footer class="footer-meta clearfix">
+			<footer class="lsx-sharing-wrapper footer-meta clearfix">
 				<div class="post-tags-wrapper">
 					<?php $this->sharing_buttons_template(); ?>
 				</div>

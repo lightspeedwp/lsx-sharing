@@ -56,4 +56,6 @@ body.single-product.woocommerce-active .lsx-sharing-content { margin-top: 20px; 
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest .fa:before { content: '\f231'; }
 
+.lsx-sharing-wrapper .footer-meta { padding: 2.4rem 0; }
+
 /*# sourceMappingURL=maps/lsx-sharing.css.map */
