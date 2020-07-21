@@ -147,6 +147,7 @@ class Settings {
 					case 'topic':
 					case 'lesson':
 					case 'quizz':
+					case 'question':
 					case 'reply':
 					case 'popup':
 					case 'message':
