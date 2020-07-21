@@ -34,6 +34,9 @@ class Output {
 
 		// Tribe Events.
 		add_filter( 'tribe_events_ical_single_event_links', array( $this, 'output_event_sharing' ), 10, 1 );
+
+		// Sensei Integration.
+		add_action( 'sensei_pagination', array( $this, 'output_sharing' ), 20 );
 	}
 
 	/**
