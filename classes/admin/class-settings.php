@@ -141,24 +141,10 @@ class Settings {
 						);
 						break;
 
-					case 'page':
-					case 'attachment':
-					case 'forum':
-					case 'topic':
-					case 'lesson':
-					case 'quiz':
-					case 'question':
-					case 'reply':
-					case 'popup':
-					case 'sensei_message':
-					case 'envira':
-					case 'soliloquy':
-					case 'certificate_template':
-					case 'certificate':
-					case 'project':
-						break;
-
 					default:
+						if ( in_array( $post_type_key, \lsx\sharing\includes\functions\get_restricted_post_types() ) ) {
+							break;
+						}
 						$temp_post_type = get_post_type_object( $post_type_key );
 						if ( ! is_wp_error( $temp_post_type ) ) {
 							$page_url    = get_post_type_archive_link( $temp_post_type->name );

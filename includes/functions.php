@@ -8,6 +8,50 @@
 namespace lsx\sharing\includes\functions;
 
 /**
+ * Gets the sharing text.
+ *
+ * @return array
+ */
+function get_restricted_post_types() {
+	$post_types = array(
+		'page',
+		'attachment',
+		'forum',
+		'topic',
+		'lesson',
+		'quiz',
+		'question',
+		'reply',
+		'popup',
+		'sensei_message',
+		'envira',
+		'soliloquy',
+		'certificate_template',
+		'certificate',
+		'project',
+	);
+	return apply_filters( 'lsx_sharing_get_restricted_post_types', $post_types );
+}
+
+/**
+ * Gets the sharing text.
+ *
+ * @return array
+ */
+function get_to_post_types() {
+	$post_types = array(
+		'accommodation',
+		'tour',
+		'destination',
+		'review',
+		'special',
+		'vehicle',
+		'activity',
+	);
+	return apply_filters( 'lsx_sharing_get_to_post_types', $post_types );
+}
+
+/**
  * Gets a specific option from the array.
  *
  * @return boolean

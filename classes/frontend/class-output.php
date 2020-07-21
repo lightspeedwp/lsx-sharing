@@ -191,7 +191,8 @@ class Output {
 	 */
 	public function output_sharing() {
 		if ( is_main_query() && is_single() && ! is_singular( array( 'post', 'page', 'product' ) ) ) {
-			if ( \lsx\sharing\includes\functions\is_disabled() || \lsx\sharing\includes\functions\is_pt_disabled( get_post_type() ) ) {
+
+			if ( \lsx\sharing\includes\functions\is_disabled() || \lsx\sharing\includes\functions\is_pt_disabled( get_post_type() ) || in_array( get_post_type(), \lsx\sharing\includes\functions\get_restricted_post_types() ) || in_array( get_post_type(), \lsx\sharing\includes\functions\get_to_post_types() ) ) {
 				return '';
 			}
 			?>
