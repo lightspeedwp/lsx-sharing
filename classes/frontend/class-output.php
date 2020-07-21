@@ -29,7 +29,11 @@ class Output {
 		// WooCommerce.
 		add_action( 'woocommerce_share', array( $this, 'sharing_buttons_template' ) );
 
+		// General Post Types.
 		add_action( 'lsx_entry_after', array( $this, 'output_sharing' ) );
+
+		// Tribe Events.
+		add_filter( 'tribe_events_ical_single_event_links', array( $this, 'output_event_sharing' ), 10, 1 );
 	}
 
 	/**
@@ -184,6 +188,9 @@ class Output {
 	 */
 	public function output_sharing() {
 		if ( is_main_query() && is_single() && ! is_singular( array( 'post', 'page', 'product' ) ) ) {
+			if ( \lsx\sharing\includes\functions\is_disabled() || \lsx\sharing\includes\functions\is_pt_disabled( get_post_type() ) ) {
+				return '';
+			}
 			?>
 			<footer class="footer-meta clearfix">
 				<div class="post-tags-wrapper">
@@ -192,5 +199,20 @@ class Output {
 			</footer><!-- .footer-meta -->
 			<?php
 		}
+	}
+
+	/**
+	 * Outputs the sharing below the events.
+	 *
+	 * @param string $ical_links
+	 * @return string
+	 */
+	public function output_event_sharing( $ical_links = '' ) {
+		if ( \lsx\sharing\includes\functions\is_disabled() || \lsx\sharing\includes\functions\is_pt_disabled( get_post_type() ) ) {
+			return '';
+		} else {
+			$ical_links .= $this->sharing_buttons();
+		}
+		return $ical_links;
 	}
 }
