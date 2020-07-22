@@ -65,7 +65,6 @@ class Settings {
 	 * Enqueue JS and CSS.
 	 */
 	public function assets( $hook ) {
-		wp_enqueue_script( 'lsx-sharing-admin', LSX_SHARING_URL . 'assets/js/src/lsx-sharing-admin.js', array( 'jquery' ), LSX_SHARING_VER, true );
 		wp_enqueue_style( 'lsx-sharing-admin', LSX_SHARING_URL . 'assets/css/lsx-sharing-admin.css', array(), LSX_SHARING_VER );
 	}
 

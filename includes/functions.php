@@ -52,6 +52,22 @@ function get_to_post_types() {
 }
 
 /**
+ * Gets the LSX HP Post types
+ *
+ * @return array
+ */
+function get_hp_post_types() {
+	$post_types = array(
+		'workout',
+		'exercise',
+		'recipe',
+		'meal',
+		'tip',
+	);
+	return apply_filters( 'lsx_sharing_get_hp_post_types', $post_types );
+}
+
+/**
  * Gets a specific option from the array.
  *
  * @return boolean
