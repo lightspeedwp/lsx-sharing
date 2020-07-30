@@ -1,5 +1,5 @@
 === LSX Sharing ===
-Contributors: feedmymedia
+Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, virginialsdev, deon80, jaab1985, jacquesvdh, ignusvermaak, garthlsdev
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, Gutenberg, sharing, social sharing, wordpress blocks
 Requires at least: 4.9
