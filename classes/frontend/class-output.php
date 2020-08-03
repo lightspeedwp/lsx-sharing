@@ -98,6 +98,10 @@ class Output {
 			return '';
 		}
 
+		if ( empty( $this->options ) ) {
+			$this->options = array();
+		}
+
 		//Set our variables
 		global $post;
 		$share_post = $post;
