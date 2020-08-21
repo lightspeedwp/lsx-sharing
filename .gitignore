@@ -1,3 +1,5 @@
 node_modules
-lsx-sharing.sublime-workspace
+.sass-cache
+.idea
+*.sublime-workspace
 package-lock.json
