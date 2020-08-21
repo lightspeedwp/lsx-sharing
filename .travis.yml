@@ -98,5 +98,5 @@ script:
   - $WP_DEVELOP_DIR/phpcs/bin/phpcs --colors -p -s -v -n --standard=./.phpcs.xml
   - vendor/bin/phpunit --coverage-clover coverage.xml
  
- after_success:
+after_success:
   - bash <(curl -s https://codecov.io/bash)
