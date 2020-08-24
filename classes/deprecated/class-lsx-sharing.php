@@ -9,10 +9,11 @@
  * Deprecated class.
  */
 class LSX_Sharing {
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		return lsx_sharing();
-	}
+
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+         return lsx_sharing();
+    }
 }

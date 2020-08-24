@@ -13,14 +13,14 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if ( ! defined('WPINC') ) {
+    die;
 }
 
-define( 'LSX_SHARING_PATH', plugin_dir_path( __FILE__ ) );
-define( 'LSX_SHARING_CORE', __FILE__ );
-define( 'LSX_SHARING_URL', plugin_dir_url( __FILE__ ) );
-define( 'LSX_SHARING_VER', '1.2.0' );
+define('LSX_SHARING_PATH', plugin_dir_path(__FILE__));
+define('LSX_SHARING_CORE', __FILE__);
+define('LSX_SHARING_URL', plugin_dir_url(__FILE__));
+define('LSX_SHARING_VER', '1.2.0');
 
 /* ======================= Below is the Plugin Class init ========================= */
 require_once LSX_SHARING_PATH . '/classes/class-sharing.php';
@@ -30,7 +30,7 @@ require_once LSX_SHARING_PATH . '/classes/class-sharing.php';
  * @return object \lsx\sharing\Sharing();
  */
 function lsx_sharing() {
-	$lsx_sharing = \lsx\sharing\Sharing::get_instance();
-	return $lsx_sharing;
+     $lsx_sharing = \lsx\sharing\Sharing::get_instance();
+    return $lsx_sharing;
 }
 lsx_sharing();
