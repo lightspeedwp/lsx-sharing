@@ -31,10 +31,6 @@ filter:
     excluded_paths: [tests/*, bin/*, assets/*, languages/*, includes/classes/legacy/*, vendor/*]
 build:
   nodes:
-    cache:
-        directories:
-            - ~/.composer
-            - vendor
     environment:
         variables:
             CI: 'true'
