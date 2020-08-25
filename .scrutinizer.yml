@@ -25,6 +25,10 @@ filter:
 build:
   nodes:
     my-tests:
+      cache:
+        directories:
+            - ~/.composer
+            - vendor
       environment:
         variables:
             CI: 'true'
