@@ -1,12 +1,12 @@
 tools:
   sensiolabs_security_checker: true
+  php_cs_fixer: false
 checks:
   php:
     avoid_closing_tag: false
     avoid_superglobals: false
     coding_standard:
       name: WordPress
-    checkstyle: false
     no_exit: false
     no_global_keyword: false
     one_class_per_file: false
