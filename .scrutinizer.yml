@@ -29,6 +29,13 @@ checks:
 filter:
     dependency_paths: [wordpress/*, wp-content/*, includes/classes/legacy/*, vendor/*]
     excluded_paths: [tests/*, bin/*, assets/*, languages/*, includes/classes/legacy/*, vendor/*]
+coding_style:
+    php:
+        spaces:
+            before_parentheses:
+                closure_definition: true
+            around_operators:
+                concatenation: false
 build:
     environment:
         variables:
