@@ -42,7 +42,8 @@ build:
         timezone: GMT+2
         postgresql: false
         redis: false
-    analysis:
+    nodes:
+     analysis:
       project_setup:
         override: true
       tests:
