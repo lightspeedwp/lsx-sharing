@@ -1,6 +1,7 @@
 tools:
   sensiolabs_security_checker: true
   php_cs_fixer: false
+  php_code_coverage: true
 checks:
   php:
     avoid_closing_tag: false
