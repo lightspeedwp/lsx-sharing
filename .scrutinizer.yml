@@ -47,8 +47,6 @@ build:
         timezone: GMT+2
         postgresql: false
         redis: false
-      services:
-        mariadb: 10
     analysis:
       project_setup:
         override: true
