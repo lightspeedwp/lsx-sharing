@@ -18,6 +18,7 @@ checks:
     verify_access_scope_valid: false
     verify_argument_usable_as_reference: false
     verify_property_names: false
+    fix_doc_comments: false
 filter:
     dependency_paths: [wordpress/*, wp-content/*, includes/classes/legacy/*, vendor/*]
     excluded_paths: [tests/*, bin/*, assets/*, languages/*, includes/classes/legacy/*, vendor/*]
@@ -25,8 +26,17 @@ build:
   nodes:
     my-tests:
       environment:
+        variables:
+            CI: 'true'
+            TEST_OUTPUT_STYLE: 'pretty'
+            COMPOSER_OPTIONS: '--optimize-autoloader'
+            COVERAGE_OUTPUT_STYLE: 'clover'
+            COVERAGE_CLOVER_FILE_PATH: 'build/coverage/clover.xml'
         php:
-          version: 7.4
+            version: "7.4"
+        timezone: GMT+2
+        postgresql: false
+        redis: false
       services:
         mariadb: 10
     analysis:
