@@ -30,7 +30,6 @@ filter:
     dependency_paths: [wordpress/*, wp-content/*, includes/classes/legacy/*, vendor/*]
     excluded_paths: [tests/*, bin/*, assets/*, languages/*, includes/classes/legacy/*, vendor/*]
 build:
-  nodes:
     environment:
         variables:
             CI: 'true'
