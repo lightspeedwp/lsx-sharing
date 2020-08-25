@@ -4,13 +4,19 @@ tools:
   php_code_coverage: true
 checks:
   php:
+    argument_type_checks: false
     avoid_closing_tag: false
     avoid_superglobals: false
     coding_standard:
       name: WordPress
+    encourage_shallow_comparison: false
+    method_calls_on_non_object: false
     no_exit: false
     no_global_keyword: false
+    no_trailing_whitespace: false
     one_class_per_file: false
+    property_assignments: false
+    parse_doc_comments: false
     psr2_class_declaration: false
     psr2_control_structure_declaration: false
     psr2_switch_declaration: false
@@ -19,17 +25,17 @@ checks:
     verify_argument_usable_as_reference: false
     verify_property_names: false
     fix_doc_comments: false
+    non_commented_empty_catch_block: false
 filter:
     dependency_paths: [wordpress/*, wp-content/*, includes/classes/legacy/*, vendor/*]
     excluded_paths: [tests/*, bin/*, assets/*, languages/*, includes/classes/legacy/*, vendor/*]
 build:
   nodes:
-    my-tests:
-      cache:
+    cache:
         directories:
             - ~/.composer
             - vendor
-      environment:
+    environment:
         variables:
             CI: 'true'
             TEST_OUTPUT_STYLE: 'pretty'
