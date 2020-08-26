@@ -77,7 +77,7 @@ class Settings {
     public function configure_general_fields( $cmb ) {
          $global_args = array(
 			 'title' => __('Global', 'lsx-search'),
-			 'desc'  => esc_html__('Control the sharing WordPress post types.', 'lsx-search'),
+			 'desc'  => esc_html__('These settings will control sharing icons everywhere.', 'lsx-search'),
 		 );
         $this->get_fields($cmb, 'global', $global_args);
     }
@@ -111,7 +111,7 @@ class Settings {
                     }
                     $description = sprintf(
                     /* translators: %s: The subscription info */
-                        __('Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> posts.', 'lsx-search'),
+                        __('Control the sharing buttons on your <a target="_blank" href="%1$s">%2$s</a> posts.', 'lsx-search'),
                         $page_url,
                         $page_title
                     );
@@ -131,7 +131,7 @@ class Settings {
                     }
                     $description = sprintf(
                     /* translators: %s: The subscription info */
-                        __('Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> product pages.', 'lsx-search'),
+                        __('Control the sharing buttons which show on your <a target="_blank" href="%1$s">%2$s</a> product pages.', 'lsx-search'),
                         $page_url,
                         $page_title
                     );
@@ -150,7 +150,7 @@ class Settings {
                         $page_url    = get_post_type_archive_link($temp_post_type->name);
                         $description = sprintf(
                         /* translators: %s: The subscription info */
-                            __('Control the filters which show on your <a target="_blank" href="%1$s">%2$s</a> singles.', 'lsx-search'),
+                            __('Control the sharing buttons which show on your <a target="_blank" href="%1$s">%2$s</a> singles.', 'lsx-search'),
                             $page_url,
                             $temp_post_type->label
                         );
@@ -193,7 +193,7 @@ class Settings {
                 array(
 					'name'        => esc_html__('Disable all', 'lsx-sharing'),
 					'id'          => $section . '_disable_all',
-					'description' => esc_html__('Disable all share buttons on the site', 'lsx-sharing'),
+					'description' => esc_html__('Disable all sharing buttons on the site', 'lsx-sharing'),
 					'type'        => 'checkbox',
                 )
             );
@@ -212,7 +212,7 @@ class Settings {
             array(
 				'name'        => esc_html__('Label text', 'lsx-sharing'),
 				'id'          => $section . '_label_text',
-				'description' => esc_html__('A default label for the sharing.', 'lsx-sharing'),
+				'description' => esc_html__('This text will display alongside the sharing buttons.', 'lsx-sharing'),
 				'type'        => 'text',
             )
         );
