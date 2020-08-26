@@ -4,14 +4,21 @@
 
 ### Added
 
-- You now have the ability to disable the sharing per post type
+- You now have the ability to disable the sharing per post type.
 - Disable each service per post type.
 - Set a sharing label per post type.
 
 ### Updated
 
-- Updated the settings page to CMB2
+- Updated the settings page to CMB2.
 - Updated the PHP classes to use get_instance functions.
+
+### Security
+
+- Updating dependencies to prevent vulnerabilities.
+- Updating PHPCS options for better code.
+- General testing to ensure compatibility with latest WordPress version (5.5).
+- General testing to ensure compatibility with latest LSX Theme version (2.9).
 
 ## [[1.1.3]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.1.3) - 2020-03-30
 
