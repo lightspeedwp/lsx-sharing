@@ -218,6 +218,7 @@ class Settings {
 			array(
 				'name'        => esc_html__( 'Label text', 'lsx-sharing' ),
 				'id'          => $section . '_label_text',
+				'type'        => 'text',
 				'description' => $label_text_description,
 			)
 		);
