@@ -211,7 +211,7 @@ class Settings {
 		if ( 'global' === $section ) {
 			$label_text_description = esc_html__( 'If no text is specified per post type this text will display.' , 'lsx-sharing' );
 		} else {
-			$label_text_description = esc_html__( 'A default label for the sharing.', 'lsx-sharing' );
+			$label_text_description = esc_html__( 'This text will display alongside the sharing buttons.', 'lsx-sharing' );
 		}
 		
         $cmb->add_field(
@@ -219,7 +219,6 @@ class Settings {
 				'name'        => esc_html__( 'Label text', 'lsx-sharing' ),
 				'id'          => $section . '_label_text',
 				'description' => $label_text_description,
-				'type'        => 'text',
 			)
 		);
 		
