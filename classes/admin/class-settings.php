@@ -208,14 +208,21 @@ class Settings {
             );
         }
 
+		if ( 'global' === $section ) {
+			$label_text_description = esc_html__( 'If no text is specified per post type this text will display.' , 'lsx-sharing' );
+		} else {
+			$label_text_description = esc_html__( 'A default label for the sharing.', 'lsx-sharing' );
+		}
+		
         $cmb->add_field(
-            array(
-				'name'        => esc_html__('Label text', 'lsx-sharing'),
+			array(
+				'name'        => esc_html__( 'Label text', 'lsx-sharing' ),
 				'id'          => $section . '_label_text',
-				'description' => esc_html__('This text will display alongside the sharing buttons.', 'lsx-sharing'),
+				'description' => $label_text_description,
 				'type'        => 'text',
-            )
-        );
+			)
+		);
+		
         if ( 'global' === $section || ( 'global' !== $section && ! \lsx\sharing\includes\functions\is_button_disabled('global', 'facebook') ) ) {
             $cmb->add_field(
                 array(
