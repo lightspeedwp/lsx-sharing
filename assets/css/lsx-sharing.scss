@@ -33,23 +33,29 @@
 		text-align: right;
 		width: 50%;
 
-		@media only screen and (max-width: 767px) {
-			text-align: left;
+		@media only screen and (max-width: 991px) {
+			text-align: center;
+			width: 100%;
+			margin-top: 2.4rem;
 		}
 	}
 
 	// Storefront
-	body.single-post:not(.lsx) & { margin-bottom: 20px; }
+	body.single-post:not(.lsx) & {
+		margin-bottom: 20px;
+	}
 
 	// WooCommerce
-	body.single-product.woocommerce-active & { margin-top: 20px; }
+	body.single-product.woocommerce-active & {
+		margin-top: 20px;
+	}
 
 	.lsx-sharing-label {
 		font-size: 90%;
 		line-height: 25px;
 
 		&:before {
-			content: '\f1e0';
+			content: "\f1e0";
 			border-top: none;
 			display: inline-block;
 			font: {
@@ -129,7 +135,7 @@
 
 			.fa {
 				&:before {
-					content: '\f0e0';
+					content: "\f0e0";
 				}
 			}
 		}
@@ -153,7 +159,7 @@
 
 			.fa {
 				&:before {
-					content: '\f09a';
+					content: "\f09a";
 				}
 			}
 		}
@@ -177,7 +183,7 @@
 
 			.fa {
 				&:before {
-					content: '\f099';
+					content: "\f099";
 				}
 			}
 		}
@@ -201,7 +207,7 @@
 
 			.fa {
 				&:before {
-					content: '\f231';
+					content: "\f231";
 				}
 			}
 		}
