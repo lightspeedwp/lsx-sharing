@@ -14,51 +14,55 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: classes/admin/class-settings.php:205
-msgid "Disable"
-msgstr ""
-
-#: classes/admin/class-settings.php:207
-msgid "Disable the share buttons on this post type"
-msgstr ""
-
-#: classes/admin/class-settings.php:196
+#: classes/admin/class-settings.php:194
 msgid "Disable all"
 msgstr ""
 
-#: classes/admin/class-settings.php:198
-msgid "Disable all share buttons on the site"
+#: classes/admin/class-settings.php:196
+msgid "Disable all sharing buttons on the site"
 msgstr ""
 
-#: classes/admin/class-settings.php:215
+#: classes/admin/class-settings.php:203
+msgid "Disable"
+msgstr ""
+
+#: classes/admin/class-settings.php:205
+msgid "Disable the share buttons on this post type"
+msgstr ""
+
+#: classes/admin/class-settings.php:212
+msgid "If no text is specified per post type this text will display."
+msgstr ""
+
+#: classes/admin/class-settings.php:214
+msgid "This text will display alongside the sharing buttons."
+msgstr ""
+
+#: classes/admin/class-settings.php:219
 msgid "Label text"
 msgstr ""
 
-#: classes/admin/class-settings.php:217
-msgid "A default label for the sharing."
-msgstr ""
-
-#: classes/admin/class-settings.php:224
+#: classes/admin/class-settings.php:229
 msgid "Disable Facebook"
 msgstr ""
 
-#: classes/admin/class-settings.php:226
+#: classes/admin/class-settings.php:231
 msgid "Disable Facebook share button."
 msgstr ""
 
-#: classes/admin/class-settings.php:234
+#: classes/admin/class-settings.php:239
 msgid "Disable Twitter"
 msgstr ""
 
-#: classes/admin/class-settings.php:236
+#: classes/admin/class-settings.php:241
 msgid "Disable Twitter share button."
 msgstr ""
 
-#: classes/admin/class-settings.php:244
+#: classes/admin/class-settings.php:249
 msgid "Disable Pinterest"
 msgstr ""
 
-#: classes/admin/class-settings.php:246
+#: classes/admin/class-settings.php:251
 msgid "Disable Pinterest button."
 msgstr ""
 
@@ -86,14 +90,14 @@ msgstr ""
 msgid "Services"
 msgstr ""
 
-#: includes/settings/display.php:41
+#: includes/settings/display.php:44
 msgid "Blog Customizer (posts widget)"
 msgstr ""
 
-#: includes/settings/display.php:47
+#: includes/settings/display.php:50
 msgid "Sharing"
 msgstr ""
 
-#: includes/settings/display.php:53
+#: includes/settings/display.php:56
 msgid "Videos"
 msgstr ""
