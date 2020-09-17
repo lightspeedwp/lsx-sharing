@@ -8,7 +8,7 @@
 
 .post-tags-wrapper .post-tags + .lsx-sharing-content { text-align: left; width: 50%; }
 
-@media only screen and (max-width: 767px) { .post-tags-wrapper .post-tags + .lsx-sharing-content { text-align: right; } }
+@media only screen and (max-width: 991px) { .post-tags-wrapper .post-tags + .lsx-sharing-content { text-align: center; width: 100%; margin-top: 2.4rem; } }
 
 body.single-post:not(.lsx) .lsx-sharing-content { margin-bottom: 20px; }
 
@@ -16,7 +16,7 @@ body.single-product.woocommerce-active .lsx-sharing-content { margin-top: 20px; 
 
 .lsx-sharing-content .lsx-sharing-label { font-size: 90%; line-height: 25px; }
 
-.lsx-sharing-content .lsx-sharing-label:before { content: '\f1e0'; border-top: none; display: inline-block; font-family: fontawesome; font-weight: normal; font-size: 16px; margin-left: 8px; margin-bottom: 0; min-width: auto; width: auto; }
+.lsx-sharing-content .lsx-sharing-label:before { content: "\f1e0"; border-top: none; display: inline-block; font-family: fontawesome; font-weight: normal; font-size: 16px; margin-left: 8px; margin-bottom: 0; min-width: auto; width: auto; }
 
 @media only screen and (max-width: 767px) { .lsx-sharing-content .lsx-sharing-label { display: none; } }
 
@@ -38,24 +38,24 @@ body.single-product.woocommerce-active .lsx-sharing-content { margin-top: 20px; 
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):focus { background-color: #242424; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email .fa:before { content: '\f0e0'; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email .fa:before { content: "\f0e0"; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):visited { background-color: #3b5998; color: white; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):focus { background-color: #263961; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook .fa:before { content: '\f09a'; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook .fa:before { content: "\f09a"; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):visited { background-color: #00acee; color: white; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):focus { background-color: #0075a2; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter .fa:before { content: '\f099'; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter .fa:before { content: "\f099"; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):visited { background-color: #ca1f27; color: white; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):focus { background-color: #88151a; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest .fa:before { content: '\f231'; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest .fa:before { content: "\f231"; }
 
 .lsx-sharing-wrapper.footer-meta { padding: 2.4rem 0; }
