@@ -108,7 +108,8 @@ class Button {
      * Get Pinterest link to share.
      */
     public function get_link_pinterest( $post ) {
-         $permalink = get_permalink($post->ID);
+		$image = '';
+        $permalink = get_permalink($post->ID);
         $permalink = apply_filters('lsx_sharing_pinterest_url', $permalink, $post);
         $title     = apply_filters('the_title', $post->post_title);
 
