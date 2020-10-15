@@ -1,7 +1,7 @@
 /** Styles. @package lsx-sharing */
 .post-tags-wrapper .lsx-sharing-content { clear: none; float: left; line-height: 1; margin: 0 0 7px 0; text-align: center; width: 100%; }
 
-@media only screen and (max-width: 767px) { .post-tags-wrapper .lsx-sharing-content { margin-top: 10px; text-align: right; width: 100%; }
+@media only screen and (max-width: 767px) { .post-tags-wrapper .lsx-sharing-content { margin-top: 10px; width: 100%; }
   .post-tags-wrapper .lsx-sharing-content:first-child { margin-top: 0; } }
 
 .lsx-sharing-content .post-tags-wrapper .post-tags { width: 50%; display: inline-block; }
@@ -34,27 +34,27 @@ body.single-product.woocommerce-active .lsx-sharing-content { margin-top: 20px; 
 
 .lsx-sharing-content .lsx-sharing-button:last-child { margin-left: 0; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):visited { background-color: #4a4a4a; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited { background-color: #4a4a4a; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):focus { background-color: #242424; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus { background-color: #242424; color: white; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-email .fa:before { content: "\f0e0"; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):visited { background-color: #3b5998; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited { background-color: #3b5998; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):focus { background-color: #263961; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus { background-color: #263961; color: white; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-facebook .fa:before { content: "\f09a"; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):visited { background-color: #00acee; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited { background-color: #00acee; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):focus { background-color: #0075a2; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus { background-color: #0075a2; color: white; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-twitter .fa:before { content: "\f099"; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):visited { background-color: #ca1f27; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor), .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):visited { background-color: #ca1f27; color: white; }
 
-.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):focus { background-color: #88151a; color: white; }
+.lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):hover:active, .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor):focus { background-color: #88151a; color: white; }
 
 .lsx-sharing-content .lsx-sharing-button.lsx-sharing-button-pinterest .fa:before { content: "\f231"; }
 

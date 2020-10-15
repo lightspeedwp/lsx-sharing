@@ -15,7 +15,6 @@
 
 		@media only screen and (max-width: 767px) {
 			margin-top: 10px;
-			text-align: left;
 			width: 100%;
 
 			&:first-child {
@@ -117,7 +116,7 @@
 		}
 
 		&.lsx-sharing-button-email {
-			a:not(.btn) {
+			a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor){
 				&,
 				&:active,
 				&:visited {
@@ -141,7 +140,7 @@
 		}
 
 		&.lsx-sharing-button-facebook {
-			a:not(.btn) {
+			a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor){
 				&,
 				&:active,
 				&:visited {
@@ -165,7 +164,7 @@
 		}
 
 		&.lsx-sharing-button-twitter {
-			a:not(.btn) {
+			a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor){
 				&,
 				&:active,
 				&:visited {
@@ -189,7 +188,7 @@
 		}
 
 		&.lsx-sharing-button-pinterest {
-			a:not(.btn) {
+			a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor) {
 				&,
 				&:active,
 				&:visited {
