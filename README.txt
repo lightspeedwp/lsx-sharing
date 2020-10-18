@@ -1,29 +1,30 @@
 === LSX Sharing ===
-Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, virginialsdev, deon80, jaab1985, jacquesvdh, ignusvermaak, garthlsdev
-Donate link: https://donate.lsdev.biz/
-Tags: lsx, Gutenberg, sharing, social sharing, wordpress blocks
-Requires at least: 5.3
+Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusvermaak
+Donate link: https://lsdev.biz/lsx/donate/
+Tags: lsx, sharing, share, social, social sharing
+Requires at least: 5.0
 Tested up to: 5.5.1
-Requires PHP: 7.2
+Requires PHP: 7.0
 Stable tag: 1.2.0
-License: GPLv3
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-[LSX Sharing Extension](https://lsx.lsdev.biz/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
+[LSX Sharing Extension](https://www.lsdev.biz/lsx/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
 
 ## Works with the LSX Theme
-Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with LSX Sharing, improving internal linking, website SEO and user experience! 
+Our modern and lightweight [theme](https://www.lsdev.biz/lsx/) works perfectly with LSX Sharing, improving internal linking, website SEO and user experience! 
 
-## Gutenberg Compatible Plugin
+## Gutenberg Compatible
 Have you updated to the new WordPress Gutenberg editor? We've got you covered! Our software has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
 
 ## It's free, and always will be.
-We’re firm believers in open source - that’s why the [LSX Sharing](https://lsx.lsdev.biz/extensions/sharing/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
+We’re firm believers in open source - that’s why the [LSX Sharing](https://www.lsdev.biz/lsx/extensions/sharing/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
 
-## LSX Sharing Documentation
+## Documentation
 
-We have created extensive documentation on all of the LSX Sharing Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Sharing Documentation](https://lsx.lsdev.biz/documentation/lsx-sharing/).
+We have created extensive documentation on all of the LSX Sharing Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Sharing Documentation](https://www.lsdev.biz/lsx/documentation/lsx-extensions/lsx-sharing/).
 
-## LSX Sharing Help & Support
+## Support
 
 We offer premium support for this plugin. Premium support that can be purchased [via our website](https://www.lsdev.biz/services/support/).
 
