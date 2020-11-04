@@ -3,63 +3,65 @@ Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusver
 Donate link: https://lsdev.biz/lsx/donate/
 Tags: lsx, sharing, share, social, social sharing
 Requires at least: 5.0
-Tested up to: 5.5.1
+Tested up to: 5.5.3
 Requires PHP: 7.0
 Stable tag: 1.2.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-This plugin adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
+Add sharing buttons to your website so users can share your content to social networks (Facebook, Twitter and Pinterest).
 
 == Description ==
 
 = Works with the LSX Theme = 
 Our modern and lightweight [theme](https://www.lsdev.biz/lsx/) works perfectly with LSX Sharing, improving internal linking, website SEO and user experience! 
 
-= Gutenberg Compatible =
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! Our software has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
+= Free Companion Theme = 
 
-= It's free, and always will be. =
-We’re firm believers in open source - that’s why the [LSX Sharing](https://www.lsdev.biz/lsx/extensions/sharing/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
+LSX Team is built to show off the best of the WordPress block editor, but it requires the free LSX theme in the WordPress theme repository as the perfect companion for LSX Blocks - https://wordpress.org/themes/lsx/
+
+= Works with the LSX Theme == Block Editor Support = 
+
+The LSX theme is full compatible with the WordPress block editor. This means you can now make use of the drag-and-drop page builder when creating new pages and posts. 
+
+[LSX Blocks](https://lsdev.biz/lsx/extensions/blocks) is an extension with blocks designed to display perfectly with the LSX theme. The blocks plugin extends various WordPress core blocks to be more flexible with the WordPress theme. 
+
+The combination of LSX Theme & LSX Blocks gives you a true page builder experience using the WordPress Gutenberg block editor.
 
 = Documentation = 
 
-We have created extensive documentation on all of the LSX Sharing Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Sharing Documentation](https://www.lsdev.biz/lsx/documentation/lsx-extensions/lsx-sharing/).
+We have extensive documentation on all our plugins and theme functionality. This allows you to take control of your website setup and design to your needs: 
+
+* [LSX Sharing Documentation](https://lsdev.biz/lsx/documentation/lsx-extensions/lsx-sharing/).
+* [LSX Theme](https://lsdev.biz/lsx/documentation/lsx-theme/)
+* [LSX Blocks](https://lsdev.biz/lsx/documentation/lsx-blocks/)
 
 = Support =
 
 Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://www.lsdev.biz/lsx/support/).
 
-If you are experiencing issues with the LSX Sharing Plugin & have experience with Github, please log any bug issues you are having on the [LSX Sharing Github Issues](https://github.com/lightspeeddevelopment/lsx-sharing/issues/) page.
+If you are experiencing issues with the LSX  plugin, please log any bug issues you are having on the [LSX Sharing Issues](https://github.com/lightspeeddevelopment/lsx-sharing/issues) page.
 
 = Contributing =
 
-If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Sharing Plugin on Github](https://github.com/lightspeeddevelopment/lsx-sharing) and submit a Pull Request with your updates.
+Extensible, adaptable, and open source — LSX Sharing is created with theme and plugin developers in mind. If you’re interested to jump in the project, there are opportunities for developers at all levels to get involved. 
+
+If you're a developer who's spotted a bug issue and have a fix, or simply have the functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Sharing on Github](https://github.com/lightspeeddevelopment/lsx-Sharing/) and submit a Pull Request with your updates.
+
+== Frequently Asked Questions ==
+= I’ve installed the plugin, now what? =
+Go to Settings > LSX Sharing and start adding and customizing sharing buttons for your content.  Follow the steps in the documentation to find out about all the options.
+
+= Where can I get support or talk to other users =
+Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://lsdev.biz/lsx/support/).
+
+= Will the LSX Sharing plugin work with my theme =
+No; the LSX Sharing plugin will only work with LSX Theme.
 
 == Screenshots ==
-
 1. Sharing Settings Panel
 2. Sharing Buttons 
 
-== Frequently Asked Questions == 
+== Changelog == 
 
-
-
-== Changelog ==
-
-= 1.1.2 =
-* Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
-* Fix - Changing the wp_enqueue_script priority
-* Fix - Removing gulp-minify-css and updating gulpfile to 4.0+
-
-= 1.1.1 =
-* Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
-
-= 1.1.0 =
-* Dev -  Removing API file.
-* Dev - making sure that there are no code sniffer errors.
-
-== Upgrade Notice ==
-
-= 1.1.0 =
-Removing API file and making sure that there are no code sniffer errors.
+[Latest changelogs can be found on GitHub](https://github.com/lightspeeddevelopment/lsx-sharing/blob/master/changelog.md).
