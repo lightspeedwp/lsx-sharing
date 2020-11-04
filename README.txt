@@ -9,7 +9,7 @@ Stable tag: 1.2.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Add sharing buttons to your website so users can share your content to social networks (Facebook, Twitter and Pinterest).
+This plugin adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
 
 == Description ==
 
