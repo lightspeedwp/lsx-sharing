@@ -1,6 +1,6 @@
 # Changelog
 
-## [[1.2.0]]()
+## [[1.2.0]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.2.0) - 2020-11-09
 
 ### Added
 
