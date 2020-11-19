@@ -14,13 +14,13 @@ This plugin adds buttons to your posts & pages that your readers can use to shar
 == Description ==
 
 = Works with the LSX Theme = 
-Our modern and lightweight [theme](https://www.lsdev.biz/lsx/) works perfectly with LSX Sharing, improving internal linking, website SEO and user experience! 
+Our modern and lightweight [theme](https://lsdev.biz/lsx/) works perfectly with LSX Sharing, improving internal linking, website SEO and user experience! 
 
 = Free Companion Theme = 
 
-LSX Team is built to show off the best of the WordPress block editor, but it requires the free LSX theme in the WordPress theme repository as the perfect companion for LSX Blocks - https://wordpress.org/themes/lsx/
+LSX Sharing is built for the free [LSX theme](https://wordpress.org/themes/lsx/) in the WordPress theme repository as the perfect companion for LSX Blocks.
 
-= Works with the LSX Theme == Block Editor Support = 
+= Block Editor Support = 
 
 The LSX theme is full compatible with the WordPress block editor. This means you can now make use of the drag-and-drop page builder when creating new pages and posts. 
 
