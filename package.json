@@ -21,7 +21,7 @@
   "homepage": "https://github.com/lightspeeddevelopment/lsx-sharing#readme",
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-rtlcss": "^1.0.0",
+    "gulp-rtlcss": "^2.0.0",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-gettext": "^0.3.0",
