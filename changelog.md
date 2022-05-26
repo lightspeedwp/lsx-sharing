@@ -1,5 +1,10 @@
 # Changelog
 
+## [[1.2.2]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.2.2) - 2022-05-26
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (6.0).
+
 ## [[1.2.1]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.2.1) - 2021-01-15
 
 ### Updated
