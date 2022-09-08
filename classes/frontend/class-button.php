@@ -158,6 +158,35 @@ class Button {
         return $url . rawurlencode($permalink) . '&media=' . rawurlencode($image) . '&text=' . rawurlencode($title);
     }
 
+	/**
+	 * Return the link attributes.
+	 *
+	 * @param string $button
+	 * @return string
+	 */
+	public function get_atts( $button = '' ) {
+		$atts      = array();
+		$attstring = '';
+
+		switch( $button ) {
+			case 'facebook':
+			break;
+			case 'twitter':
+			break;
+			case 'pinterest':
+			break;
+			case 'whatsapp':
+				$atts[] = 'data-action="share/whatsapp/share"';
+			break;
+		}
+
+		if ( ! empty( $atts ) ) {
+			$attstring = implode( '', $atts );
+		}
+		return $attstring;
+	}
+
+
     /**
      * Get Email Link.
      */

@@ -128,19 +128,21 @@ class Output {
             }
 
             foreach ( $buttons as $id => $button ) {
-                $button_obj = new \lsx\sharing\classes\frontend\Button($button, $this->options, $post_type);
+                $button_obj = new \lsx\sharing\classes\frontend\Button( $button, $this->options, $post_type );
 
                 if ( ! empty($button_obj) ) {
-                    $url = $button_obj->get_link($share_post);
+                    $url = $button_obj->get_link( $share_post );
+					
+					$atts = $button_obj->get_atts( $button );
 
                     if ( ! empty($url) ) {
                         if ( 'email' === $button ) {
                             if ( ! isset($this->options['display']) || empty($this->options['display']['sharing_email_form_id']) ) {
                                 continue;
                             }
-                            $sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr($button) . '"><a href="#lsx-sharing-email" data-toggle="modal" data-link="' . esc_url($url) . '"><span class="fa" aria-hidden="true"></span></a></span>';
+                            $sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr($button) . '"><a href="#lsx-sharing-email" data-toggle="modal" data-link="' . esc_url($url) . '" ' . $atts . '><span class="fa" aria-hidden="true"></span></a></span>';
                         } else {
-                            $sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr($button) . '"><a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer"><span class="fa" aria-hidden="true"></span></a></span>';
+                            $sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr($button) . '"><a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer" ' . $atts . '><span class="fa" aria-hidden="true"></span></a></span>';
                         }
                     }
                 }
@@ -188,8 +190,9 @@ class Output {
      * Allow data params for Bootstrap modal.
      */
     public function wp_kses_allowed_html( $allowedtags, $context ) {
-         $allowedtags['a']['data-toggle'] = true;
+        $allowedtags['a']['data-toggle'] = true;
         $allowedtags['a']['data-link']   = true;
+		$allowedtags['a']['data-action']   = true;
         return $allowedtags;
     }
 
