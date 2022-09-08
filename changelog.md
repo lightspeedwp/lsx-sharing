@@ -1,5 +1,10 @@
 # Changelog
 
+## [[1.2.3]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.2.3) - In development
+
+### Added
+- Added support for sharing to whatsapp.
+
 ## [[1.2.2]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.2.2) - 2022-05-26
 
 ### Security

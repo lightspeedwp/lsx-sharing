@@ -94,7 +94,7 @@ class Output {
     /**
      * Display/return sharing buttons.
      */
-    public function sharing_buttons( $buttons = array( 'facebook', 'twitter', 'pinterest' ), $echo = false, $post_id = false ) {
+    public function sharing_buttons( $buttons = array( 'facebook', 'twitter', 'pinterest', 'whatsapp' ), $echo = false, $post_id = false ) {
          $sharing_content = '';
 
         if ( ( is_preview() || is_admin() ) && ! ( defined('DOING_AJAX') && DOING_AJAX ) ) {
