@@ -136,7 +136,7 @@ class Button {
 		$image = '';
         $permalink = get_permalink($post->ID);
         $permalink = apply_filters('lsx_sharing_whatsapp_url', $permalink, $post);
-        $title     = apply_filters('the_title', '<a href="' . get_permalink( $post ) . '">' . $post->post_title . '</a>' );
+        $title     = apply_filters('the_title', $post->post_title . ' - ' . get_permalink( $post ) );
 
         if ( ! has_post_thumbnail($post) ) {
             if ( class_exists('lsx\legacy\Placeholders') ) {
