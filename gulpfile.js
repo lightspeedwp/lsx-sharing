@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const rtlcss = require("gulp-rtlcss");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require("gulp-sourcemaps");
 const jshint = require("gulp-jshint");
 const concat = require("gulp-concat");

@@ -253,6 +253,16 @@ class Settings {
                 )
             );
         }
+        if ( 'global' === $section || ( 'global' !== $section && ! \lsx\sharing\includes\functions\is_button_disabled('global', 'whatsapp') ) ) {
+            $cmb->add_field(
+                array(
+					'name'        => esc_html__('Disable Whatsapp', 'lsx-sharing'),
+					'id'          => $section . '_disable_whatsapp',
+					'description' => esc_html__('Disable Whatsapp button.', 'lsx-sharing'),
+					'type'        => 'checkbox',
+                )
+            );
+        }
 
         do_action('lsx_sharing_settings_section', $cmb, $section);
         $cmb->add_field(

@@ -24,6 +24,7 @@ class Button {
 		'facebook',
 		'twitter',
 		'pinterest',
+		'whatsapp',
     );
 
     /**
@@ -63,6 +64,8 @@ class Button {
             return $this->get_link_twitter($post);
         } elseif ( 'pinterest' === $this->service ) {
             return $this->get_link_pinterest($post);
+        } elseif ( 'whatsapp' === $this->service ) {
+            return $this->get_link_whatsapp($post);
         }
     }
 
@@ -124,6 +127,35 @@ class Button {
         }
 
         return 'https://www.pinterest.com/pin/create/button/?url=' . rawurlencode($permalink) . '&media=' . rawurlencode($image) . '&description=' . rawurlencode($title);
+    }
+
+    /**
+     * Get Pinterest link to share.
+     */
+    public function get_link_whatsapp( $post ) {
+		$image = '';
+        $permalink = get_permalink($post->ID);
+        $permalink = apply_filters('lsx_sharing_whatsapp_url', $permalink, $post);
+        $title     = apply_filters('the_title', $post->post_title);
+
+        if ( ! has_post_thumbnail($post) ) {
+            if ( class_exists('lsx\legacy\Placeholders') ) {
+                $image = \lsx\legacy\Placeholders::placeholder_url(null, $post->post_type);
+            } elseif ( class_exists('LSX_Placeholders') ) {
+                $image = \LSX_Placeholders::placeholder_url(null, $post->post_type);
+            }
+        } else {
+            $image = get_the_post_thumbnail_url($post->ID, 'large');
+        }
+
+		// Firefox for desktop doesn't handle the "api.whatsapp.com" URL properly, so use "web.whatsapp.com"
+		//if ( User_Agent_Info::is_firefox_desktop() ) {
+			//$url = 'https://web.whatsapp.com/send?=';
+		//} else {
+			$url = 'https://api.whatsapp.com/send?=';
+		//}
+
+        return $url . rawurlencode($permalink) . '&media=' . rawurlencode($image) . '&text=' . rawurlencode($title);
     }
 
     /**

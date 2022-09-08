@@ -210,6 +210,30 @@
 				}
 			}
 		}
+
+		&.lsx-sharing-button-whatsapp {
+			a:not(.btn):not(.wp-block-button__link):not(.has-link-anchor) {
+				&,
+				&:active,
+				&:visited {
+					background-color: #55D063;
+					color: white;
+				}
+
+				&:hover,
+				&:hover:active,
+				&:focus {
+					background-color: darken(#55D063, 15%);
+					color: white;
+				}
+			}
+
+			.fa {
+				&:before {
+					content: "\f232";
+				}
+			}
+		}
 	}
 }
 
