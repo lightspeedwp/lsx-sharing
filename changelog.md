@@ -4,6 +4,7 @@
 
 ### Added
 - Added support for sharing to Whatsapp.
+- Added in a `lsx_sharing_additional_buttons` filter to allow 3rd party plugins to add additional buttons to the modal.
 
 ## [[1.2.2]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.2.2) - 2022-05-26
 

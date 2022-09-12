@@ -147,7 +147,8 @@ class Output {
                     }
                 }
             }
-            $sharing_content .= '</p></div>';
+			$additional_buttons = apply_filters( 'lsx_sharing_additional_buttons', '', $this );
+            $sharing_content .= $additional_buttons . '</p></div>';
         }
 
         if ( $echo ) {
