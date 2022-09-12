@@ -137,7 +137,7 @@ class Output {
 
                     if ( ! empty($url) ) {
                         if ( 'email' === $button ) {
-                            if ( ! isset($this->options['display']) || empty($this->options['display']['sharing_email_form_id']) ) {
+                            if ( ! isset($this->options['global_email_form_id']) || empty($this->options['global_email_form_id']) ) {
                                 continue;
                             }
                             $sharing_content .= '<span class="lsx-sharing-button lsx-sharing-button-' . esc_attr($button) . '"><a href="#lsx-sharing-email" data-toggle="modal" data-link="' . esc_url($url) . '" ' . $atts . '><span class="fa" aria-hidden="true"></span></a></span>';
