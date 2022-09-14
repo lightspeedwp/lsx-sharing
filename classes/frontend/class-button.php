@@ -138,7 +138,7 @@ class Button {
 		//if ( User_Agent_Info::is_firefox_desktop() ) {
 			//$url = 'https://web.whatsapp.com/send?=';
 		//} else {
-			$url = 'https://api.whatsapp.com/send?=';
+			$url = 'https://api.whatsapp.com/send?';
 		//}
 
         return $url . 'text=' . rawurlencode($title);
