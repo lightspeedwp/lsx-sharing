@@ -3,7 +3,7 @@
  * Plugin Name: LSX Sharing
  * Plugin URI:  https://www.lsdev.biz/product/lsx-sharing/
  * Description: The LSX Sharing extension add social share icons for LSX Theme.
- * Version:     1.2.3
+ * Version:     1.2.4
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
  * License:     GPL3
@@ -20,7 +20,7 @@ if ( ! defined('WPINC') ) {
 define('LSX_SHARING_PATH', plugin_dir_path(__FILE__));
 define('LSX_SHARING_CORE', __FILE__);
 define('LSX_SHARING_URL', plugin_dir_url(__FILE__));
-define('LSX_SHARING_VER', '1.2.3');
+define('LSX_SHARING_VER', '1.2.4');
 
 /* ======================= Below is the Plugin Class init ========================= */
 require_once LSX_SHARING_PATH . '/classes/class-sharing.php';
