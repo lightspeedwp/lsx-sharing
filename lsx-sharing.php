@@ -23,7 +23,8 @@ define('LSX_SHARING_URL', plugin_dir_url(__FILE__));
 define('LSX_SHARING_VER', '2.0.0');
 
 /* ======================= Below is the Plugin Class init ========================= */
-require_once LSX_SHARING_PATH . '/classes/class-sharing.php';
+require_once LSX_SHARING_PATH . 'includes/classes/class-sharing.php';
+
 /**
  * Returns and instance of the LSX Sharing plugin.
  *
