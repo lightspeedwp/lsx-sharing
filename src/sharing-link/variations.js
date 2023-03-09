@@ -9,6 +9,7 @@ const variations = [
 		name: 'facebook',
 		attributes: {
 			service: 'facebook',
+			url: 'https://www.facebook.com/sharer.php?display=page&u=lsx_sharing_url&t=lsx_sharing_title',
 		},
 		title: 'FB Share',
 		icon: FacebookIcon
@@ -16,7 +17,8 @@ const variations = [
 	{
 		name: 'mail',
 		attributes: {
-			service: 'mail'
+			service: 'mail',
+			url: 'mailto@lsx_sharing_email',
 		},
 		title: 'Mail Share',
 		keywords: ['email', 'e-mail'],
@@ -25,7 +27,8 @@ const variations = [
 	{
 		name: 'pinterest',
 		attributes: {
-			service: 'pinterest'
+			service: 'pinterest',
+			url: 'https://www.pinterest.com/pin/create/button/?url=lsx_sharing_url&media=lsx_sharing_image&description=lsx_sharing_title',
 		},
 		title: 'Pin It',
 		icon: PinterestIcon
@@ -33,7 +36,8 @@ const variations = [
 	{
 		name: 'twitter',
 		attributes: {
-			service: 'twitter'
+			service: 'twitter',
+			url: 'https://twitter.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
 		},
 		title: 'Tweet',
 		icon: TwitterIcon
@@ -41,7 +45,8 @@ const variations = [
 	{
 		name: 'whatsapp',
 		attributes: {
-			service: 'whatsapp'
+			service: 'whatsapp',
+			url: 'https://api.whatsapp.com/send?lsx_sharing_title - lsx_sharing_url',
 		},
 		title: 'Send',
 		icon: WhatsAppIcon

@@ -1,7 +1,7 @@
 /**
  * Wordpress Dependancies
  */
-import { createElement, Fragment } from "@wordpress/element";
+import { createElement } from "@wordpress/element";
 import { useBlockProps } from '@wordpress/block-editor';
 import { Button } from '@wordpress/components';
 
@@ -14,9 +14,7 @@ import classNames from 'classnames';
 export default function Edit( props ) {
 	let {
 		attributes,
-		context,
-		isSelected,
-		setAttributes
+		context
 	} = props;
 
 	console.log(attributes);
@@ -24,8 +22,7 @@ export default function Edit( props ) {
 	const {
 		url,
 		service,
-		label,
-		rel
+		label
 	} = attributes;
 
 	const {
@@ -35,7 +32,7 @@ export default function Edit( props ) {
 	} = context;
 
 	const classes = classNames('wp-social-link', 'wp-social-link-' + service, {
-		'wp-social-link__is-incomplete': !url
+		'' : ! url
 	  });
 
 	const IconComponent = getIconBySite(service);
@@ -57,6 +54,7 @@ export default function Edit( props ) {
 			Button,
 			{
 				className: "wp-block-social-link-anchor",
+				href: url,
 			},
 			createElement( IconComponent, null),
 			createElement( 
