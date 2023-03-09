@@ -1,26 +1,30 @@
 {
-  "name": "lsx-sharing",
-  "version": "2.0.0",
-  "description": "Sharing plugin for LSX Theme.",
-  "main": "gulpfile.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lightspeeddevelopment/lsx-sharing.git"
-  },
-  "keywords": [
-    "lsx",
-    "social",
-    "sharing"
-  ],
-  "author": "LightSpeed",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lightspeeddevelopment/lsx-sharing/issues"
-  },
-  "homepage": "https://github.com/lightspeeddevelopment/lsx-sharing#readme",
-  "scripts": {
-	"build-pot": "wp i18n make-pot . languages/lsx-sharing.pot",
-    "build-mopo": "rm -R languages/lsx-sharing-en_EN.mo && cp languages/lsx-sharing.pot languages/lsx-sharing-en_EN.po && wp i18n make-mo languages",
-    "translate-US": "cp languages/lsx-sharing-en_EN.po languages/lsx-sharing-en_US.po && cp languages/lsx-sharing-en_EN.mo languages/lsx-sharing-en_US.mo"
-  }
+	"name": "lsx-sharing",
+	"version": "2.0.0",
+	"description": "Sharing plugin for LSX Theme.",
+	"main": "gulpfile.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lightspeeddevelopment/lsx-sharing.git"
+	},
+	"keywords": [
+		"lsx",
+		"social",
+		"sharing"
+	],
+	"author": "LightSpeed",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/lightspeeddevelopment/lsx-sharing/issues"
+	},
+	"homepage": "https://github.com/lightspeeddevelopment/lsx-sharing#readme",
+	"scripts": {
+		"build-blocks": "wp-scripts build src/blocks.js --output-path=build",
+		"build-pot": "wp i18n make-pot . languages/lsx-sharing.pot",
+		"build-mopo": "rm -R languages/lsx-sharing-en_EN.mo && cp languages/lsx-sharing.pot languages/lsx-sharing-en_EN.po && wp i18n make-mo languages",
+		"translate-US": "cp languages/lsx-sharing-en_EN.po languages/lsx-sharing-en_US.po && cp languages/lsx-sharing-en_EN.mo languages/lsx-sharing-en_US.mo"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^25.3.0"
+	}
 }
