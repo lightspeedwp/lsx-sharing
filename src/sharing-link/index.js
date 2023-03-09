@@ -1,7 +1,9 @@
 /**
  * WordPress dependencies
  */
+import { registerBlockType } from '@wordpress/blocks';
 import { share as icon } from '@wordpress/icons';
+
 /**
  * Internal dependencies
  */

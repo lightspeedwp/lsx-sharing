@@ -10,7 +10,7 @@ const variations = [
 		attributes: {
 			service: 'facebook',
 		},
-		title: 'Facebook',
+		title: 'FB Share',
 		icon: FacebookIcon
 	},
 	{
@@ -18,7 +18,7 @@ const variations = [
 		attributes: {
 			service: 'mail'
 		},
-		title: 'Mail',
+		title: 'Mail Share',
 		keywords: ['email', 'e-mail'],
 		icon: MailIcon
 	},
@@ -27,7 +27,7 @@ const variations = [
 		attributes: {
 			service: 'pinterest'
 		},
-		title: 'Pinterest',
+		title: 'Pin It',
 		icon: PinterestIcon
 	},
 	{
@@ -35,15 +35,15 @@ const variations = [
 		attributes: {
 			service: 'twitter'
 		},
-		title: 'Twitter',
+		title: 'Tweet',
 		icon: TwitterIcon
 	},
 	{
-		name: 'whatsapp-share',
+		name: 'whatsapp',
 		attributes: {
 			service: 'whatsapp'
 		},
-		title: 'WhatsApp Share',
+		title: 'Send',
 		icon: WhatsAppIcon
 	}
 ];
