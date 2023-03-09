@@ -8,9 +8,30 @@
 	"parent": [ "lsx/lsx-sharing" ],
 	"icon": "share",
 	"description": "The LSX Sharing block",
-	"supports": {
-		"html": false
+	"attributes": {
+		"username": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"service": {
+			"type": "string"
+		},
+		"label": {
+			"type": "string"
+		},
+		"rel": {
+			"type": "string"
+		}
 	},
+	"usesContext": ["openInNewTab", "showLabels", "iconColorValue", "iconBackgroundColorValue"],
+	"supports": {
+	"anchor": true,
+	"reusable": false,
+	"html": false
+	},
+	"editorStyle": "wp-block-social-link-editor",
 	"textdomain": "lsx-sharing",
 	"editorScript": "file:./index.js"
 }

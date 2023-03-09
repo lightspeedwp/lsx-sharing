@@ -25,6 +25,8 @@
 		"translate-US": "cp languages/lsx-sharing-en_EN.po languages/lsx-sharing-en_US.po && cp languages/lsx-sharing-en_EN.mo languages/lsx-sharing-en_US.mo"
 	},
 	"devDependencies": {
+		"@wordpress/block-library": "^8.5.0",
+		"@wordpress/icons": "^9.19.0",
 		"@wordpress/scripts": "^25.3.0"
 	}
 }
