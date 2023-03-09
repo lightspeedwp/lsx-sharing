@@ -11,7 +11,7 @@ import { Button } from '@wordpress/components';
 import { getIconBySite, getNameBySite } from './social-list';
 import classNames from 'classnames';
 
-export default function Edit( props ) {
+export default function Save( props ) {
 	let {
 		attributes,
 		context
