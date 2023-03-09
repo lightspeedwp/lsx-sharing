@@ -34,6 +34,7 @@ function lsx_sharing() {
 	global $lsx_sharing;
 	if ( null === $lsx_sharing ) {
 		$lsx_sharing = new \lsx\sharing\Sharing();
+		$lsx_sharing->init();
 	}
     return $lsx_sharing;
 }
