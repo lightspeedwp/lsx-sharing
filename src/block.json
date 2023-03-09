@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lsx/lsx-sharing",
+	"version": "1.0.0",
+	"title": "LSX Sharing",
+	"category": "theme",
+	"icon": "share",
+	"description": "The LSX Sharing block",
+	"attributes": {
+		"message": {
+			"type": "string",
+			"source": "text",
+			"selector": "div"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "lsx-sharing",
+	"editorScript": "file:./index.js"
+}
