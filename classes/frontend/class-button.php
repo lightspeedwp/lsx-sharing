@@ -5,7 +5,7 @@
  * @package lsx-sharing
  */
 
-namespace lsx\sharing\classes\frontend;
+namespace LSX\Sharing\Classes\frontend;
 
 /**
  * LSX Sharing buttons class.

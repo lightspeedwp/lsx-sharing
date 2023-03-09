@@ -1,5 +1,5 @@
 <?php
-namespace lsx\sharing\classes\frontend;
+namespace LSX\Sharing\Classes\frontend;
 
 /**
  * Houses the functions for the Settings page.
@@ -14,7 +14,7 @@ class Output {
      *
      * @since 1.0.0
      *
-     * @var object \lsx\sharing\classes\frontend\Output()
+     * @var object \LSX\Sharing\Classes\frontend\Output()
      */
     protected static $instance = null;
 
@@ -45,7 +45,7 @@ class Output {
      *
      * @since 1.0.0
      *
-     * @return object \lsx\sharing\classes\frontend\Output()    A single instance of this class.
+     * @return object \LSX\Sharing\Classes\frontend\Output()    A single instance of this class.
      */
     public static function get_instance() {
          // If the single instance hasn't been set, set it now.
@@ -128,7 +128,7 @@ class Output {
             }
 
             foreach ( $buttons as $id => $button ) {
-                $button_obj = new \lsx\sharing\classes\frontend\Button( $button, $this->options, $post_type );
+                $button_obj = new \LSX\Sharing\Classes\frontend\Button( $button, $this->options, $post_type );
 
                 if ( ! empty($button_obj) ) {
                     $url = $button_obj->get_link( $share_post );

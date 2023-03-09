@@ -5,7 +5,7 @@
  * @package lsx-sharing
  */
 
-namespace lsx\sharing\classes;
+namespace LSX\Sharing\Classes;
 
 /**
  * LSX Sharing front-end class.
@@ -20,14 +20,14 @@ class Frontend {
      *
      * @since 1.0.0
      *
-     * @var object \lsx\sharing\classes\Frontend()
+     * @var object \LSX\Sharing\Classes\Frontend()
      */
     protected static $instance = null;
 
     /**
      * Holds the output class.
      *
-     * @var object \lsx\sharing\classes\frontend\Output()
+     * @var object \LSX\Sharing\Classes\frontend\Output()
      */
     public $output = null;
 
@@ -44,7 +44,7 @@ class Frontend {
      *
      * @since 1.0.0
      *
-     * @return object \lsx\sharing\classes\Frontend()    A single instance of this class.
+     * @return object \LSX\Sharing\Classes\Frontend()    A single instance of this class.
      */
     public static function get_instance() {
          // If the single instance hasn't been set, set it now.
@@ -60,7 +60,7 @@ class Frontend {
     private function load_classes() {
          include_once LSX_SHARING_PATH . '/classes/frontend/class-button.php';
         include_once LSX_SHARING_PATH . '/classes/frontend/class-output.php';
-        $this->output = \lsx\sharing\classes\frontend\Output::get_instance();
+        $this->output = \LSX\Sharing\Classes\frontend\Output::get_instance();
     }
 
     /**
