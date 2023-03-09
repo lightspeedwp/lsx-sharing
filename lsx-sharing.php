@@ -30,7 +30,10 @@ require_once LSX_SHARING_PATH . '/classes/class-sharing.php';
  * @return object \lsx\sharing\Sharing();
  */
 function lsx_sharing() {
-     $lsx_sharing = \lsx\sharing\Sharing::get_instance();
+	global $lsx_sharing;
+	if ( null === $lsx_sharing ) {
+		$lsx_sharing = \lsx\sharing\Sharing::get_instance();
+	}
     return $lsx_sharing;
 }
 lsx_sharing();
