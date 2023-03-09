@@ -11,9 +11,6 @@
   "icon": "share",
   "description": "The LSX Sharing block",
   "attributes": {
-    "username": {
-      "type": "string"
-    },
     "url": {
       "type": "string"
     },

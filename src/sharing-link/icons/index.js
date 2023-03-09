@@ -1,4 +1,5 @@
 export * from './facebook';
+export * from './chain';
 export * from './mail';
 export * from './pinterest';
 export * from './twitter';
