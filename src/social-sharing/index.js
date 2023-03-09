@@ -17,10 +17,9 @@ wp.blocks.registerBlockVariation( 'core/social-links', {
     },
 	example: {
 		innerBlocks: [{
-			name: 'core/social-link',
+			name: 'lsx/sharing-link',
 			attributes: {
-			service: 'facebook',
-			url: 'https://www.facebook.com/WordPress/'
+				service: 'facebook'
 			}
 		}]
 	}

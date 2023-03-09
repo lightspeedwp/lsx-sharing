@@ -74,12 +74,9 @@ class Sharing {
 	 * @return string Rendered HTML of the referenced block.
 	 */
 	function render_sharing_link( $attributes, $content, $block ) {
-		$open_in_new_tab = isset( $block->context['openInNewTab'] ) ? $block->context['openInNewTab'] : false;
-
 		$service     = ( isset( $attributes['service'] ) ) ? $attributes['service'] : 'Icon';
 		$url         = ( isset( $attributes['url'] ) ) ? $attributes['url'] : false;
 		$label       = ( isset( $attributes['label'] ) ) ? $attributes['label'] : $this->get_name( $service );
-		$rel         = ( isset( $attributes['rel'] ) ) ? $attributes['rel'] : '';
 		$show_labels = array_key_exists( 'showLabels', $block->context ) ? $block->context['showLabels'] : false;
 
 		// Don't render a link if there is no URL set.
