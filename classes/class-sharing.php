@@ -50,8 +50,6 @@ class Sharing {
      * Constructor.
      */
     public function __construct() {
-         add_action('init', array( $this, 'set_options' ), 50);
-        $this->load_vendors();
         $this->load_includes();
         $this->load_classes();
     }
@@ -74,15 +72,6 @@ class Sharing {
     /**
      * Loads the plugin functions.
      */
-    private function load_vendors() {
-         // Configure custom fields.
-        if ( ! class_exists('CMB2') ) {
-            include_once LSX_SHARING_PATH . 'vendor/CMB2/init.php';
-        }
-    }
-    /**
-     * Loads the plugin functions.
-     */
     private function load_includes() {
          include_once LSX_SHARING_PATH . '/includes/functions.php';
     }
@@ -90,38 +79,7 @@ class Sharing {
      * Loads the plugin functions.
      */
     private function load_classes() {
-         include_once LSX_SHARING_PATH . '/classes/class-admin.php';
-        global $lsx_sharing_admin;
-        $this->admin = \lsx\sharing\classes\Admin::get_instance();
-        $lsx_sharing_admin;
-
         include_once LSX_SHARING_PATH . '/classes/class-frontend.php';
         $this->frontend = \lsx\sharing\classes\Frontend::get_instance();
-        global $lsx_sharing;
-        $lsx_sharing = $this->frontend->output;
-
-        include_once LSX_SHARING_PATH . '/classes/deprecated/class-lsx-sharing.php';
-    }
-    /**
-     * Set options.
-     */
-    public function set_options() {
-         if ( function_exists('tour_operator') ) {
-            $this->options = get_option('_lsx-to_settings', false);
-        } else {
-            $this->options = get_option('_lsx_settings', false);
-
-            if ( false === $this->options ) {
-                $this->options = get_option('_lsx_lsx-settings', false);
-            }
-        }
-
-        $new_options = get_option('lsx-sharing-settings');
-        if ( ! empty($new_options) ) {
-            if ( '' !== $new_options && false !== $new_options ) {
-                $this->is_new_options = true;
-                $this->options        = $new_options;
-            }
-        }
     }
 }
