@@ -11,7 +11,7 @@ const variations = [
 			service: 'facebook',
 			url: 'https://www.facebook.com/sharer.php?display=page&u=lsx_sharing_url&t=lsx_sharing_title',
 		},
-		title: 'FB Share',
+		title: 'Facebook Share',
 		icon: FacebookIcon
 	},
 	{
@@ -20,7 +20,7 @@ const variations = [
 			service: 'mail',
 			url: 'mailto@lsx_sharing_email',
 		},
-		title: 'Mail Share',
+		title: 'Mail (popup)',
 		keywords: ['email', 'e-mail'],
 		icon: MailIcon
 	},
@@ -30,7 +30,7 @@ const variations = [
 			service: 'pinterest',
 			url: 'https://www.pinterest.com/pin/create/button/?url=lsx_sharing_url&media=lsx_sharing_image&description=lsx_sharing_title',
 		},
-		title: 'Pin It',
+		title: 'Pinterest Share',
 		icon: PinterestIcon
 	},
 	{
@@ -39,7 +39,7 @@ const variations = [
 			service: 'twitter',
 			url: 'https://twitter.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
 		},
-		title: 'Tweet',
+		title: 'Tweet Share',
 		icon: TwitterIcon
 	},
 	{
@@ -48,7 +48,7 @@ const variations = [
 			service: 'whatsapp',
 			url: 'https://api.whatsapp.com/send?lsx_sharing_title - lsx_sharing_url',
 		},
-		title: 'Send',
+		title: 'Whatsapp Share',
 		icon: WhatsAppIcon
 	}
 ];
