@@ -29,6 +29,5 @@
 	"html": false
 	},
 	"editorStyle": "wp-block-social-link-editor",
-	"textdomain": "lsx-sharing",
-	"editorScript": "file:./index.js"
+	"textdomain": "lsx-sharing"
 }
