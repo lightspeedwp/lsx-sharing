@@ -24,6 +24,7 @@ wp.blocks.registerBlockVariation( 'core/social-links', {
 			}
 		}]
 	},
+	isDefault: true,
 	editorStyle: "wp-block-sharing-link-editor",
 	style: "wp-block-sharing-links"
 });
