@@ -10,6 +10,5 @@
   "supports": {
     "html": false
   },
-  "textdomain": "lsx-sharing",
-  "editorScript": "file:./index.js"
+  "textdomain": "lsx-sharing"
 }

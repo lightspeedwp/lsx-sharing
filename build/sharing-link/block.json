@@ -7,7 +7,7 @@
   "category": "widgets",
   "parent": [
     "core/social-links",
-    "lsx/lsx-sharing"
+    "lsx/lsx-sharing-links"
   ],
   "icon": "share",
   "description": "The LSX Sharing block",
@@ -37,6 +37,5 @@
     "html": false
   },
   "editorStyle": "wp-block-social-link-editor",
-  "textdomain": "lsx-sharing",
-  "editorScript": "file:./index.js"
+  "textdomain": "lsx-sharing"
 }

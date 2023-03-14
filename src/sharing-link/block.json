@@ -5,7 +5,7 @@
 	"version": "1.0.0",
 	"title": "LSX Sharing Link",
 	"category": "widgets",
-	"parent": [ "core/social-links", "lsx/lsx-sharing" ],
+	"parent": [ "core/social-links", "lsx/lsx-sharing-links" ],
 	"icon": "share",
 	"description": "The LSX Sharing block",
 	"attributes": {
@@ -24,9 +24,9 @@
 	},
 	"usesContext": ["openInNewTab", "showLabels", "iconColorValue", "iconBackgroundColorValue"],
 	"supports": {
-	"anchor": true,
-	"reusable": false,
-	"html": false
+		"anchor": true,
+		"reusable": false,
+		"html": false
 	},
 	"editorStyle": "wp-block-social-link-editor",
 	"textdomain": "lsx-sharing"

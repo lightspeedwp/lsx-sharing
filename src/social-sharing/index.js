@@ -15,6 +15,7 @@ wp.blocks.registerBlockVariation( 'core/social-links', {
             namespace === metadata.name
         );
     },
+	scope: ['inserter'],
 	example: {
 		innerBlocks: [{
 			name: 'lsx/sharing-link',
