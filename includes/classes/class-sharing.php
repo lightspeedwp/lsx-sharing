@@ -48,10 +48,16 @@ class Sharing {
 	 * Registers the `core/social-link` blocks.
 	 */
 	function register_block_type() {
+		wp_register_style(
+			'lsx-sharing-block-styles',
+			LSX_SHARING_URL . '/includes/lsx-sharing.css'
+		);
+
 		register_block_type_from_metadata(
 			LSX_SHARING_PATH . 'src/sharing-link',
 			array(
 				'render_callback' => array( $this, 'render_sharing_link' ),
+				'style_handles' => array( 'lsx-sharing-block-styles' ),
 			)
 		);
 	}
