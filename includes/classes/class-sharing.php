@@ -24,20 +24,12 @@ class Sharing {
      * Constructor.
      */
     public function __construct() {
-        $this->load_includes();
     }
 
 	public function init() {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'register_block_variations' ) );
 		add_action( 'init', array( $this, 'register_block_type' ), 20 );
 	}
-
-    /**
-     * Loads the plugin functions.
-     */
-    private function load_includes() {
-         include_once LSX_SHARING_PATH . '/includes/functions.php';
-    }
 
 	/**
 	 * Registers our block variations.
