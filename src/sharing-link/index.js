@@ -9,13 +9,11 @@ import { share as icon } from '@wordpress/icons';
  */
 import metadata from './block.json';
 import variations from './variations';
-import edit from './edit';
-import save from './save';
+import Edit from './edit';
 
 metadata.icon = icon;
 metadata.variations = variations;
-metadata.edit = edit;
-metadata.edit = save;
+metadata.edit = Edit;
 
 registerBlockType( 
 	metadata.name, metadata

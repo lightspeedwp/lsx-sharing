@@ -6,11 +6,10 @@
   "title": "LSX Sharing Link",
   "category": "widgets",
   "parent": [
-    "core/social-links",
-    "lsx/lsx-sharing-links"
+    "core/social-links"
   ],
   "icon": "share",
-  "description": "The LSX Sharing block",
+  "description": "Share to links",
   "attributes": {
     "url": {
       "type": "string"

@@ -45,6 +45,7 @@ export default function Edit( props ) {
 		}
 	});
 
+	console.log(url);
 	let html = createElement(
 		"li",
 		blockProps, 

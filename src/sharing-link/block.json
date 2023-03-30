@@ -5,9 +5,9 @@
 	"version": "1.0.0",
 	"title": "LSX Sharing Link",
 	"category": "widgets",
-	"parent": [ "core/social-links", "lsx/lsx-sharing-links" ],
+	"parent": [ "core/social-links" ],
 	"icon": "share",
-	"description": "The LSX Sharing block",
+	"description": "Share to links",
 	"attributes": {
 		"url": {
 			"type": "string"

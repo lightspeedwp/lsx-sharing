@@ -1,0 +1,42 @@
+/**
+ * WP Structure
+ */
+
+.wp-block-lsx-lsx-sharing-link {
+	border-radius:9999px;
+	display:block;
+	height:auto;
+	transition:transform .1s ease;
+}
+@media (prefers-reduced-motion:reduce) {
+	.wp-block-lsx-lsx-sharing-link {
+		transition-delay:0s;
+		transition-duration:0s;
+	}
+}
+.wp-block-lsx-lsx-sharing-link a{
+	align-items:center;
+	display:flex;
+	line-height:0;
+	transition:transform .1s ease;
+}
+.wp-block-lsx-lsx-sharing-link:hover {
+	transform:scale(1.1);
+}
+
+.wp-block-social-links .wp-block-lsx-lsx-sharing-link .wp-block-social-link-anchor,
+.wp-block-social-links .wp-block-lsx-lsx-sharing-link .wp-block-social-link-anchor svg,
+.wp-block-social-links .wp-block-lsx-lsx-sharing-link .wp-block-social-link-anchor:active,
+.wp-block-social-links .wp-block-lsx-lsx-sharing-link .wp-block-social-link-anchor:hover,
+.wp-block-social-links .wp-block-lsx-lsx-sharing-link .wp-block-social-link-anchor:visited {
+	fill:currentColor;
+	color:currentColor;
+}
+
+/**
+ * FACEBOOK
+ */
+
+/**
+ * WP Structure
+ */
