@@ -20,6 +20,24 @@ class Sharing {
      */
     public $options = array();
 
+	/**
+	 * Holds the current variables for the url
+	 *
+	 * @var array
+	 */
+	public $current_vars = array();
+
+	/**
+	 * Holds the list of URL variables
+	 *
+	 * @var array
+	 */
+	public $tags = array(
+		'lsx_sharing_url',
+		'lsx_sharing_title',
+		'lsx_sharing_image',
+	);
+
     /**
      * Constructor.
      */
@@ -47,7 +65,7 @@ class Sharing {
 	/**
 	 * Registers the `core/social-link` blocks.
 	 */
-	function register_block_type() {
+	public function register_block_type() {
 		wp_register_style(
 			'lsx-sharing-block-styles',
 			LSX_SHARING_URL . '/includes/lsx-sharing.css'
@@ -71,11 +89,13 @@ class Sharing {
 	 *
 	 * @return string Rendered HTML of the referenced block.
 	 */
-	function render_sharing_link( $attributes, $content, $block ) {
-		$service     = ( isset( $attributes['service'] ) ) ? $attributes['service'] : 'Icon';
-		$url         = ( isset( $attributes['url'] ) ) ? $attributes['url'] : false;
-		$label       = ( isset( $attributes['label'] ) ) ? $attributes['label'] : $this->get_name( $service );
-		$show_labels = array_key_exists( 'showLabels', $block->context ) ? $block->context['showLabels'] : false;
+	public function render_sharing_link( $attributes, $content, $block ) {
+		$open_in_new_tab = isset( $block->context['openInNewTab'] ) ? $block->context['openInNewTab'] : false;
+		$service         = ( isset( $attributes['service'] ) ) ? $attributes['service'] : 'Icon';
+		$url             = ( isset( $attributes['url'] ) ) ? $attributes['url'] : false;
+		$label           = ( isset( $attributes['label'] ) ) ? $attributes['label'] : $this->get_name( $service );
+		$rel             = ( isset( $attributes['rel'] ) ) ? $attributes['rel'] : '';
+		$show_labels     = array_key_exists( 'showLabels', $block->context ) ? $block->context['showLabels'] : false;
 
 		// Don't render a link if there is no URL set.
 		if ( ! $url ) {
@@ -106,13 +126,25 @@ class Sharing {
 			)
 		);
 
+		//Lets replace our var
+		$url = $this->replace_variables( $url );
+
 		$link  = '<li ' . $wrapper_attributes . '>';
 		$link .= '<a href="' . esc_url( $url ) . '" class="wp-block-social-link-anchor">';
 		$link .= $icon;
 		$link .= '<span class="wp-block-social-link-label' . ( $show_labels ? '' : ' screen-reader-text' ) . '">';
 		$link .= esc_html( $label );
 		$link .= '</span></a></li>';
-		return $link;
+
+		$w = new \WP_HTML_Tag_Processor( $link );
+		$w->next_tag( 'a' );
+		if ( $open_in_new_tab ) {
+			$w->set_attribute( 'rel', esc_attr( $rel ) . ' noopener nofollow' );
+			$w->set_attribute( 'target', '_blank' );
+		} elseif ( '' !== $rel ) {
+			$w->set_attribute( 'rel', esc_attr( $rel ) );
+		}
+		return $w;
 	}
 
 	/**
@@ -122,7 +154,7 @@ class Sharing {
 	 *
 	 * @return string SVG Element for service icon.
 	 */
-	function get_icon( $service ) {
+	public function get_icon( $service ) {
 		$services = $this->get_services();
 		if ( isset( $services[ $service ] ) && isset( $services[ $service ]['icon'] ) ) {
 			return $services[ $service ]['icon'];
@@ -137,7 +169,7 @@ class Sharing {
 	 *
 	 * @return string Brand label.
 	 */
-	function get_name( $service ) {
+	public function get_name( $service ) {
 		$services = $this->get_services();
 		if ( isset( $services[ $service ] ) && isset( $services[ $service ]['name'] ) ) {
 			return $services[ $service ]['name'];
@@ -153,7 +185,7 @@ class Sharing {
 	 *
 	 * @return array|string
 	 */
-	function get_services( $service = '', $field = '' ) {
+	public function get_services( $service = '', $field = '' ) {
 		$services_data = array(
 			'chain'         => array(
 				'name' => 'Link',
@@ -205,7 +237,7 @@ class Sharing {
 	 *
 	 * @return string Inline CSS styles for link's icon and background colors.
 	 */
-	function get_color_styles( $context ) {
+	public function get_color_styles( $context ) {
 		$styles = array();
 
 		if ( array_key_exists( 'iconColorValue', $context ) ) {
@@ -217,5 +249,56 @@ class Sharing {
 		}
 
 		return implode( '', $styles );
+	}
+
+	/**
+	 * Replace the variables in the url
+	 *
+	 * @param string $url
+	 * @return string
+	 */
+	public function replace_variables( $url = '' ) {
+
+		foreach ( $this->tags as $tag ) {
+			$replace_value = '';
+
+			if ( isset( $this->current_vars[ $tag ] ) && '' !== $this->current_vars[ $tag ] ) {
+				$replace_value = $this->current_vars[ $tag ];
+			} else {
+				switch( $tag ) {
+					case 'lsx_sharing_url':
+						$replace_value = get_permalink();
+					break;
+
+					case 'lsx_sharing_title':
+						$replace_value = get_the_title();
+					break;
+
+					case 'lsx_sharing_image':
+						$replace_value = get_the_post_thumbnail_url();
+
+						if ( false === $replace_value ) {
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							if ( false !== $custom_logo_id && '' !== $custom_logo_id ) {
+								$image = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+								if ( ! empty( $image ) && isset( $image['src'] ) ) {
+									$replace_value = $image['src'];
+								}
+							}
+						}
+					break;
+						
+					default:
+						$replace_value = '';
+					break;
+				}
+				$this->current_vars[ $tag ] = $replace_value;
+			}
+
+			if ( '' !== $replace_value ) {
+				$url = str_replace( $tag, $replace_value, $url );
+			}
+		}
+		return $url;
 	}
 }
