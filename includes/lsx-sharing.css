@@ -38,5 +38,13 @@
  */
 
 /**
- * WP Structure
+ * Sharing Label
  */
+.wp-block-lsx-lsx-sharing-label {
+	list-style: none;
+}
+
+.wp-block-lsx-lsx-sharing-label .components-base-control__field {
+	margin-bottom: 0;
+	max-width: 70px;
+}

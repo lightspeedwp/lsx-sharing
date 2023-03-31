@@ -17,7 +17,17 @@
 		}
 	},
 	"supports": {
-		"html": false
+		"html": false,
+		"color": {
+            "text": true,
+            "background": false,
+            "link": false
+        },
+		"supports": {
+			"typography": {
+				"fontSize": true
+			}
+		}
 	},
 	"textdomain": "lsx-sharing"
 }
