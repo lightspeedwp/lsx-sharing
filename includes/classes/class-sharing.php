@@ -78,6 +78,10 @@ class Sharing {
 				'style_handles' => array( 'lsx-sharing-block-styles' ),
 			)
 		);
+
+		register_block_type_from_metadata(
+			LSX_SHARING_PATH . 'src/sharing-label',
+		);
 	}
 
 	/**

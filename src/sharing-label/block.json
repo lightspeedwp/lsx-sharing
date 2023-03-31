@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lsx/lsx-sharing-label",
+	"version": "1.0.0",
+	"title": "Sharing Label",
+	"category": "widgets",
+	"parent": [ "core/social-links" ],
+	"icon": "sharing",
+	"description": "A label for the sharing icons, with an optional icon.",
+	"attributes": {
+		"label": {
+			"type": "string"
+		},
+		"icon": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "lsx-sharing"
+}
