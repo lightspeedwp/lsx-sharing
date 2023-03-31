@@ -3,7 +3,7 @@
 	"apiVersion": 2,
 	"name": "lsx/lsx-sharing-label",
 	"version": "1.0.0",
-	"title": "Sharing Label",
+	"title": "Share Label",
 	"category": "widgets",
 	"parent": [ "core/social-links" ],
 	"icon": "sharing",
