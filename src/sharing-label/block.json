@@ -6,7 +6,7 @@
 	"title": "Share Label",
 	"category": "widgets",
 	"parent": [ "core/social-links" ],
-	"icon": "sharing",
+	"icon": "share",
 	"description": "A label for the sharing icons, with an optional icon.",
 	"attributes": {
 		"label": {
