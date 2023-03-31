@@ -42,9 +42,34 @@
  */
 .wp-block-lsx-lsx-sharing-label {
 	list-style: none;
+	padding-right: 5px;
 }
+
+.wp-block-lsx-lsx-sharing-label.has-icon::before {
+    font-family: dashicons;
+	content: "\f237";
+    display: inline-block;
+    line-height: 1;
+    speak: never;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    vertical-align: middle;
+    text-align: center;
+    transition: color 0.1s ease-in;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+/**
+ * Sharing Label Editor
+ */
+ .wp-block-lsx-lsx-sharing-label .components-base-control {
+	display: inline-block;
+ }
 
 .wp-block-lsx-lsx-sharing-label .components-base-control__field {
 	margin-bottom: 0;
 	max-width: 70px;
+	vertical-align: middle;
 }

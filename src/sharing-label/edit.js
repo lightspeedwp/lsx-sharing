@@ -18,7 +18,9 @@ import { __ } from '@wordpress/i18n';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps({
-		className: classnames({ 'has-icon': !!attributes.icon })
+		className: classnames({
+			'has-icon': !!attributes.icon,
+		})
 	});
 
 	return (
