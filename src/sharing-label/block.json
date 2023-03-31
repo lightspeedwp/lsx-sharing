@@ -23,10 +23,8 @@
             "background": false,
             "link": false
         },
-		"supports": {
-			"typography": {
-				"fontSize": true
-			}
+		"typography": {
+			"fontSize": true
 		}
 	},
 	"textdomain": "lsx-sharing"
