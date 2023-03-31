@@ -15,7 +15,8 @@
       "type": "string"
     },
     "icon": {
-      "type": "string"
+      "type": "boolean",
+      "default": false
     }
   },
   "supports": {

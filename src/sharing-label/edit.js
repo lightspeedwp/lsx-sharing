@@ -1,6 +1,6 @@
 import { TextControl, CheckboxControl, Panel, PanelBody } from '@wordpress/components';
-import { useState } from '@wordpress/element';
 import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import classnames from 'classnames';
 
 import { __ } from '@wordpress/i18n';
 
@@ -17,7 +17,9 @@ import { __ } from '@wordpress/i18n';
  * @return {WPElement} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: classnames({ 'has-icon': !!attributes.icon })
+	});
 
 	return (
 		<li { ...blockProps }>
