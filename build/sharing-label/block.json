@@ -3,12 +3,12 @@
   "apiVersion": 2,
   "name": "lsx/lsx-sharing-label",
   "version": "1.0.0",
-  "title": "Sharing Label",
+  "title": "Share Label",
   "category": "widgets",
   "parent": [
     "core/social-links"
   ],
-  "icon": "sharing",
+  "icon": "share",
   "description": "A label for the sharing icons, with an optional icon.",
   "attributes": {
     "label": {
@@ -19,7 +19,15 @@
     }
   },
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "text": true,
+      "background": false,
+      "link": false
+    },
+    "typography": {
+      "fontSize": true
+    }
   },
   "textdomain": "lsx-sharing"
 }

@@ -1,17 +1,8 @@
-/**
- * WordPress components that create the necessary UI elements for the block
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-components/
- */
-import { TextControl } from '@wordpress/components';
+import { TextControl, CheckboxControl, Panel, PanelBody } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps } from '@wordpress/block-editor';
+import { __ } from '@wordpress/i18n';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -27,8 +18,21 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps();
+
 	return (
 		<li { ...blockProps }>
+			<InspectorControls>
+				<Panel>
+					<PanelBody title='Icon'>
+						<CheckboxControl
+							label={ __('Display Icon') }
+							help={ __('Display the sharing icon before the label') }
+							checked={ attributes.icon }
+							onChange={ ( val ) => setAttributes( { icon: val } ) }
+						/>
+					</PanelBody>
+				</Panel>
+			</InspectorControls>
 			<TextControl
 				value={ attributes.label }
 				onChange={ ( val ) => setAttributes( { label: val } ) }

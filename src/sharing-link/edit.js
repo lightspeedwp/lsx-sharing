@@ -44,8 +44,6 @@ export default function Edit( props ) {
 			backgroundColor: iconBackgroundColorValue
 		}
 	});
-
-	console.log(url);
 	let html = createElement(
 		"li",
 		blockProps, 
