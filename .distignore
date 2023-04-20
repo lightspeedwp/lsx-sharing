@@ -1,12 +1,17 @@
 /.wordpress-org
 /.git
 /.github
+.codeclimate.yml
+.codecov.yml
 .distignore
 .gitattributes
 .editorconfig
 .git
 .gitignore
 .gitlab-ci.yml
+.mergify.yml
+.phpcs.xml
+.scrutinizer.yml
 .travis.yml
 .DS_Store
 Thumbs.db
