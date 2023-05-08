@@ -13,13 +13,6 @@ namespace LSX\Sharing;
  */
 class Sharing {
 
-    /**
-     * The options for the plugin.
-     *
-     * @var array
-     */
-    public $options = array();
-
 	/**
 	 * Holds the current variables for the url
 	 *
