@@ -29,8 +29,8 @@ export default function Edit( { attributes, setAttributes } ) {
 				<Panel>
 					<PanelBody title='Icon'>
 						<CheckboxControl
-							label={ __('Display Icon') }
-							help={ __('Display the sharing icon before the label') }
+							label={ __('Display Icon','lsx-sharing') }
+							help={ __('Display the sharing icon before the label','lsx-sharing') }
 							checked={ attributes.icon }
 							onChange={ ( val ) => setAttributes( { icon: val } ) }
 						/>
