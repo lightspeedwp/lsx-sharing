@@ -16,4 +16,23 @@
  */
 .wp-block-lsx-lsx-sharing-link a {
 	pointer-events: none;
-} 
+}
+
+.wp-block-social-links .wp-block-lsx-lsx-sharing-link svg {
+	height: auto;
+	width: auto;
+}
+
+.wp-block-social-links.is-style-pill-shape .wp-block-lsx-lsx-sharing-link a {
+    padding-left: 0.66667em;
+    padding-right: 0.66667em;
+}
+
+.wp-block-social-links .wp-block-lsx-lsx-sharing-link a {
+    color: currentColor;
+    font-size: inherit;
+    height: auto;
+    line-height: 0;
+    opacity: 1;
+    padding: 0.25em;
+}
