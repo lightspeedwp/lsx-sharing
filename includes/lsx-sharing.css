@@ -43,6 +43,7 @@
 .wp-block-lsx-lsx-sharing-label {
 	list-style: none;
 	padding-right: 5px;
+	font-size: var(--wp--preset--font-size--small);
 }
 
 .wp-block-lsx-lsx-sharing-label.has-icon::before {
