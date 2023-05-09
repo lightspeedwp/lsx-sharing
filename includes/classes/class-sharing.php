@@ -13,24 +13,6 @@ namespace LSX\Sharing;
  */
 class Sharing {
 
-	/**
-	 * Holds the current variables for the url
-	 *
-	 * @var array
-	 */
-	public $current_vars = array();
-
-	/**
-	 * Holds the list of URL variables
-	 *
-	 * @var array
-	 */
-	public $tags = array(
-		'lsx_sharing_url',
-		'lsx_sharing_title',
-		'lsx_sharing_image',
-	);
-
     /**
      * Constructor.
      */
@@ -262,11 +244,19 @@ class Sharing {
 	 */
 	public function replace_variables( $url = '' ) {
 
-		foreach ( $this->tags as $tag ) {
+		$current_vars = array();
+
+		$tags = array(
+			'lsx_sharing_url',
+			'lsx_sharing_title',
+			'lsx_sharing_image',
+		);
+
+		foreach ( $tags as $tag ) {
 			$replace_value = '';
 
-			if ( isset( $this->current_vars[ $tag ] ) && '' !== $this->current_vars[ $tag ] ) {
-				$replace_value = $this->current_vars[ $tag ];
+			if ( isset( $current_vars[ $tag ] ) && '' !== $current_vars[ $tag ] ) {
+				$replace_value = $current_vars[ $tag ];
 			} else {
 				switch( $tag ) {
 					case 'lsx_sharing_url':
@@ -295,7 +285,7 @@ class Sharing {
 						$replace_value = '';
 					break;
 				}
-				$this->current_vars[ $tag ] = $replace_value;
+				$current_vars[ $tag ] = $replace_value;
 			}
 
 			if ( '' !== $replace_value ) {
