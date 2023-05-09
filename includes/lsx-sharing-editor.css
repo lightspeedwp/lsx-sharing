@@ -3,6 +3,7 @@
  */
  .wp-block-lsx-lsx-sharing-label .components-base-control {
 	display: inline-block;
+	vertical-align: text-bottom;
 }
 
 .wp-block-lsx-lsx-sharing-label .components-base-control__field {
