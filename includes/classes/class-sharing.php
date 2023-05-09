@@ -254,7 +254,7 @@ class Sharing {
 			} else {
 				switch( $tag ) {
 					case 'lsx_sharing_url':
-						$replace_value = get_permalink();
+						$replace_value = urlencode( get_permalink() );
 					break;
 
 					case 'lsx_sharing_title':
