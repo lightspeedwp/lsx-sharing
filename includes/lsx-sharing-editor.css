@@ -1,0 +1,19 @@
+/**
+ * Sharing Label
+ */
+ .wp-block-lsx-lsx-sharing-label .components-base-control {
+	display: inline-block;
+}
+
+.wp-block-lsx-lsx-sharing-label .components-base-control__field {
+	margin-bottom: 0;
+	max-width: 70px;
+	vertical-align: middle;
+}
+
+/**
+ * Sharing Link
+ */
+.wp-block-lsx-lsx-sharing-label a{
+	pointer-events: none;
+} 

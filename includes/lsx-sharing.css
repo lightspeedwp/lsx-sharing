@@ -60,16 +60,3 @@
     margin-right: 5px;
     margin-top: -3px;
 }
-
-/**
- * Sharing Label Editor
- */
- .wp-block-lsx-lsx-sharing-label .components-base-control {
-	display: inline-block;
- }
-
-.wp-block-lsx-lsx-sharing-label .components-base-control__field {
-	margin-bottom: 0;
-	max-width: 70px;
-	vertical-align: middle;
-}
