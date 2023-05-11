@@ -27,7 +27,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		<li { ...blockProps }>
 			<InspectorControls>
 				<Panel>
-					<PanelBody title='Icon'>
+					<PanelBody title={ __('Icon','lsx-sharing') }>
 						<CheckboxControl
 							label={ __('Display Icon','lsx-sharing') }
 							help={ __('Display the sharing icon before the label','lsx-sharing') }
@@ -40,6 +40,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			<TextControl
 				value={ attributes.label }
 				onChange={ ( val ) => setAttributes( { label: val } ) }
+				placeholder={ __('Share to','lsx-sharing') }
 			/>
 		</li>
 	);

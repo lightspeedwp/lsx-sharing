@@ -35,7 +35,7 @@ registerBlockType(
 	 */
 	example: {
 		attributes: {
-			label: __('Share to'),
+			label: __('Share to','lsx-sharing'),
 		},
 	},
 	/**
