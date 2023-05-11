@@ -42,7 +42,8 @@ class Sharing {
 
 		wp_register_style(
 			'lsx-sharing-block-editor-styles',
-			LSX_SHARING_URL . 'includes/lsx-sharing-editor.css'
+			LSX_SHARING_URL . 'includes/lsx-sharing-editor.css',
+			array( 'dashicons' )
 		);
 
 		register_block_type_from_metadata(
