@@ -25,13 +25,13 @@ LSX Sharing is built for the free [LSX Design theme](https://wordpress.org/theme
 We have extensive documentation on all our plugin and theme functionality. This allows you to take control of your website setup and design to your needs:
 
 * [LSX Sharing Documentation](https://lsdev.biz/lsx/documentation/lsx-extensions/lsx-sharing/).
-* [LSX Theme](https://lsdev.biz/lsx/documentation/lsx-theme/)
+* [LSX Design Theme](https://lsdev.biz/lsx/documentation/lsx-theme/)
 
 = Support =
 
 Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://www.lsdev.biz/lsx/support/).
 
-If you are experiencing issues with the LSX Sharing plugin, please log any bug issues you are having on the [LSX Sharing Issues](https://github.com/lightspeeddevelopment/lsx-sharing/issues) page.
+If you are experiencing issues with the LSX Sharing plugin, please log any bug issues you are having on the [LSX Sharing Issues](https://github.com/lightspeedwp/lsx-sharing/issues) page.
 
 = Contributing =
 
@@ -55,4 +55,4 @@ No; the LSX Sharing plugin will only work with LSX Theme.
 
 == Changelog ==
 
-[Latest changelogs can be found on GitHub](https://github.com/lightspeeddevelopment/lsx-sharing/blob/master/changelog.md).
+[Latest changelogs can be found on GitHub](https://github.com/lightspeedwp/lsx-sharing/blob/master/changelog.md).
