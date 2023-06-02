@@ -5,7 +5,7 @@
 	"main": "gulpfile.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/lightspeeddevelopment/lsx-sharing.git"
+		"url": "git+https://github.com/lightspeedwp/lsx-sharing.git"
 	},
 	"keywords": [
 		"lsx",
@@ -15,9 +15,9 @@
 	"author": "LightSpeed",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/lightspeeddevelopment/lsx-sharing/issues"
+		"url": "https://github.com/lightspeedwp/lsx-sharing/issues"
 	},
-	"homepage": "https://github.com/lightspeeddevelopment/lsx-sharing#readme",
+	"homepage": "https://github.com/lightspeedwp/lsx-sharing#readme",
 	"scripts": {
 		"build-blocks": "wp-scripts build src/blocks.js --output-path=build",
 		"build-pot": "wp i18n make-pot . languages/lsx-sharing.pot",
