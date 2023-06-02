@@ -9,38 +9,29 @@ Stable tag: 2.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-This plugin adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
+This plugin adds shring buttons to the "Social Links" block, that your readers can use to share your content on Facebook, Twitter and Pinterest.
 
 == Description ==
 
 = Works with the LSX Theme =
-Our modern and lightweight [theme](https://lsdev.biz/lsx/) works perfectly with LSX Sharing, improving internal linking, website SEO and user experience!
+Our modern and lightweight [theme](https://lsx.design/) works perfectly with LSX Sharing, improving internal linking, website SEO and user experience!
 
 = Free Companion Theme =
 
-LSX Sharing is built for the free [LSX theme](https://wordpress.org/themes/lsx/) in the WordPress theme repository as the perfect companion for LSX Blocks.
-
-= Block Editor Support =
-
-The LSX theme is full compatible with the WordPress block editor. This means you can now make use of the drag-and-drop page builder when creating new pages and posts.
-
-[LSX Blocks](https://lsdev.biz/lsx/extensions/blocks) is an extension with blocks designed to display perfectly with the LSX theme. The blocks plugin extends various WordPress core blocks to be more flexible with the WordPress theme.
-
-The combination of LSX Theme & LSX Blocks gives you a true page builder experience using the WordPress Gutenberg block editor.
+LSX Sharing is built for the free [LSX Design theme](https://wordpress.org/themes/lsx-design/) in the WordPress theme repository.
 
 = Documentation =
 
-We have extensive documentation on all our plugins and theme functionality. This allows you to take control of your website setup and design to your needs:
+We have extensive documentation on all our plugin and theme functionality. This allows you to take control of your website setup and design to your needs:
 
 * [LSX Sharing Documentation](https://lsdev.biz/lsx/documentation/lsx-extensions/lsx-sharing/).
 * [LSX Theme](https://lsdev.biz/lsx/documentation/lsx-theme/)
-* [LSX Blocks](https://lsdev.biz/lsx/documentation/lsx-blocks/)
 
 = Support =
 
 Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://www.lsdev.biz/lsx/support/).
 
-If you are experiencing issues with the LSX  plugin, please log any bug issues you are having on the [LSX Sharing Issues](https://github.com/lightspeeddevelopment/lsx-sharing/issues) page.
+If you are experiencing issues with the LSX Sharing plugin, please log any bug issues you are having on the [LSX Sharing Issues](https://github.com/lightspeeddevelopment/lsx-sharing/issues) page.
 
 = Contributing =
 
