@@ -8,7 +8,7 @@
 - WhatsApp, Twitter, Facebook and Pinterest
 
 ### Security
-- General testing to ensure compatibility with latest WordPress version (6.2).
+- General testing to ensure compatibility with latest WordPress version (6.2.2).
 
 ## [[1.2.5]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.2.5) - 2023-04-20
 
