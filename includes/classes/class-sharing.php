@@ -37,7 +37,8 @@ class Sharing {
 	public function register_block_type() {
 		wp_register_style(
 			'lsx-sharing-block-styles',
-			LSX_SHARING_URL . 'includes/lsx-sharing.css'
+			LSX_SHARING_URL . 'includes/lsx-sharing.css',
+			array( 'dashicons' )
 		);
 
 		wp_register_style(
