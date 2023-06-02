@@ -1,5 +1,15 @@
 # Changelog
 
+## [[2.0.0]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.0) - 2023-06-01
+
+### NOTICE
+- The plugin was rewritten to utilise the Site Editor available.
+- 4 sharing blocks have been added to the core Social Links block.
+- WhatsApp, Twitter, Facebook and Pinterest
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (6.2).
+
 ## [[1.2.5]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/1.2.5) - 2023-04-20
 
 ### Security

@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lsx/lsx-sharing-link",
+	"version": "1.0.0",
+	"title": "LSX Sharing Link",
+	"category": "widgets",
+	"parent": [ "core/social-links" ],
+	"icon": "share",
+	"description": "Share to links",
+	"attributes": {
+		"url": {
+			"type": "string"
+		},
+		"service": {
+			"type": "string"
+		},
+		"label": {
+			"type": "string"
+		},
+		"rel": {
+			"type": "string"
+		}
+	},
+	"usesContext": ["openInNewTab", "showLabels", "iconColorValue", "iconBackgroundColorValue"],
+	"supports": {
+		"anchor": true,
+		"reusable": false,
+		"html": false
+	},
+	"editorStyle": "wp-block-social-link-editor",
+	"textdomain": "lsx-sharing"
+}
