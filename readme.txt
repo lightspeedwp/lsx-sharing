@@ -24,12 +24,12 @@ LSX Sharing is built for the free [LSX Design theme](https://wordpress.org/theme
 
 We have extensive documentation on all our plugin and theme functionality. This allows you to take control of your website setup and design to your needs:
 
-* [LSX Sharing Documentation](https://lsdev.biz/lsx/documentation/lsx-extensions/lsx-sharing/).
-* [LSX Design Theme](https://lsdev.biz/lsx/documentation/lsx-theme/)
+* [LSX Sharing Documentation](https://lsx.design/products/lsx-sharing/).
+* [LSX Design Theme](https://lsx.design/docs/)
 
 = Support =
 
-Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://www.lsdev.biz/lsx/support/).
+Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://www.lsdev.biz/contact/).
 
 If you are experiencing issues with the LSX Sharing plugin, please log any bug issues you are having on the [LSX Sharing Issues](https://github.com/lightspeedwp/lsx-sharing/issues) page.
 
@@ -41,7 +41,7 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have t
 
 == Frequently Asked Questions ==
 = I’ve installed the plugin, now what? =
-Go to Settings > LSX Sharing and start adding and customizing sharing buttons for your content.  Follow the steps in the documentation to find out about all the options.
+Go to the site editor, add in the "Social Links" block, and start adding your "share" buttons. You can search for the word "Share" to return the blocks when the "Social Block" is selected.
 
 = Where can I get support or talk to other users =
 Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://lsdev.biz/lsx/support/).
