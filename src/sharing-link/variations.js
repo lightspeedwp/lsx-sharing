@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { FacebookIcon, MailIcon, PinterestIcon, TwitterIcon, WhatsAppIcon } from './icons';
+import { FacebookIcon, MailIcon, PinterestIcon, TwitterIcon, WhatsAppIcon, XIcon } from './icons';
 
 const variations = [
 	{
@@ -50,6 +50,15 @@ const variations = [
 		},
 		title: 'Whatsapp Share',
 		icon: WhatsAppIcon
+	},
+	{
+		name: 'x',
+		attributes: {
+			service: 'x',
+			url: 'https://twitter.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
+		},
+		title: 'X Share',
+		icon: XIcon
 	}
 ];
 
