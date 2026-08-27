@@ -1,5 +1,14 @@
 # Changelog
 
+## [[2.0.4]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.4) - 2026-08-27
+
+### Fixed
+- Both the `x` and legacy `twitter` block variations pointed their share URL at `twitter.com`.
+  Per X's current developer documentation (docs.x.com/x-for-websites/post-button/guides/web-intent),
+  the documented web intent base URL is `https://x.com/intent/tweet` — updated both variations
+  and rebuilt `build/blocks.js`. Also added the missing `classnames` devDependency, without which
+  the block build failed outright.
+
 ## [[2.0.3]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.3) - 2026-08-27
 
 ### Fixed

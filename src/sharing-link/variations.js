@@ -37,7 +37,7 @@ const variations = [
 		name: 'twitter',
 		attributes: {
 			service: 'twitter',
-			url: 'https://twitter.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
+			url: 'https://x.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
 		},
 		title: 'Tweet Share',
 		icon: TwitterIcon
@@ -55,7 +55,7 @@ const variations = [
 		name: 'x',
 		attributes: {
 			service: 'x',
-			url: 'https://twitter.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
+			url: 'https://x.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
 		},
 		title: 'X Share',
 		icon: XIcon

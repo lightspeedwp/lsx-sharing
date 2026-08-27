@@ -27,6 +27,7 @@
 	"devDependencies": {
 		"@wordpress/block-library": "^10.0.0",
 		"@wordpress/icons": "^15.0.0",
-		"@wordpress/scripts": "^34.0.0"
+		"@wordpress/scripts": "^34.0.0",
+		"classnames": "^2.5.1"
 	}
 }
