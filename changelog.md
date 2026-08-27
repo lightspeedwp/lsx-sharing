@@ -1,6 +1,6 @@
 # Changelog
 
-## [[2.0.4]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.4) - 2026-08-27
+## [[2.0.4]](https://github.com/lightspeedwp/lsx-sharing/releases/tag/2.0.4) - 2026-08-27
 
 ### Fixed
 - Both the `x` and legacy `twitter` block variations pointed their share URL at `twitter.com`.
@@ -9,7 +9,7 @@
   and rebuilt `build/blocks.js`. Also added the missing `classnames` devDependency, without which
   the block build failed outright.
 
-## [[2.0.3]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.3) - 2026-08-27
+## [[2.0.3]](https://github.com/lightspeedwp/lsx-sharing/releases/tag/2.0.3) - 2026-08-27
 
 ### Fixed
 - `Sharing::replace_variables()` did not URL-encode `lsx_sharing_title` before substituting it
@@ -17,7 +17,7 @@
   `#`, `%` or other reserved characters would corrupt the resulting Facebook/X/WhatsApp/Pinterest
   share URL. Now `urlencode()`d to match the existing `lsx_sharing_url` handling.
 
-## [[2.0.2]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.2) - 2026-08-27
+## [[2.0.2]](https://github.com/lightspeedwp/lsx-sharing/releases/tag/2.0.2) - 2026-08-27
 
 ### Added
 - X (formerly Twitter) sharing icon and block variation, finishing the JS-only work started on the
