@@ -1,5 +1,12 @@
 # Changelog
 
+## [[2.0.2]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.2) - 2026-08-27
+
+### Added
+- X (formerly Twitter) sharing icon and block variation, finishing the JS-only work started on the
+  never-merged `update/twitter-to-x` branch by adding the matching server-side icon so
+  `lsx/lsx-sharing-link` blocks with `service: "x"` render correctly.
+
 ## [[2.0.1]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.1) - 2023-08-09
 
 ### Security
