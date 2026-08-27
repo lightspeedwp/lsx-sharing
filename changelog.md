@@ -1,5 +1,15 @@
 # Changelog
 
+## [[2.0.6]](https://github.com/lightspeedwp/lsx-sharing/releases/tag/2.0.6) - 2026-08-27
+
+### Added
+- Web-based share dialogs (Facebook, X/Twitter, Pinterest) now open in a small centred popup
+  window instead of a full new tab, via `includes/lsx-sharing-popup.js` (enqueued on
+  `wp_enqueue_scripts`, no build step needed - plain vanilla JS). Mail and WhatsApp are excluded,
+  since mailto: has no dialog to pop and WhatsApp's web intent works better as a normal navigation
+  on mobile. Anchors get a `lsx-sharing-popup` class server-side (`Sharing::POPUP_SERVICES`); with
+  JS disabled the link still works as a normal new-tab link (progressive enhancement).
+
 ## [[2.0.5]](https://github.com/lightspeedwp/lsx-sharing/releases/tag/2.0.5) - 2026-08-27
 
 ### Fixed

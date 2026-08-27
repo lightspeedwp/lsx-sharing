@@ -13,9 +13,36 @@ namespace LSX\Sharing;
  */
 class Sharing {
 
+	/**
+	 * Services whose share link should open in a small popup window rather
+	 * than a full new tab - these are all web-based "share dialog" flows.
+	 * Mail (mailto:) and WhatsApp are excluded: mailto: has no dialog to pop
+	 * up, and WhatsApp's web intent works better as a normal navigation
+	 * (especially on mobile, where it deep-links into the app).
+	 *
+	 * @var string[]
+	 */
+	const POPUP_SERVICES = array( 'facebook', 'twitter', 'x', 'pinterest' );
+
 	public function init() {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'register_block_variations' ) );
 		add_action( 'init', array( $this, 'register_block_type' ), 20 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_frontend_assets' ) );
+	}
+
+	/**
+	 * Enqueues the frontend popup handler for web-based share dialogs.
+	 *
+	 * @return void
+	 */
+	public function enqueue_frontend_assets() {
+		wp_enqueue_script(
+			'lsx-sharing-popup',
+			LSX_SHARING_URL . 'includes/lsx-sharing-popup.js',
+			array(),
+			LSX_SHARING_VER,
+			true
+		);
 	}
 
 	/**
@@ -110,8 +137,13 @@ class Sharing {
 		//Lets replace our var
 		$url = $this->replace_variables( $url );
 
+		$anchor_class = 'wp-block-social-link-anchor';
+		if ( in_array( $service, self::POPUP_SERVICES, true ) ) {
+			$anchor_class .= ' lsx-sharing-popup';
+		}
+
 		$link  = '<li ' . $wrapper_attributes . '>';
-		$link .= '<a href="' . esc_url( $url ) . '" class="wp-block-social-link-anchor">';
+		$link .= '<a href="' . esc_url( $url ) . '" class="' . esc_attr( $anchor_class ) . '">';
 		$link .= $icon;
 		$link .= '<span class="wp-block-social-link-label' . ( $show_labels ? '' : ' screen-reader-text' ) . '">';
 		$link .= esc_html( $label );
