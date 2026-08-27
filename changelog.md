@@ -1,5 +1,13 @@
 # Changelog
 
+## [[2.0.3]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.3) - 2026-08-27
+
+### Fixed
+- `Sharing::replace_variables()` did not URL-encode `lsx_sharing_title` before substituting it
+  into a share URL query string (only `lsx_sharing_url` was encoded) - a title containing `&`,
+  `#`, `%` or other reserved characters would corrupt the resulting Facebook/X/WhatsApp/Pinterest
+  share URL. Now `urlencode()`d to match the existing `lsx_sharing_url` handling.
+
 ## [[2.0.2]](https://github.com/lightspeeddevelopment/lsx-sharing/releases/tag/2.0.2) - 2026-08-27
 
 ### Added

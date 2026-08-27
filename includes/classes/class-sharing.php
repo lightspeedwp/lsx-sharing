@@ -264,7 +264,7 @@ class Sharing {
 					break;
 
 					case 'lsx_sharing_title':
-						$replace_value = get_the_title();
+						$replace_value = urlencode( get_the_title() );
 					break;
 
 					case 'lsx_sharing_image':
