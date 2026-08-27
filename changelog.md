@@ -1,5 +1,17 @@
 # Changelog
 
+## [[2.0.5]](https://github.com/lightspeedwp/lsx-sharing/releases/tag/2.0.5) - 2026-08-27
+
+### Fixed
+- Facebook, twitter and x block variations passed a `t=`/`text=` title parameter duplicating
+  the page title that the unfurled link card (sourced from Open Graph/Twitter Card tags) already
+  shows. Per developers.facebook.com/docs/sharing/reference/share-dialog, the documented Facebook
+  endpoint takes only `u` - no title/quote parameter is documented, and Facebook ignores `t=` in
+  practice. Also switched to the documented `/sharer/sharer.php` path (was `/sharer.php`, which
+  still works via redirect but does not match the reference). Per
+  docs.x.com/x-for-websites/post-button/guides/web-intent, `text` on X is for optional commentary
+  above the link, not a restatement of the title - dropped it too.
+
 ## [[2.0.4]](https://github.com/lightspeedwp/lsx-sharing/releases/tag/2.0.4) - 2026-08-27
 
 ### Fixed

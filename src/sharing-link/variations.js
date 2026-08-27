@@ -9,7 +9,7 @@ const variations = [
 		name: 'facebook',
 		attributes: {
 			service: 'facebook',
-			url: 'https://www.facebook.com/sharer.php?display=page&u=lsx_sharing_url&t=lsx_sharing_title',
+			url: 'https://www.facebook.com/sharer/sharer.php?u=lsx_sharing_url',
 		},
 		title: 'Facebook Share',
 		icon: FacebookIcon
@@ -37,7 +37,7 @@ const variations = [
 		name: 'twitter',
 		attributes: {
 			service: 'twitter',
-			url: 'https://x.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
+			url: 'https://x.com/intent/tweet?url=lsx_sharing_url',
 		},
 		title: 'Tweet Share',
 		icon: TwitterIcon
@@ -55,7 +55,7 @@ const variations = [
 		name: 'x',
 		attributes: {
 			service: 'x',
-			url: 'https://x.com/intent/tweet?text=lsx_sharing_title&url=lsx_sharing_url',
+			url: 'https://x.com/intent/tweet?url=lsx_sharing_url',
 		},
 		title: 'X Share',
 		icon: XIcon
